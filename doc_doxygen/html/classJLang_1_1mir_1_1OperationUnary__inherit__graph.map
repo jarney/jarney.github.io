@@ -1,0 +1,9 @@
+<map id="JLang::mir::OperationUnary" name="JLang::mir::OperationUnary">
+<area shape="rect" id="Node000001" title="This subclass of Operation represents a unary operation." alt="" coords="104,79,303,104"/>
+<area shape="rect" id="Node000003" href="$classJLang_1_1mir_1_1OperationCast.html" title="This subclass of OperationUnary represents a cast operation." alt="" coords="5,152,193,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,114,118,154,115,150,174,110"/>
+<area shape="rect" id="Node000004" href="$classJLang_1_1mir_1_1OperationDot.html" title="This subclass of Operation is used to access member variables of classes and other aggregate types by..." alt="" coords="217,152,400,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="233,110,293,150,290,154,230,114"/>
+<area shape="rect" id="Node000002" href="$classJLang_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="124,5,283,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,44,206,79,201,79,201,44"/>
+</map>

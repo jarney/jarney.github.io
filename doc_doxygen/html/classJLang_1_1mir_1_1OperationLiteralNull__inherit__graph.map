@@ -1,0 +1,5 @@
+<map id="JLang::mir::OperationLiteralNull" name="JLang::mir::OperationLiteralNull">
+<area shape="rect" id="Node000001" title="Literal null." alt="" coords="5,79,232,104"/>
+<area shape="rect" id="Node000002" href="$classJLang_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="39,5,198,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,44,121,79,116,79,116,44"/>
+</map>

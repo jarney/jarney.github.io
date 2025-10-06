@@ -1,0 +1,11 @@
+<map id="JLang::mir::OperationSymbol" name="JLang::mir::OperationSymbol">
+<area shape="rect" id="Node000001" title="Symbol&#45;table lookup." alt="" coords="57,272,265,297"/>
+<area shape="rect" id="Node000002" href="$classJLang_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="82,197,241,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,237,164,272,159,272,159,237"/>
+<area shape="rect" id="Node000003" href="$classJLang_1_1context_1_1SourceReference.html" title=" " alt="" coords="5,109,237,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,146,158,196,153,198,130,148"/>
+<area shape="rect" id="Node000004" href="/home/jona/NetBeansProjects/jos/compiler/jlang2/doc/libstdc++.tag$a07426.html" title=" " alt="" coords="262,109,421,135"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="306,143,187,199,185,195,304,138"/>
+<area shape="rect" id="Node000005" href="/home/jona/NetBeansProjects/jos/compiler/jlang2/doc/libstdc++.tag$a07414.html" title=" " alt="" coords="245,5,438,60"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="344,74,344,109,339,109,339,74"/>
+</map>

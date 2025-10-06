@@ -1,0 +1,5 @@
+<map id="JLang::frontend::tree::TypeSpecifierFunctionPointer" name="JLang::frontend::tree::TypeSpecifierFunctionPointer">
+<area shape="rect" id="Node000001" title="Represents a pointer to a function." alt="" coords="5,93,223,133"/>
+<area shape="rect" id="Node000002" href="$classJLang_1_1frontend_1_1ast_1_1SyntaxNode.html" title=" " alt="" coords="40,5,188,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,59,117,93,111,93,111,59"/>
+</map>

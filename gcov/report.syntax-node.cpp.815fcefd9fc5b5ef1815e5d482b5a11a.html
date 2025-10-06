@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="theme-green">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>GCC Code Coverage Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="report.css"/>
+  </head>
+
+  <body>
+    <header>
+      <h1>GCC Code Coverage Report</h1>
+
+      <hr/>
+
+      <div class="summary">
+<div>
+  <table class="legend">
+    <tr>
+      <th scope="row">Directory:</th>
+      <td>src/</td>
+    </tr>
+    <tr>
+      <th scope="row">File:</th>
+      <td>src/frontend/syntax-node.cpp</td>
+    </tr>
+    <tr>
+      <th scope="row">Date:</th>
+      <td>2025-10-06 12:22:17</td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table class="coverage">
+    <tr>
+      <th></th>
+      <th scope="col">Exec</th>
+      <th scope="col">Total</th>
+      <th scope="col">Coverage</th>
+    </tr>
+    <tr>
+      <th scope="row">Lines:</th>
+      <td>19</td>
+      <td>22</td>
+      <td class="coverage-medium">86.4%</td>
+    </tr>
+    <tr>
+      <th scope="row">Functions:</th>
+      <td>7</td>
+      <td>8</td>
+      <td class="coverage-medium">87.5%</td>
+    </tr>
+    <tr>
+      <th scope="row">Branches:</th>
+      <td>0</td>
+      <td>0</td>
+      <td class="coverage-unknown">-%</td>
+    </tr>
+  </table>
+</div>
+      </div>
+
+      <hr/>
+    </header>
+
+    <nav>
+<details>
+  <summary>List of functions</summary>
+  <table class="listOfFunctions">
+    <tr>
+      <th>Function (Line)</th>
+      <th>Call count</th>
+      <th>Block coverage</th>
+    </tr>
+    <tr><td><a href="#l20">JLang::frontend::ast::SyntaxNode::add_child(JLang::frontend::ast::SyntaxNode const&amp;) (line 20)</a></td><td>called 36175 times, returned 36175 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l30">JLang::frontend::ast::SyntaxNode::get_children() const (line 30)</a></td><td>called 16927 times, returned 16927 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l43">JLang::frontend::ast::SyntaxNode::get_source_ref() const (line 43)</a></td><td>called 35062 times, returned 35062 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l39">JLang::frontend::ast::SyntaxNode::get_syntax_node() const (line 39)</a></td><td>called 48 times, returned 48 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l34">JLang::frontend::ast::SyntaxNode::get_type() const (line 34)</a></td><td>called 6159 times, returned 6159 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l25">JLang::frontend::ast::SyntaxNode::prepend_child(JLang::frontend::ast::SyntaxNode const&amp;) (line 25)</a></td><td>not called</td><td>0.0%</td></tr>
+    <tr><td><a href="#l17">JLang::frontend::ast::SyntaxNode::~SyntaxNode() (line 17)</a></td><td>called 36436 times, returned 36436 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l8">_ZN5JLang8frontend3ast10SyntaxNodeC2EjSt7variantIJPNS0_4tree8TerminalEPNS4_15AccessQualifierEPNS4_14AccessModifierEPNS4_14UnsafeModifierEPNS4_13TypeSpecifierEPNS4_8TypeNameEPNS4_21TypeSpecifierCallArgsEPNS4_19TypeSpecifierSimpleEPNS4_21TypeSpecifierTemplateEPNS4_28TypeSpecifierFunctionPointerEPNS4_22TypeSpecifierPointerToEPNS4_24TypeSpecifierReferenceToEPNS4_18TypeSpecifierArrayEPNS4_25FunctionDefinitionArgListEPNS4_21FunctionDefinitionArgEPNS4_14ClassDeclStartEPNS4_17ClassArgumentListEPNS4_30ClassMemberDeclarationVariableEPNS4_28ClassMemberDeclarationMethodEPNS4_33ClassMemberDeclarationConstructorEPNS4_32ClassMemberDeclarationDestructorEPNS4_22ClassMemberDeclarationEPNS4_26ClassMemberDeclarationListEPNS4_15ClassDefinitionEPNS4_16ClassDeclarationEPNS4_14TypeDefinitionEPNS4_19EnumDefinitionValueEPNS4_23EnumDefinitionValueListEPNS4_14EnumDefinitionEPNS4_10ExpressionEPNS4_17ExpressionPrimaryEPNS4_27ExpressionPrimaryIdentifierEPNS4_23ExpressionPrimaryNestedEPNS4_28ExpressionPrimaryLiteralCharEPNS4_30ExpressionPrimaryLiteralStringEPNS4_27ExpressionPrimaryLiteralIntEPNS4_29ExpressionPrimaryLiteralFloatEPNS4_28ExpressionPrimaryLiteralBoolEPNS4_28ExpressionPrimaryLiteralNullEPNS4_27ExpressionPostfixArrayIndexEPNS4_29ExpressionPostfixFunctionCallEPNS4_22ArgumentExpressionListEPNS4_20ExpressionPostfixDotEPNS4_22ExpressionPostfixArrowEPNS4_23ExpressionPostfixIncDecEPNS4_21ExpressionUnaryPrefixEPNS4_25ExpressionUnarySizeofTypeEPNS4_14ExpressionCastEPNS4_16ExpressionBinaryEPNS4_17ExpressionTrinaryEPNS4_13StatementListEPNS4_9StatementEPNS4_28StatementVariableDeclarationEPNS4_14StatementBlockEPNS4_19StatementExpressionEPNS4_13StatementGotoEPNS4_15StatementIfElseEPNS4_14StatementWhileEPNS4_12StatementForEPNS4_15StatementSwitchEPNS4_22StatementSwitchContentEPNS4_20StatementSwitchBlockEPNS4_15StatementReturnEPNS4_17StatementContinueEPNS4_14StatementBreakEPNS4_14StatementLabelEPNS4_15TranslationUnitEPNS4_17FileStatementListEPNS4_13FileStatementEPNS4_31FileStatementFunctionDefinitionEPNS4_9ScopeBodyEPNS4_32FileStatementFunctionDeclarationEPNS4_11ArrayLengthEPNS4_17GlobalInitializerEPNS4_34GlobalInitializerExpressionPrimaryEPNS4_43GlobalInitializerAddressofExpressionPrimaryEPNS4_38GlobalInitializerStructInitializerListEPNS4_21StructInitializerListEPNS4_17StructInitializerEPNS4_29FileStatementGlobalDefinitionEPNS4_22FileStatementNamespaceEPNS4_20NamespaceDeclarationEPNS4_18FileStatementUsingEPNS4_7UsingAsEEERKNS_7context15SourceReferenceE (line 8)</a></td><td>called 38743 times, returned 38743 times</td><td>100.0%</td></tr>
+  </table>
+</details>
+
+    </nav>
+
+    <main>
+<div class="file-source">
+  <table>
+    <tr>
+      <th align="right">Line</th>
+      <th align="right">Branch</th>
+      <th align="right">Exec</th>
+      <th align="left">Source</th>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l1" href="#l1">1</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;jlang-frontend.hpp&gt;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l2" href="#l2">2</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l3" href="#l3">3</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">context</span><span class="p">;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l4" href="#l4">4</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">frontend</span><span class="p">;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l5" href="#l5">5</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">frontend</span><span class="o">::</span><span class="nn">ast</span><span class="p">;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l6" href="#l6">6</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l7" href="#l7">7</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">///////////////////////////////////////////////////</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l8" href="#l8">8</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">38743</td>
+      <td class="src coveredLine"><span class="n">SyntaxNode</span><span class="o">::</span><span class="n">SyntaxNode</span><span class="p">(</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l9" href="#l9">9</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="n">TokenID</span><span class="w"> </span><span class="n">_type</span><span class="p">,</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l10" href="#l10">10</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="n">SyntaxNode</span><span class="o">::</span><span class="n">specific_type_t</span><span class="w"> </span><span class="n">_data</span><span class="p">,</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l11" href="#l11">11</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SourceReference</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">_source_ref</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l12" href="#l12">12</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">38743</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l13" href="#l13">13</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">38743</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">source_ref</span><span class="p">(</span><span class="n">_source_ref</span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l14" href="#l14">14</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">38743</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p">(</span><span class="n">_type</span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l15" href="#l15">15</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">38743</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">(</span><span class="n">_data</span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l16" href="#l16">16</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">38743</td>
+      <td class="src coveredLine"><span class="p">{}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l17" href="#l17">17</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">36436</td>
+      <td class="src coveredLine"><span class="n">SyntaxNode</span><span class="o">::~</span><span class="n">SyntaxNode</span><span class="p">()</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l18" href="#l18">18</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">36436</td>
+      <td class="src coveredLine"><span class="p">{}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l19" href="#l19">19</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="kt">void</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l20" href="#l20">20</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">36175</td>
+      <td class="src coveredLine"><span class="n">SyntaxNode</span><span class="o">::</span><span class="n">add_child</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SyntaxNode</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">node</span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l21" href="#l21">21</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l22" href="#l22">22</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">36175</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">children</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="p">);</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l23" href="#l23">23</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">36175</td>
+      <td class="src coveredLine"><span class="p">}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l24" href="#l24">24</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="kt">void</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l25" href="#l25">25</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="n">SyntaxNode</span><span class="o">::</span><span class="n">prepend_child</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SyntaxNode</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">node</span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l26" href="#l26">26</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l27" href="#l27">27</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="w">    </span><span class="n">children</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">children</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">node</span><span class="p">);</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l28" href="#l28">28</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="p">}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l29" href="#l29">29</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">SyntaxNode</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l30" href="#l30">30</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">16927</td>
+      <td class="src coveredLine"><span class="n">SyntaxNode</span><span class="o">::</span><span class="n">get_children</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l31" href="#l31">31</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l32" href="#l32">32</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">16927</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">children</span><span class="p">;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l33" href="#l33">33</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l34" href="#l34">34</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">6159</td>
+      <td class="src coveredLine"><span class="k">const</span><span class="w"> </span><span class="n">TokenID</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">SyntaxNode</span><span class="o">::</span><span class="n">get_type</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l35" href="#l35">35</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l36" href="#l36">36</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">6159</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">type</span><span class="p">;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l37" href="#l37">37</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l38" href="#l38">38</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">SyntaxNode</span><span class="w"> </span><span class="o">&amp;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l39" href="#l39">39</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">48</td>
+      <td class="src coveredLine"><span class="n">SyntaxNode</span><span class="o">::</span><span class="n">get_syntax_node</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l40" href="#l40">40</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">48</td>
+      <td class="src coveredLine"><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l41" href="#l41">41</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l42" href="#l42">42</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">SourceReference</span><span class="w"> </span><span class="o">&amp;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l43" href="#l43">43</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">35062</td>
+      <td class="src coveredLine"><span class="n">SyntaxNode</span><span class="o">::</span><span class="n">get_source_ref</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l44" href="#l44">44</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">35062</td>
+      <td class="src coveredLine"><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">source_ref</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l45" href="#l45">45</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+  </table>
+</div>
+      <hr/>
+    </main>
+
+    <footer>
+      Generated by: <a href="http://gcovr.com/en/7.0">GCOVR (Version 7.0)</a>
+    </footer>
+  </body>
+</html>

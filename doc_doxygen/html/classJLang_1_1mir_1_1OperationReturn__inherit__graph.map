@@ -1,0 +1,5 @@
+<map id="JLang::mir::OperationReturn" name="JLang::mir::OperationReturn">
+<area shape="rect" id="Node000001" title="Return from a function." alt="" coords="5,79,208,104"/>
+<area shape="rect" id="Node000002" href="$classJLang_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="27,5,186,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,44,109,79,104,79,104,44"/>
+</map>
