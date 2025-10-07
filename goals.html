@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gyoji Programming Language</title>
+</head>
+<body>
+
+<div class="sidenav">
+    <h1><a href="index.html">About</a></h1>
+    <h1><a href="architecture.html">Architecture</a></h1>
+    <h1><a href="help-wanted.html">Help Wanted</a></h1>
+    <h1><a href="goals.html">Goals</a></h1>
+    <h1><a href="doxygen.html">Doxygen</a></h1>
+    <h1><a href="code-coverage.html">Code Coverage</a></h1>
+</div>
+
+<div class="main">
+  <h1>Gyoji Programming Language</h1>
+<h2>Goals</h3>
+<p>
+  I would like to have a type-safe and memory safe version of C.
+  This means a lot of different things to different people, so a bit of explanation is required.
+  Complete memory safety is a myth.  Although it's true that languages like Rust provide
+  semantics in &#39;safe&#39; mode which allow the memory to be &#39;memory safe&#39;, they do so at the cost
+  of a difficult mental model, the borrow checker.  While the borrow-checker and region-style
+  semantic reasoning does provide assurances of safety, they come at the cost of
+  understandability of the model that restricts some legitimate use-cases which are
+  perfectly memory safe, but if the compiler can't prove it, they are disallowed.
+</p>
+<p>
+  Rust cannot prove many common cases, and it might be argued that a better
+  reasoning system might someday hope to prove that all memory safe
+  code is, in fact, safe.  This cannot happen, however, because Rice's theorem,
+  a consequence of Turing's Stopping theorem, show that compilers cannot,
+  in general, prove all cases[1].
+</p>
+
+<p>
+  The other problem that Rust has is that is's suffering from bloat.  The
+  executables end up being very large because the compiler and the core
+  libraries are tightly coupled.  The whole &#39;panic&#39; and unwinding system
+  is built-in and comes along with a bunch of garbage that isn't always (usually)
+  wanted or needed.  You could argue that it's fine because you can
+  always #![no_std] and #[no_panic] stuff away, but the fact that it's there
+  by default is a bit troubling.  This is particularly true when
+  functions like &#39;sqrt()&#39; may panic and unless the programmer knows
+  to protect against this, can be a big problem for reliability.  The
+  authors of Rust would argue that it's better to panic() rathre than
+  have undefined behaviour, but the fact that &#39;sqrt()&#39; on a negative
+  number may be undefined in a mathematical sense, it need not be
+  undefined in a computational sense.  Returning a NaN would seem
+  to be a better choice than a panic() in these cases, but making
+  philosophical changes to the core standard library at this stage
+  are tall asks.
+</p>
+<p>
+  Instead, this language follows a different path.  Minimalism.  We aim
+  for a C/Java/C++ style syntax with support for objects,
+  but without a lot of the things that come with them.  References and
+  borrow checking for memory safety.  Classes and basic notions of
+  inheritance, but without allowing multiple inheritance and
+  the ambiguities associated.  Interfaces may be multiply inherited, but
+  the vtable is constructed associated with the interface, not as a part of
+  the class.  Constructors cannot leak their content before initialization,
+  removing the problem of &#39;half-initialized&#39; objects.  Generics are Java-style
+  with type erasure which removes a lot of the complexity and bloat of C++-style
+  template metaprogramming.  The goal is to unify the best features
+  of languages that have come before and to do it in the simplest way possible.
+</p>
+
+
+
+  </body>
+</html>

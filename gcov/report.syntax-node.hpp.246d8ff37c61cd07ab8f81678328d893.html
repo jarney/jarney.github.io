@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2025-10-06 12:22:17</td>
+      <td>2025-10-07 12:31:33</td>
     </tr>
   </table>
 </div>
@@ -73,8 +73,8 @@
       <th>Call count</th>
       <th>Block coverage</th>
     </tr>
-    <tr><td><a href="#l95">JLang::frontend::tree::Terminal const&amp; JLang::frontend::ast::SyntaxNode::get_data&lt;JLang::frontend::tree::Terminal&gt;() const (line 95)</a></td><td>called 8193 times, returned 8193 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l83">bool JLang::frontend::ast::SyntaxNode::has_data&lt;JLang::frontend::tree::Terminal&gt;() const (line 83)</a></td><td>called 23086 times, returned 23086 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l95">JLang::frontend::tree::Terminal const&amp; JLang::frontend::ast::SyntaxNode::get_data&lt;JLang::frontend::tree::Terminal&gt;() const (line 95)</a></td><td>called 16386 times, returned 16386 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l83">bool JLang::frontend::ast::SyntaxNode::has_data&lt;JLang::frontend::tree::Terminal&gt;() const (line 83)</a></td><td>called 46156 times, returned 46156 times</td><td>100.0%</td></tr>
   </table>
 </details>
 
@@ -667,14 +667,14 @@
       <td class="lineno"><a id="l83" href="#l83">83</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">23086</td>
+      <td class="linecount coveredLine">46156</td>
       <td class="src coveredLine"><span class="w">	</span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">has_data</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l84" href="#l84">84</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">23086</td>
+      <td class="linecount coveredLine">46156</td>
       <td class="src coveredLine"><span class="w">	    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">holds_alternative</span><span class="o">&lt;</span><span class="n">T</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -751,21 +751,21 @@
       <td class="lineno"><a id="l95" href="#l95">95</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">8193</td>
+      <td class="linecount coveredLine">16386</td>
       <td class="src coveredLine"><span class="w">	</span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="n">get_data</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l96" href="#l96">96</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">8193</td>
+      <td class="linecount coveredLine">16386</td>
       <td class="src coveredLine"><span class="w">	    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">T</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l97" href="#l97">97</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">8193</td>
+      <td class="linecount coveredLine">16386</td>
       <td class="src coveredLine"><span class="w">	    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">d</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">

@@ -1,11 +1,138 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <h1>Gyoji Programming Language</h1>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gyoji Programming Language</title>
+</head>
+<body>
 
-    <h1><a href="doc_doxygen/html/namespaces.html">Documentation</a></h1>
-    <h1><a href="gcov/report.html">Code Coverage Metrics</a></h1>
-    
+<div class="sidenav">
+    <h1><a href="index.html">About</a></h1>
+    <h1><a href="architecture.html">Architecture</a></h1>
+    <h1><a href="help-wanted.html">Help Wanted</a></h1>
+    <h1><a href="goals.html">Goals</a></h1>
+    <h1><a href="doxygen.html">Doxygen</a></h1>
+    <h1><a href="code-coverage.html">Code Coverage</a></h1>
+</div>
+
+<div class="main">
+  <h1>Gyoji Programming Language</h1>
+<h2>What is it?</h2>
+
+<p>
+  Ths Gyoji programming language is intended to be a memory-safe low-level,
+  general-purpose programming language.  It is intended to be safer than C,
+  and offer high-level features of C++ without the un-neccessary complexity.
+  It is also intended to use many concepts from Rust like the borrow-checker
+  without going "too far" and making too many assumptions about the
+  "standard" library, the environment, or the way it should be used.
+</p>
+
+<p>
+  It uses the C ABI (largely thanks to <a href="https://llvm.org/">LLVM</a> and does NOT introduce exceptions
+  or other constructs which would break ABI compatibility.  It does NOT
+  ever "panic" or halt execution without the programmer's explicit instruction
+  to do so.
+</p>
+
+<p>
+  The syntax will be "familiar" to users of C, Java, C++, borrowing many ideas
+from prior art, but is not intended to be backward-compatible with any of them.
+</p>
+
+<h2>What it is NOT!</h2>
+
+<p>
+  Gyoji is a programming language and NOT a build system.  Discovering
+  dependencies and compiling software is NOT the responsibility of
+  a programming language.  This is a question of separation of concerns
+  and the language is intended to stand on its own as a programming language
+  which is a set of instructions designed to tell a computer how to operate.
+</p>
+
+<p>
+  Gyoji is also not a package manager.  Packaging and distributing source
+  and object code is a separate concern also.  While the compiler does
+  produce binary code, the responsibility lies elsewhere in organizing
+  the results of the compilation for distribution.  There are many fine
+  examples of package managers and one need not have a new package manager
+  for every programming language.  Gyoji makes no assumptions or
+  restrictions on what package management techniques to use.
+</p>
+
+<p>
+  Gyoji is also not a standard library.  While there is (or soon will be)
+  a set of libraries written in the Gyoji library to perform certain
+  tasks, it is not the responsibility of a programming language
+  to prescribe things like lists, maps, sets, or algorithms.  Those
+  can be expressed in the Gyoji language and the language itself
+  makes no assumptions about what libraries are and are not used.
+  Again, this is a separation of concerns argument that allows
+  the language to be general-purpose.
+</p>
+
+<p>
+  While it is ABI compatible with C (i.e. you can call back and forth between them),
+  it is NOT syntax-compatible. (i.e. you can't just compile a random C file with
+  it even though much of the syntax matches up pretty well). It is a NON-goal to
+  be a "drop-in" replacement for GCC or CLANG.
+</p>
+
+<h2>What is a Gyoji?</h2>
+<p>
+  The term <a href="https://en.wikipedia.org/wiki/Gy%C5%8Dji">Gyoji (行司)</a>
+  is borrowed from the world of professional Sumo.  It is
+  an honorable sport where one wrestler <a href="">(rikishi 力士)</a> attempts to push
+  another one out of the ring <a href="https://en.wikipedia.org/wiki/Dohy%C5%8D">(dohyō (土俵))</a>.
+  The <a href="https://en.wikipedia.org/wiki/Gy%C5%8Dji">Gyoji (行司)</a>
+  is the referee who determines who went out of the ring first.  This is a
+  nice metaphor for boundary-checking in programming.  The Gyoji programming
+  language is your referee, letting you know when you've gone out of bounds.
+</p>
+
+  
+<h2>Why on EARTH do we need ANOTHER programming language.</h2>
+
+<p>
+  Ok, so this is where it gets interesting.  I love the C
+  programming language because of its relative simplicity,
+  but let's be honest.  It simply wasn't designed with
+  safety in mind, so I also kind-of hate it.   I also love C++,
+  but let's face it.  It's riddled with little traps
+  and undefined behaviors in the name of making things "abstract"
+  and allowing implementations to make their own decisions.
+  This abstraction, however, comes at very little benefit.  In contrast,
+  languages like Java are more prescriptive and define more
+  behaviors, yet is still able to function well and used
+  generally.  C++ also has a problem with complexity in
+  template metaprogramming which can be useful in limited
+  circumstances, but in my opinion has gotten out of hand.
+  Java is great, but I really don't like the GC and the
+  lack of low-level control.  Rust is cool too and has really
+  good solutions to a lot of these problems, but that also
+  comes at a great cost.  Rust, in my opinion, makes
+  far too many assumptions about the 'standard' and 'core'
+  libraries and is full of 'panic()' in the most unexpected
+  places.  While it is quite memory safe, it is not at all
+  'termination' safe.  For example, a sqrt of a negative
+  value can cause the system to 'panic()'.  This is not
+  at all what I would characterize as 'safe'.  Although
+  it does not allow access to invalid memory, abrupt
+  and unexpected termination is not a good thing.
+</p>
+
+<p>
+  So that leaves me with an urge to pull together
+  some of the best ideas of each of these languages
+  and try something new.
+</p>
+
+<p>
+  Maybe this is just an old man shouting into the wind,
+  but this is a project I have to do and would love
+  some help doing it.
+</p>
+
   </body>
 </html>

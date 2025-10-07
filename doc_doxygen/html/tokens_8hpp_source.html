@@ -128,25 +128,25 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_INC_OP = 32;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_DEC_OP = 33;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_LEFT_OP = 34;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_LT_OP = 35;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_GT_OP = 36;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_LE_OP = 37;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_GE_OP = 38;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_EQ_OP = 39;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_NE_OP = 40;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_COMPARE_LESS = 35;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_COMPARE_GREATER = 36;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_COMPARE_LESS_EQUAL = 37;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_COMPARE_GREATER_EQUAL = 38;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_COMPARE_EQUAL = 39;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_COMPARE_NOT_EQUAL = 40;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_XOR_OP = 41;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_OR_OP = 42;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_MUL_ASSIGN = 43;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_DIV_ASSIGN = 44;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_ADD_ASSIGN = 45;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_SUB_ASSIGN = 46;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_LEFT_ASSIGN = 47;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_RIGHT_ASSIGN = 48;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_AND_ASSIGN = 49;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_XOR_ASSIGN = 50;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_MUL_ASSIGNMENT = 43;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_DIV_ASSIGNMENT = 44;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_ADD_ASSIGNMENT = 45;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_SUB_ASSIGNMENT = 46;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_LEFT_ASSIGNMENT = 47;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_RIGHT_ASSIGNMENT = 48;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_AND_ASSIGNMENT = 49;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_XOR_ASSIGNMENT = 50;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_OR_ASSIGN = 51;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_OR_ASSIGNMENT = 51;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_PAREN_L = 52;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_PAREN_R = 53;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_BRACKET_L = 54;</div>
@@ -168,7 +168,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_SLASH = 69;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_PERCENT = 70;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_EQUALS = 71;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_ASSIGNMENT = 71;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_NAMESPACE_NAME = 72;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_TYPE_NAME = 73;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">const</span> JLang::context::TokenID TERMINAL_BOOL = 74;</div>
@@ -268,12 +268,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keyword">const</span> JLang::context::TokenID NONTERMINAL_type_specifier_template = 277;</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">const</span> JLang::context::TokenID NONTERMINAL_unsafe_modifier = 278;</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keyword">const</span> JLang::context::TokenID NONTERMINAL_using_as = 279;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keyword">const</span> JLang::context::TokenID END_OF_TOKENS = 9999;</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keyword">const</span> JLang::context::TokenID NONTERMINAL_initializer_expression = 280;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keyword">const</span> JLang::context::TokenID END_OF_TOKENS = 9999;</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>};</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>};</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
 <div class="ttc" id="anamespaceJLang_1_1frontend_1_1tree_html"><div class="ttname"><a href="namespaceJLang_1_1frontend_1_1tree.html">JLang::frontend::tree</a></div><div class="ttdoc">Parse Tree Data.</div><div class="ttdef"><b>Definition</b> forward.hpp:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->

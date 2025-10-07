@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gyoji Programming Language</title>
+</head>
+<body>
+
+<div class="sidenav">
+    <h1><a href="index.html">About</a></h1>
+    <h1><a href="architecture.html">Architecture</a></h1>
+    <h1><a href="help-wanted.html">Help Wanted</a></h1>
+    <h1><a href="goals.html">Goals</a></h1>
+    <h1><a href="doxygen.html">Doxygen</a></h1>
+    <h1><a href="code-coverage.html">Code Coverage</a></h1>
+</div>
+
+<div class="main">
+  <h1>Gyoji Programming Language</h1>
+<h2>Gyoji Architecture</h2>
+
+<p>
+  The architecture is described here.  A compiler is a complicated
+  machine, so there is more than one way to view the system.
+  Each section below describes the same system with a different
+  perspective.
+</p>
+
+<h3>Components</h3>
+<p>
+  The following diagram shows how the various parts of the
+  compiler are organized.  Each of the components are designed
+  to be independent of one another, exposing interfaces
+  and all tied together in the "compiler" application
+  using dependency-injection techniques.  This way,
+  any part of the compiler can be modified and
+  augmented without having to unwind the entire system.
+</p>
+
+<p>
+  This makes the compiler/language system itself
+  modular and reduces the load on any individual
+  contributer to understand the whole flow too deeply.
+</p>
+
+<div class="ascii-art">
+                                      Compiler Context
++-----------+                      +-----------------+
+| Input .j  |                      | Error reporting |
++-----------+                      +-----------------+
+      |   Frontend                 | Token stream    |
++----------------------+-------+   +-----------------+
+| +-----------------------+    |     |
+| | Lex/Parse             |    |     | Error/context api
+| | namespace resolution  |    |-----+ 
+| +-----------------------+    |
+|   |          | Syntax tree   |
+|   |  +---------------------+ |
+|   |  | Function Resolution | |
+|   |  | Type Resolution     | |
+|   |  | (Lowering to MIR)   | |
+|   |  +---------------------+ |
+|   |                  \\      |
++------------------------------+
+    |                    \\
+    |                     \\
++------------------+       \\                           AnalysisPass
+| formatters       |    +------------------+        +------------------------------+
++------------------+    | MIR              |--------| Borrow Check (Polonius-like) |
+        | AST Tree      +------------------+        | Unreachable Code             |
+	|                                           | Other semantic checks        |
++---------------+               |                   +------------------------------+
+|format-identity|               |          
+|format-pretty  |               |          
+|format-tree    |               |           
++---------------+               |
+        |               +------------------------+
+  +-----------+         | Code Generation(LLVM)  |
+  |Text output|         +------------------------+
+  +-----------+                 | LLVM
+                        +------------------+
+                        | ELF (.o) output  |
+                        +------------------+
+</div>
+
+<p>
+  The components defined in the system are:
+</p>
+<ul>
+  <li> Front-end
+    <p>
+      Lexical and syntactical analysis is the first stage.  This involves
+      reading from input as bytes and producing a set of "tokens"
+      which are recognized by a set of regular expressions.  The lexical
+      analysis phase is lossless in the sense that it consumes and
+      records all data read as data associated with these tokens. 
+      This includes whitespace and comments.  This is useful
+      later in some back-ends which can reproduce the input exactly (for testing)
+      or produce the output as a "pretty-print" of the input (formatters).
+      The lexical stage also includes handling namespaces and types.  This is
+      because the syntax would be ambiguous with only identifiers, so the ability
+      to distinguish between types and variables is important.
+      The syntactical analysis uses the traditional LALR(1) algorithm
+      to recognize the syntax and produce a parse tree.  The output of this
+      stage is an abstract syntax tree which is used later to build the data-structures
+      for the semantic representation of the language.
+    </p>
+    <p>
+      Note that because of this structure, other front-ends for the language are possible
+      including representations with entirely different syntax so for example, a
+      "python-like" representation or a "rust-like" representation can be parsed into
+      the same semantic tree.
+    </p>
+  </li>
+
+  <li>Syntax back-ends
+    <p>
+      After the syntax has been parsed, one or more backends can be applied directly
+      to the syntax tree.  Some of these are pure transformations of the input
+      such as code formatters and XML tree output for debugging purposes.
+      Other back-ends pass the information to the next stage of processing, the semantic
+      stage.  The semantic stage may also provide a number of back-ends
+      to perform code-generation, making use of all of the semantic information.
+    </p>
+  </li>
+
+  <li>Semantic analysis is next
+    <p>
+      At this stage, the syntax tree is processed into
+      a semantic representation of the language.  This semantic representation
+      discards the whitespace and original tokens and organizes the input program
+      in a way that closely matches the semantics.  At this layer, several additional
+      analyses can be perfored to ensure consistency and correctness as well as
+      preparing the program for a code generation phase later.  Specifically,
+      this semantic analysis applies rules such as:
+    </p>
+    <ul>
+      <li>Ensuring types match</li>
+      <li>Resolving expression operations so that they are applied to the correct types.</li>
+      <li>Generic programming and type parameters.</li>
+    </ul>
+  </li>
+
+  <li>Analysis passes
+    <p>
+      The ananlysis passes are additional checks on the semantics of
+      what was parsed (i.e. what the code you wrote actually means).
+      At this stage, for example, we check to make sure that the types
+      have been completely defined (i.e. check that there are no un-resolved
+      forward declarations that are actually used).  We also perform
+      memory safety checks like making sure types match up and that
+      the &#39;borrows&#39; follow the borrowing rules.  We also perform
+      checks to make sure that array access is within bounds
+      and other rules that would impact type or memory safety.
+    </p>
+  </li>
+  
+  <ul>
+    <li>Performing borrow-checking</li>
+  </ul>
+  <li>Code generation
+    <p>
+      During this stage of processing, a code generation back-end produces
+      executable output (ELF object files, for example) using LLVM or other
+      similar code generation utilities.
+    </p>
+    <p>
+      Some back-ends may even be possible allowing the generated code to
+      be run within other machine environments such as a bash or python shell
+      although there is probably very little utility in doing that, it might
+      be cool to try.
+    </p>
+</ul>
+<h3>Lifetimes</h3>
+<p>
+The following is a "lifetime" diagram that indicates the lifetimes
+involved in the compiler stages.  This is important because the compiler
+is designed such that more than one front-end and back-end can be
+used.  In order to facilitate this capability, it is important to understand
+which parts of the compiler will have access to other components at
+different stages throughout the compile lifecycle.  For instance,
+the error handling of the compiler is a feature that is used
+all throughout the program whereas the parse tree is only used
+in the initial stages and is not directly accessible in
+later stages of code generation.
+</p>
+<p>
+  High-level lifetimes and interactions:
+</p>
+<pre>
++-------------------------- Compiler Context
+| +------------------------ TokenStream Input context
+| |                                    provides context to the error handler.
+| |
+| | +---------------------- Errors : Error reporting library
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| |-|--------------------- Parser : Reads from input                    Parsing
+| | |                                      * Parses input into a
+| | |                                        parse tree
+| | |                                      * Records input data
+| | |                                        in token stream.
+| | | +------------------- TranslationUnit
+| | | |
+| | | | +----------------- NamespaceContext
+| | | | |
+| | | | | +--------------- mir::Types                               Type Lowering
+| | | | | | 
+| | | | | | +------------  mir::Functions                       Function lowering
+| | | | | | |
+| | | | | | |                                                   Type consistency
+| | | | | | |
+| | | | | | |
+| | | | +----------------- ~NamespaceContext
+| | | |   | |
+| | | +-------------------  ~TranslationUnit
+| | |     | |
+| | |     | | +----------  Analysis                              Static Analysis
+| | |     | | |                                                  Borrow Checking
+| | |     | | |                                                  Visibility rules
+| | |     | | |
+| | |     | | |
+| | |     | | +---------- ~Analysis
+| | |     | |
+| | |     | +------------- LLVMBackend                           Code Generation
+| | |     | |
+| | |     | +------------- ~LLVMBackend
+| | |     |
+| | |     +--------------- ~types::Types
+| | |     
+| | +---------------------- ~Errors
+| |
+| +------------------------ ~TokenStream
+|
++-------------------------- ~CompilerContext
+</pre>
+
+<p>
+  As you can see from this diagram, the only
+  things that last the entire program scope are
+  the token stream and error reporting facilities.
+  All other aspects of the program have more limited
+  lifetimes.  This enforces some separation of
+  concerns because some parts of the system simply will
+  not have access to others due to their lifetimes.
+</p>
+
+<p>Lifetime notes:</p>
+<ul>
+  <li>TokenStream: 
+    <p>While this may be considered
+      a part of the front-end, the reality is that
+      every front-end will read input from the
+      source.  This represents the source un-touched
+      by any particular grammar front-end we choose to place
+      on it and as such, this is agnostic of
+      the syntax being parsed, making it possible to
+      parse multiple styles of syntax.
+    </p>
+  </li>
+  <li>Errors:
+    <p>
+      Errors need access to the token stream
+      so it can produce context-aware messages
+      pointing out the exact location in source
+      of the various error conditions.
+    </p>
+  </li>
+  <li>Compiler Context:
+    <p>
+      The compiler context is a container
+      for the objects that live for the entire
+      lifecycle of the compilation and wraps their
+      lifetimes to ensure that their scope lasts
+      for as long as they need to.
+      Other lifetimes such as the MIR are limited
+      and are "produced" by the front-end
+      and their lifetime is "handed off" to the
+      back-end which uses and then consumes it.
+    </p>
+  </li>
+  <li>MIR:
+    <p>
+      It is the responsibility of the front-end to produce the MIR
+      representation.  The responsibility of the front-end is to
+      produce a parse tree AND THEN TO CONSUME IT after producing
+      the MIR for the back-end.  The ultimate result of parsing
+      it to consume input, placing it faithfully into the TokenStream
+      and to produce the MIR.  The parse tree is simply a PART OF
+      the front-end and is not directly exposed beyond the MIR
+      to the analysis or code-generation stages.  All context relevant
+      for analysis, code-generation, and debugging must be placed into
+      the MIR so that it can be used in the later stages.
+    </p>
+    <p>
+      As such, the MIR representation is really the "core" of the
+      language with the front-end simply providing syntactical sugar
+      to make it easier to manipulate.
+    </p>
+  </li>
+  <li>Analysis:
+    <p>
+      The analysis is independent of the code generation system.
+      It is responsible for any semantic analysis and operates
+      purely on the MIR.  The borrow-checking, visibility rules,
+      control-flow analysis (unreachable code), etc.
+      are all performed at this stage on the MIR so that the result
+      is MIR that is ready for code-generation which should not,
+      at this point, produce errors because is makes guarantees on
+      the validity of the constructions.
+    </p>
+  </li>
+</ul>
+
+<h3>Library Dependency Stack</h3>
+<p>
+This diagram shows how the components
+may depend on one another.  This is important
+in order to establish dependencies in the build system
+but also establishes some sense of what component is responsible
+for what part of the system.
+</p>
+
+<pre>
++--------------+
+| Frontend     | 
+|    Namespaces| +-------------+ 
+|    Lowering  | | Analysi  s  |
++--------------+ |   Semantics | +---------+
+    Create MIR   |   Borrowing | | Codegen |
+    (immutable)  +-------------+ |  LLVM   |
+                     Use MIR     +---------+
+                                   Consume MIR
++-------------------------------------------------+
+| Compiler Context                                |
++---------------------------+--+------------------+
+            +-------------+ |  |            +-------------------+
+            | Errors      | |  |            | misc: Utilities   |
+            +-------------+ |  |            |       for strings |
+               +------------+  |            +-------------------+
+               | TokenStream   |
+               +---------------+
+</pre>
+
+<h3>Notes on differences from C syntax</h3>
+<ul>
+  <li>Types can be qualified with namespaces</li>
+  <li>sizeof only works on types, not on expressions.</li>
+  <li>typeof is a new built-in that will convert an expression to a type.  This was done because allowing expressions directly as arguments to sizeof would make types syntactially ambiguous with expressions.  In C, this is handled by having the lexer be type-aware.  In order to make sure the lexer is independent of the parser, the syntax was altered in order to make sure that it is unambiguous.  For example, consider sizeof(a).  If &#39;a&#39; is declared as a type, then this works one way, but if it&#39;s declared as a variable, it works differently.  The syntax sizeof(typeof(a)); makes it unambiguous.</li>
+  
+  <li>All control flow requires braces.  This was done in order to avoid the "dangling else" ambiguity in the grammar.  While this is a well known ambiguity in the C syntax, it is still better to be explicit in associating the &#39;if&#39; with the &#39;else&#39;.</li>
+  <li>Assignment expressions may not be used inline.  Assignment is always a "statement-level" expression, so "a=(b=c+2)" isn&#39;t valid.  This is ok because it is often difficult to read in this style and doesn&#39;t really add anything to the function of the language.</li>
+  <li>Comma expressions are not a thing.  This is rarely used and little known.  It adds nothing to the language.</li>
+
+  </body>
+</html>
