@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JLang Compiler: /home/jona/NetBeansProjects/jos/compiler/jlang2/src/context/jlang-context/errors.hpp Source File</title>
+<title>Gyoji Compiler: /home/jona/NetBeansProjects/jos/compiler/jlang2/src/context/gyoji-context/errors.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">JLang Compiler
+   <div id="projectname">Gyoji Compiler
    </div>
   </td>
  </tr>
@@ -75,7 +75,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fc034541bb3ad0242232d8f8d983e32a.html">context</a></li><li class="navelem"><a class="el" href="dir_9148979b62449d6ad29399cf911d20b6.html">jlang-context</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fc034541bb3ad0242232d8f8d983e32a.html">context</a></li><li class="navelem"><a class="el" href="dir_94f8c9e3ef3a6dbecf0fdacc36e96dd8.html">gyoji-context</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -88,9 +88,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="codeRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a00251.html">vector</a>&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="codeRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a00140.html">memory</a>&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;jlang-misc/pointers.hpp&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;jlang-context/source-reference.hpp&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceJLang_1_1context.html">JLang::context</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;gyoji-misc/pointers.hpp&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;gyoji-context/source-reference.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyoji_1_1context.html">Gyoji::context</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">class </span>Errors;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">class </span>Error;</div>
@@ -124,9 +124,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> print();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">size_t</span> <a class="code hl_functionRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01692.html#a86f849fa422e14fa194d390bdcc1d2cd">size</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">const</span> ErrorMessage &amp; <a class="code hl_functionRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01692.html#ab1f99c12f318a1219d97e23d526b94d2">get</a>(<span class="keywordtype">size_t</span> n) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector&lt;JLang::owned&lt;ErrorMessage&gt;</a>&gt; &amp; get_messages() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector&lt;Gyoji::owned&lt;ErrorMessage&gt;</a>&gt; &amp; get_messages() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector&lt;JLang::owned&lt;ErrorMessage&gt;</a>&gt; messages;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector&lt;Gyoji::owned&lt;ErrorMessage&gt;</a>&gt; messages;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::string</a> error_message;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    </div>
@@ -136,7 +136,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    Errors(TokenStream &amp; _token_stream);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    ~Errors();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> add_error(<a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07518.html">JLang::owned&lt;Error&gt;</a> error);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> add_error(<a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07518.html">Gyoji::owned&lt;Error&gt;</a> error);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> add_simple_error(</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">const</span> SourceReference &amp; src_ref,</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::string</a> _error_title,</div>
@@ -146,7 +146,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">size_t</span> <a class="code hl_functionRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01692.html#a86f849fa422e14fa194d390bdcc1d2cd">size</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> Error &amp; <a class="code hl_functionRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01692.html#ab1f99c12f318a1219d97e23d526b94d2">get</a>(<span class="keywordtype">size_t</span> n) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector&lt;JLang::owned&lt;Error&gt;</a>&gt; errors;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector&lt;Gyoji::owned&lt;Error&gt;</a>&gt; errors;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">const</span> TokenStream &amp; token_stream;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    </div>
@@ -160,7 +160,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aa07166_html"><div class="ttname"><a href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07166.html">std::pair</a></div></div>
 <div class="ttc" id="aa07426_html"><div class="ttname"><a href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector</a></div></div>
 <div class="ttc" id="aa07518_html"><div class="ttname"><a href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07518.html">std::unique_ptr</a></div></div>
-<div class="ttc" id="anamespaceJLang_1_1context_html"><div class="ttname"><a href="namespaceJLang_1_1context.html">JLang::context</a></div><div class="ttdef"><b>Definition</b> jlang-context.hpp:7</div></div>
+<div class="ttc" id="anamespaceGyoji_1_1context_html"><div class="ttname"><a href="namespaceGyoji_1_1context.html">Gyoji::context</a></div><div class="ttdef"><b>Definition</b> gyoji-context.hpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->
 <!-- start footer part -->

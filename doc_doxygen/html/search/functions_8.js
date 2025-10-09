@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['has_5fdata_0',['has_data',['../classJLang_1_1frontend_1_1ast_1_1SyntaxNode.html#a471eb71183b47be61c3f33fc1f0ad4da',1,'JLang::frontend::ast::SyntaxNode']]],
-  ['has_5ferrors_1',['has_errors',['../classJLang_1_1frontend_1_1ParseResult.html#ae517032eccf1f275d5bede752a5ecab7',1,'JLang::frontend::ParseResult']]],
+  ['has_5fdata_0',['has_data',['../classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html#a53d4f679e6ccc18ac002c449dd9c1ec5',1,'Gyoji::frontend::ast::SyntaxNode']]],
+  ['has_5ferrors_1',['has_errors',['../classGyoji_1_1frontend_1_1ParseResult.html#ae517032eccf1f275d5bede752a5ecab7',1,'Gyoji::frontend::ParseResult']]],
   ['has_5ffacet_2',['has_facet',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01634.html#ga9a7251826c387ab1fc71a629e5322168',1,'std::has_facet(const locale &amp;__loc) noexcept'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01634.html#ga9a7251826c387ab1fc71a629e5322168',1,'std::has_facet(const locale &amp;__loc) noexcept']]],
-  ['has_5ftranslation_5funit_3',['has_translation_unit',['../classJLang_1_1frontend_1_1ParseResult.html#af2a9e2657ef463022cb1b5e62b883089',1,'JLang::frontend::ParseResult']]],
+  ['has_5ftranslation_5funit_3',['has_translation_unit',['../classGyoji_1_1frontend_1_1ParseResult.html#af2a9e2657ef463022cb1b5e62b883089',1,'Gyoji::frontend::ParseResult']]],
   ['hash_4',['hash',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04970.html#ac70cace45e39beb108d6b6fbe6748ba3',1,'std::collate::hash()'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04970.html#ac70cace45e39beb108d6b6fbe6748ba3',1,'std::collate_byname::hash()']]],
   ['hash_5fexponential_5fsize_5fpolicy_5',['hash_exponential_size_policy',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a11646.html#afaa82af641851bf662b2cf2f60ea1eb9',1,'__gnu_pbds::hash_exponential_size_policy']]],
   ['hash_5ffunction_6',['hash_function',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07554.html#a7e199daf0d314f4d3e72f1e694571a8b',1,'std::unordered_set::hash_function()'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07550.html#a5d32e359f0a827adb05fd1c5e29362b3',1,'std::unordered_multiset::hash_function()'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07534.html#a208a268d709e23f97d5763d2f24de4f2',1,'std::unordered_multimap::hash_function()'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07538.html#ac9588299378201162e3f7da7e7d30fdf',1,'std::unordered_map::hash_function()']]],

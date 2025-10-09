@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['building_20from_20source_0',['Building from source',['../md__2home_2jona_2NetBeansProjects_2jos_2compiler_2jlang2_2INSTALL.html',1,'']]]
+  ['a_20href_20https_3a_20jarney_20github_20io_20the_20gyoji_20programming_20language_20a_0',['&lt;a href=&quot;https://jarney.github.io/&quot; &gt;The Gyoji programming language&lt;/a&gt;',['../md__2home_2jona_2NetBeansProjects_2jos_2compiler_2jlang2_2README.html',1,'']]]
 ];

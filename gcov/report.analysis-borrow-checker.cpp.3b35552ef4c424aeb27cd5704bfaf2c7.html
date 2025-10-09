@@ -19,7 +19,7 @@
   <table class="legend">
     <tr>
       <th scope="row">Directory:</th>
-      <td>src/</td>
+      <td>./</td>
     </tr>
     <tr>
       <th scope="row">File:</th>
@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2025-10-07 12:31:33</td>
+      <td>2025-10-09 15:46:52</td>
     </tr>
   </table>
 </div>
@@ -73,16 +73,16 @@
       <th>Call count</th>
       <th>Block coverage</th>
     </tr>
-    <tr><td><a href="#l45">BasicBlockOperation::BasicBlockOperation(BasicBlockOperation const&amp;) (line 45)</a></td><td>called 1720 times, returned 1720 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l41">BasicBlockOperation::BasicBlockOperation(unsigned long, unsigned long) (line 41)</a></td><td>called 720 times, returned 720 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l49">BasicBlockOperation::~BasicBlockOperation() (line 49)</a></td><td>called 2440 times, returned 2440 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l54">CFGEdge::CFGEdge(BasicBlockOperation const&amp;, BasicBlockOperation const&amp;) (line 54)</a></td><td>called 360 times, returned 360 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l58">CFGEdge::CFGEdge(CFGEdge const&amp;) (line 58)</a></td><td>called 500 times, returned 500 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l62">CFGEdge::~CFGEdge() (line 62)</a></td><td>called 860 times, returned 860 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l68">JLang::analysis::AnalysisPassBorrowChecker::AnalysisPassBorrowChecker(JLang::context::CompilerContext&amp;) (line 68)</a></td><td>called 30 times, returned 30 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l86">JLang::analysis::AnalysisPassBorrowChecker::check(JLang::mir::Function const&amp;) const (line 86)</a></td><td>called 264 times, returned 264 times</td><td>54.0%</td></tr>
-    <tr><td><a href="#l75">JLang::analysis::AnalysisPassBorrowChecker::check(JLang::mir::MIR const&amp;) const (line 75)</a></td><td>called 30 times, returned 30 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l71">JLang::analysis::AnalysisPassBorrowChecker::~AnalysisPassBorrowChecker() (line 71)</a></td><td>not called</td><td>0.0%</td></tr>
+    <tr><td><a href="#l45">BasicBlockOperation::BasicBlockOperation(BasicBlockOperation const&amp;) (line 45)</a></td><td>called 860 times, returned 860 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l41">BasicBlockOperation::BasicBlockOperation(unsigned long, unsigned long) (line 41)</a></td><td>called 360 times, returned 360 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l49">BasicBlockOperation::~BasicBlockOperation() (line 49)</a></td><td>called 1220 times, returned 1220 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l54">CFGEdge::CFGEdge(BasicBlockOperation const&amp;, BasicBlockOperation const&amp;) (line 54)</a></td><td>called 180 times, returned 180 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l58">CFGEdge::CFGEdge(CFGEdge const&amp;) (line 58)</a></td><td>called 250 times, returned 250 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l62">CFGEdge::~CFGEdge() (line 62)</a></td><td>called 430 times, returned 430 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l68">Gyoji::analysis::AnalysisPassBorrowChecker::AnalysisPassBorrowChecker(Gyoji::context::CompilerContext&amp;) (line 68)</a></td><td>called 15 times, returned 15 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l86">Gyoji::analysis::AnalysisPassBorrowChecker::check(Gyoji::mir::Function const&amp;) const (line 86)</a></td><td>called 132 times, returned 132 times</td><td>54.0%</td></tr>
+    <tr><td><a href="#l75">Gyoji::analysis::AnalysisPassBorrowChecker::check(Gyoji::mir::MIR const&amp;) const (line 75)</a></td><td>called 15 times, returned 15 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l71">Gyoji::analysis::AnalysisPassBorrowChecker::~AnalysisPassBorrowChecker() (line 71)</a></td><td>not called</td><td>0.0%</td></tr>
   </table>
 </details>
 
@@ -102,7 +102,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;jlang-analysis.hpp&gt;</span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gyoji-analysis.hpp&gt;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l2" href="#l2">2</a></td>
@@ -123,21 +123,21 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">mir</span><span class="p">;</span></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Gyoji</span><span class="o">::</span><span class="nn">mir</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l5" href="#l5">5</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">context</span><span class="p">;</span></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Gyoji</span><span class="o">::</span><span class="nn">context</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l6" href="#l6">6</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">analysis</span><span class="p">;</span></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Gyoji</span><span class="o">::</span><span class="nn">analysis</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l7" href="#l7">7</a></td>
@@ -381,70 +381,70 @@
       <td class="lineno"><a id="l41" href="#l41">41</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">720</td>
+      <td class="linecount coveredLine">360</td>
       <td class="src coveredLine"><span class="n">BasicBlockOperation</span><span class="o">::</span><span class="n">BasicBlockOperation</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">_blockid</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">_operationid</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l42" href="#l42">42</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">720</td>
+      <td class="linecount coveredLine">360</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">blockid</span><span class="p">(</span><span class="n">_blockid</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">720</td>
+      <td class="linecount coveredLine">360</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">operationid</span><span class="p">(</span><span class="n">_operationid</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l44" href="#l44">44</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">720</td>
+      <td class="linecount coveredLine">360</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l45" href="#l45">45</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1720</td>
+      <td class="linecount coveredLine">860</td>
       <td class="src coveredLine"><span class="n">BasicBlockOperation</span><span class="o">::</span><span class="n">BasicBlockOperation</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">BasicBlockOperation</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">_other</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l46" href="#l46">46</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1720</td>
+      <td class="linecount coveredLine">860</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">blockid</span><span class="p">(</span><span class="n">_other</span><span class="p">.</span><span class="n">blockid</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l47" href="#l47">47</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1720</td>
+      <td class="linecount coveredLine">860</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">operationid</span><span class="p">(</span><span class="n">_other</span><span class="p">.</span><span class="n">operationid</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l48" href="#l48">48</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1720</td>
+      <td class="linecount coveredLine">860</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l49" href="#l49">49</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2440</td>
+      <td class="linecount coveredLine">1220</td>
       <td class="src coveredLine"><span class="n">BasicBlockOperation</span><span class="o">::~</span><span class="n">BasicBlockOperation</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l50" href="#l50">50</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2440</td>
+      <td class="linecount coveredLine">1220</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -472,70 +472,70 @@
       <td class="lineno"><a id="l54" href="#l54">54</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="n">CFGEdge</span><span class="o">::</span><span class="n">CFGEdge</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">BasicBlockOperation</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">_start</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">BasicBlockOperation</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">_end</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l55" href="#l55">55</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">start</span><span class="p">(</span><span class="n">_start</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l56" href="#l56">56</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">(</span><span class="n">_end</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l57" href="#l57">57</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l58" href="#l58">58</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">500</td>
+      <td class="linecount coveredLine">250</td>
       <td class="src coveredLine"><span class="n">CFGEdge</span><span class="o">::</span><span class="n">CFGEdge</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">CFGEdge</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">_other</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l59" href="#l59">59</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">500</td>
+      <td class="linecount coveredLine">250</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">start</span><span class="p">(</span><span class="n">_other</span><span class="p">.</span><span class="n">start</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l60" href="#l60">60</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">500</td>
+      <td class="linecount coveredLine">250</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">(</span><span class="n">_other</span><span class="p">.</span><span class="n">end</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l61" href="#l61">61</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">500</td>
+      <td class="linecount coveredLine">250</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l62" href="#l62">62</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">860</td>
+      <td class="linecount coveredLine">430</td>
       <td class="src coveredLine"><span class="n">CFGEdge</span><span class="o">::~</span><span class="n">CFGEdge</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l63" href="#l63">63</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">860</td>
+      <td class="linecount coveredLine">430</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -570,21 +570,21 @@
       <td class="lineno"><a id="l68" href="#l68">68</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">30</td>
+      <td class="linecount coveredLine">15</td>
       <td class="src coveredLine"><span class="n">AnalysisPassBorrowChecker</span><span class="o">::</span><span class="n">AnalysisPassBorrowChecker</span><span class="p">(</span><span class="n">CompilerContext</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">_compiler_context</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l69" href="#l69">69</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">60</td>
+      <td class="linecount coveredLine">30</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">AnalysisPass</span><span class="p">(</span><span class="n">_compiler_context</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;borrow checker&quot;</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l70" href="#l70">70</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">30</td>
+      <td class="linecount coveredLine">15</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -619,7 +619,7 @@
       <td class="lineno"><a id="l75" href="#l75">75</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">30</td>
+      <td class="linecount coveredLine">15</td>
       <td class="src coveredLine"><span class="n">AnalysisPassBorrowChecker</span><span class="o">::</span><span class="n">check</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">MIR</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">mir</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
@@ -656,19 +656,19 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 7 taken 264 times.</div>
-          <div class="takenBranch">&check; Branch 8 taken 30 times.</div>
+          <div class="takenBranch">&check; Branch 7 taken 132 times.</div>
+          <div class="takenBranch">&check; Branch 8 taken 15 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">294</td>
+      <td class="linecount coveredLine">147</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mir</span><span class="p">.</span><span class="n">get_functions</span><span class="p">().</span><span class="n">get_functions</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l81" href="#l81">81</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">264</td>
+      <td class="linecount coveredLine">132</td>
       <td class="src coveredLine"><span class="w">	</span><span class="n">check</span><span class="p">(</span><span class="o">*</span><span class="n">function</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -689,7 +689,7 @@
       <td class="lineno"><a id="l84" href="#l84">84</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">30</td>
+      <td class="linecount coveredLine">15</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -703,7 +703,7 @@
       <td class="lineno"><a id="l86" href="#l86">86</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">264</td>
+      <td class="linecount coveredLine">132</td>
       <td class="src coveredLine"><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisPassBorrowChecker</span><span class="o">::</span><span class="n">check</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Function</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">function</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
@@ -731,7 +731,7 @@
       <td class="lineno"><a id="l90" href="#l90">90</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">264</td>
+      <td class="linecount coveredLine">132</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">function</span><span class="p">.</span><span class="n">get_blocks</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
@@ -745,7 +745,7 @@
       <td class="lineno"><a id="l92" href="#l92">92</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">264</td>
+      <td class="linecount coveredLine">132</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">CFGEdge</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cfg_edges</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -761,27 +761,27 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 5 taken 360 times.</div>
-          <div class="takenBranch">&check; Branch 6 taken 264 times.</div>
+          <div class="takenBranch">&check; Branch 5 taken 180 times.</div>
+          <div class="takenBranch">&check; Branch 6 taken 132 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">624</td>
+      <td class="linecount coveredLine">312</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">block_it</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">blocks</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l95" href="#l95">95</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="w">	</span><span class="k">const</span><span class="w"> </span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">block_it</span><span class="p">.</span><span class="n">second</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l96" href="#l96">96</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
-      <td class="src coveredLine"><span class="w">	</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">JLang</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Operation</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">operations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">block</span><span class="p">.</span><span class="n">get_operations</span><span class="p">();</span></td>
+      <td class="linecount coveredLine">180</td>
+      <td class="src coveredLine"><span class="w">	</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Gyoji</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Operation</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">operations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">block</span><span class="p">.</span><span class="n">get_operations</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l97" href="#l97">97</a></td>
@@ -804,11 +804,11 @@
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
           <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="takenBranch">&check; Branch 2 taken 360 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 180 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount partialCoveredLine">360</td>
+      <td class="linecount partialCoveredLine">180</td>
       <td class="src partialCoveredLine"><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">operations</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
@@ -899,21 +899,21 @@
       <td class="lineno"><a id="l112" href="#l112">112</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="w">	</span><span class="n">BasicBlockOperation</span><span class="w"> </span><span class="n">startblock</span><span class="p">(</span><span class="n">block_it</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l113" href="#l113">113</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="w">	</span><span class="n">BasicBlockOperation</span><span class="w"> </span><span class="nf">endblock</span><span class="p">(</span><span class="n">block_it</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l114" href="#l114">114</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="w">	</span><span class="n">cfg_edges</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">CFGEdge</span><span class="p">(</span><span class="n">startblock</span><span class="p">,</span><span class="w"> </span><span class="n">endblock</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
@@ -922,19 +922,19 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 6 taken 3354 times.</div>
-          <div class="takenBranch">&check; Branch 7 taken 360 times.</div>
+          <div class="takenBranch">&check; Branch 6 taken 1977 times.</div>
+          <div class="takenBranch">&check; Branch 7 taken 180 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">3714</td>
+      <td class="linecount coveredLine">2157</td>
       <td class="src coveredLine"><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">operation_ptr</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">block</span><span class="p">.</span><span class="n">get_operations</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l116" href="#l116">116</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">3354</td>
+      <td class="linecount coveredLine">1977</td>
       <td class="src coveredLine"><span class="w">	    </span><span class="k">const</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">operation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">operation_ptr</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -948,7 +948,7 @@
       <td class="lineno"><a id="l118" href="#l118">118</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">360</td>
+      <td class="linecount coveredLine">180</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -1018,7 +1018,7 @@
       <td class="lineno"><a id="l128" href="#l128">128</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">264</td>
+      <td class="linecount coveredLine">132</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">

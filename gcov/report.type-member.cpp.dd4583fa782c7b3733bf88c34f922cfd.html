@@ -19,7 +19,7 @@
   <table class="legend">
     <tr>
       <th scope="row">Directory:</th>
-      <td>src/</td>
+      <td>./</td>
     </tr>
     <tr>
       <th scope="row">File:</th>
@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2025-10-07 12:31:33</td>
+      <td>2025-10-09 15:46:52</td>
     </tr>
   </table>
 </div>
@@ -73,13 +73,13 @@
       <th>Call count</th>
       <th>Block coverage</th>
     </tr>
-    <tr><td><a href="#l19">JLang::mir::TypeMember::TypeMember(JLang::mir::TypeMember const&amp;) (line 19)</a></td><td>called 156 times, returned 156 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l8">JLang::mir::TypeMember::TypeMember(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, unsigned long, JLang::mir::Type const*, JLang::context::SourceReference const&amp;) (line 8)</a></td><td>called 42 times, returned 42 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l39">JLang::mir::TypeMember::get_index() const (line 39)</a></td><td>called 12 times, returned 12 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l30">JLang::mir::TypeMember::get_name[abi:cxx11]() const (line 30)</a></td><td>called 66 times, returned 66 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l36">JLang::mir::TypeMember::get_source_ref() const (line 36)</a></td><td>not called</td><td>0.0%</td></tr>
-    <tr><td><a href="#l33">JLang::mir::TypeMember::get_type() const (line 33)</a></td><td>called 96 times, returned 96 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l26">JLang::mir::TypeMember::~TypeMember() (line 26)</a></td><td>called 198 times, returned 198 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l19">Gyoji::mir::TypeMember::TypeMember(Gyoji::mir::TypeMember const&amp;) (line 19)</a></td><td>called 78 times, returned 78 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l8">Gyoji::mir::TypeMember::TypeMember(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, unsigned long, Gyoji::mir::Type const*, Gyoji::context::SourceReference const&amp;) (line 8)</a></td><td>called 21 times, returned 21 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l39">Gyoji::mir::TypeMember::get_index() const (line 39)</a></td><td>called 6 times, returned 6 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l30">Gyoji::mir::TypeMember::get_name[abi:cxx11]() const (line 30)</a></td><td>called 33 times, returned 33 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l36">Gyoji::mir::TypeMember::get_source_ref() const (line 36)</a></td><td>not called</td><td>0.0%</td></tr>
+    <tr><td><a href="#l33">Gyoji::mir::TypeMember::get_type() const (line 33)</a></td><td>called 48 times, returned 48 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l26">Gyoji::mir::TypeMember::~TypeMember() (line 26)</a></td><td>called 99 times, returned 99 times</td><td>100.0%</td></tr>
   </table>
 </details>
 
@@ -99,7 +99,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;jlang-mir/types.hpp&gt;</span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gyoji-mir/types.hpp&gt;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l2" href="#l2">2</a></td>
@@ -127,14 +127,14 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">context</span><span class="p">;</span></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Gyoji</span><span class="o">::</span><span class="nn">context</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l6" href="#l6">6</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">mir</span><span class="p">;</span></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Gyoji</span><span class="o">::</span><span class="nn">mir</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l7" href="#l7">7</a></td>
@@ -147,7 +147,7 @@
       <td class="lineno"><a id="l8" href="#l8">8</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">42</td>
+      <td class="linecount coveredLine">21</td>
       <td class="src coveredLine"><span class="n">TypeMember</span><span class="o">::</span><span class="n">TypeMember</span><span class="p">(</span></td>
     </tr>
     <tr class="source-line">
@@ -182,84 +182,84 @@
       <td class="lineno"><a id="l13" href="#l13">13</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">42</td>
+      <td class="linecount coveredLine">21</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">42</td>
+      <td class="linecount coveredLine">21</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">member_name</span><span class="p">(</span><span class="n">_member_name</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l15" href="#l15">15</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">42</td>
+      <td class="linecount coveredLine">21</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">(</span><span class="n">_index</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l16" href="#l16">16</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">42</td>
+      <td class="linecount coveredLine">21</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">member_type</span><span class="p">(</span><span class="n">_member_type</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l17" href="#l17">17</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">42</td>
+      <td class="linecount coveredLine">21</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">source_ref</span><span class="p">(</span><span class="o">&amp;</span><span class="n">_source_ref</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l18" href="#l18">18</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">42</td>
+      <td class="linecount coveredLine">21</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l19" href="#l19">19</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">78</td>
       <td class="src coveredLine"><span class="n">TypeMember</span><span class="o">::</span><span class="n">TypeMember</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">TypeMember</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l20" href="#l20">20</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">78</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">member_name</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">member_name</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">78</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">index</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l22" href="#l22">22</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">78</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">member_type</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">member_type</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">78</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">source_ref</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">source_ref</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">78</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -273,14 +273,14 @@
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">198</td>
+      <td class="linecount coveredLine">99</td>
       <td class="src coveredLine"><span class="n">TypeMember</span><span class="o">::~</span><span class="n">TypeMember</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l27" href="#l27">27</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">198</td>
+      <td class="linecount coveredLine">99</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -301,14 +301,14 @@
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">66</td>
+      <td class="linecount coveredLine">33</td>
       <td class="src coveredLine"><span class="n">TypeMember</span><span class="o">::</span><span class="n">get_name</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">66</td>
+      <td class="linecount coveredLine">33</td>
       <td class="src coveredLine"><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">member_name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -322,14 +322,14 @@
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">96</td>
+      <td class="linecount coveredLine">48</td>
       <td class="src coveredLine"><span class="n">TypeMember</span><span class="o">::</span><span class="n">get_type</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l34" href="#l34">34</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">96</td>
+      <td class="linecount coveredLine">48</td>
       <td class="src coveredLine"><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">member_type</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -337,7 +337,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">JLang</span><span class="o">::</span><span class="n">context</span><span class="o">::</span><span class="n">SourceReference</span><span class="w"> </span><span class="o">&amp;</span></td>
+      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">Gyoji</span><span class="o">::</span><span class="n">context</span><span class="o">::</span><span class="n">SourceReference</span><span class="w"> </span><span class="o">&amp;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l36" href="#l36">36</a></td>
@@ -364,14 +364,14 @@
       <td class="lineno"><a id="l39" href="#l39">39</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">12</td>
+      <td class="linecount coveredLine">6</td>
       <td class="src coveredLine"><span class="n">TypeMember</span><span class="o">::</span><span class="n">get_index</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l40" href="#l40">40</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">12</td>
+      <td class="linecount coveredLine">6</td>
       <td class="src coveredLine"><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">index</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">

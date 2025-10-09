@@ -1,5 +1,0 @@
-<map id="JLang::mir::OperationSymbol" name="JLang::mir::OperationSymbol">
-<area shape="rect" id="Node000001" title="Symbol&#45;table lookup." alt="" coords="5,79,213,104"/>
-<area shape="rect" id="Node000002" href="$classJLang_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="30,5,189,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,44,112,79,107,79,107,44"/>
-</map>

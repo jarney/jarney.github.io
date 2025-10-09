@@ -1,0 +1,7 @@
+<map id="Gyoji::mir::OperationArrayIndex" name="Gyoji::mir::OperationArrayIndex">
+<area shape="rect" id="Node000001" title="This subclass of OperationBinary represents indexing an array." alt="" coords="9,152,202,192"/>
+<area shape="rect" id="Node000002" href="$classGyoji_1_1mir_1_1OperationBinary.html" title="This subclass of Operation represents a binary operation." alt="" coords="5,79,205,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,118,108,152,103,152,103,118"/>
+<area shape="rect" id="Node000003" href="$classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="26,5,185,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,44,108,79,103,79,103,44"/>
+</map>

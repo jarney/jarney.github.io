@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JLang Compiler: The Gyoji programming language</title>
+<title>Gyoji Compiler: &lt;a href=&quot;https://jarney.github.io/&quot; &gt;The Gyoji programming language&lt;/a&gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">JLang Compiler
+   <div id="projectname">Gyoji Compiler
    </div>
   </td>
  </tr>
@@ -70,20 +70,20 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">The Gyoji programming language</div></div>
+  <div class="headertitle"><div class="title">&lt;a href="https://jarney.github.io/" &gt;The Gyoji programming language&lt;/a&gt;</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md2"></a> </p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 What</h1>
-<p>Ths Gyoji programming language is intended to be a memory-safe low-level, general-purpose programming language. It is intended to be safer than C, and offer high-level features of C++ without the un-neccessary complexity. It is also intended to use many concepts from Rust like the borrow-checker without going "too far" and making too many assumptions about the "standard" library, the environment, or the way it should be used.</p>
+<p>Ths <a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> programming language is intended to be a memory-safe low-level, general-purpose programming language. It is intended to be safer than C, and offer high-level features of C++ without the un-neccessary complexity. It is also intended to use many concepts from Rust like the borrow-checker without going "too far" and making too many assumptions about the "standard" library, the environment, or the way it should be used.</p>
 <p>It uses the C ABI (largely thanks to LLVM) and does NOT introduce exceptions or other constructs which would break ABI compatibility. It does NOT ever "panic" or halt execution without the programmer's explicit instruction to do so.</p>
 <p>The syntax will be "familiar" to users of C, Java, C++, borrowing many ideas from prior art, but is not intended to be backward-compatible with any of them.</p>
 <h1><a class="anchor" id="autotoc_md4"></a>
 What it is NOT</h1>
-<p>Gyoji is a programming language and NOT a build system. Discovering dependencies and compiling software is NOT the responsibility of a programming language. This is a question of separation of concerns and the language is intended to stand on its own as a programming language which is a set of instructions designed to tell a computer how to operate.</p>
-<p>Gyoji is also not a package manager. Packaging and distributing source and object code is a separate concern also. While the compiler does produce binary code, the responsibility lies elsewhere in organizing the results of the compilation for distribution. There are many fine examples of package managers and one need not have a new package manager for every programming language. Gyoji makes no assumptions or restrictions on what package management techniques to use.</p>
-<p>Gyoji is also not a standard library. While there is (or soon will be) a set of libraries written in the Gyoji library to perform certain tasks, it is not the responsibility of a programming language to prescribe things like lists, maps, sets, or algorithms. Those can be expressed in the Gyoji language and the language itself makes no assumptions about what libraries are and are not used. Again, this is a separation of concerns argument that allows the language to be general-purpose.</p>
+<p><a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> is a programming language and NOT a build system. Discovering dependencies and compiling software is NOT the responsibility of a programming language. This is a question of separation of concerns and the language is intended to stand on its own as a programming language which is a set of instructions designed to tell a computer how to operate.</p>
+<p><a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> is also not a package manager. Packaging and distributing source and object code is a separate concern also. While the compiler does produce binary code, the responsibility lies elsewhere in organizing the results of the compilation for distribution. There are many fine examples of package managers and one need not have a new package manager for every programming language. <a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> makes no assumptions or restrictions on what package management techniques to use.</p>
+<p><a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> is also not a standard library. While there is (or soon will be) a set of libraries written in the <a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> library to perform certain tasks, it is not the responsibility of a programming language to prescribe things like lists, maps, sets, or algorithms. Those can be expressed in the <a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> language and the language itself makes no assumptions about what libraries are and are not used. Again, this is a separation of concerns argument that allows the language to be general-purpose.</p>
 <p>While it is ABI compatible with C (i.e. you can call back and forth between them), it is NOT syntax-compatible. (i.e. you can't just compile a random C file with it even though much of the syntax matches up pretty well). It is a NON-goal to be a "drop-in" replacement for GCC or CLANG.</p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Why?</h1>

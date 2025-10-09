@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['namespace_0',['Namespace',['../classJLang_1_1frontend_1_1namespaces_1_1Namespace.html',1,'JLang::frontend::namespaces']]],
-  ['namespacecontext_1',['NamespaceContext',['../classJLang_1_1frontend_1_1namespaces_1_1NamespaceContext.html',1,'JLang::frontend::namespaces']]],
-  ['namespacefoundreason_2',['NamespaceFoundReason',['../classJLang_1_1frontend_1_1namespaces_1_1NamespaceFoundReason.html',1,'JLang::frontend::namespaces']]],
+  ['namespace_0',['Namespace',['../classGyoji_1_1frontend_1_1namespaces_1_1Namespace.html',1,'Gyoji::frontend::namespaces']]],
+  ['namespacecontext_1',['NamespaceContext',['../classGyoji_1_1frontend_1_1namespaces_1_1NamespaceContext.html',1,'Gyoji::frontend::namespaces']]],
+  ['namespacefoundreason_2',['NamespaceFoundReason',['../classGyoji_1_1frontend_1_1namespaces_1_1NamespaceFoundReason.html',1,'Gyoji::frontend::namespaces']]],
   ['negate_3',['negate',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a06774.html',1,'std']]],
   ['negate_3c_20void_20_3e_4',['negate&lt; void &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a06798.html',1,'std']]],
   ['negative_5fbinomial_5fdistribution_5',['negative_binomial_distribution',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a05578.html',1,'std']]],

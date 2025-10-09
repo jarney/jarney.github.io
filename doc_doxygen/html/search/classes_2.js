@@ -33,7 +33,7 @@ var searchData=
   ['basic_5fstring_5fview_30',['basic_string_view',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02950.html',1,'std::basic_string_view&lt; typename _CharT, typename _Traits &gt;'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a10658.html',1,'std::experimental::fundamentals_v1::basic_string_view&lt; typename _CharT, typename _Traits &gt;']]],
   ['basic_5fstringbuf_31',['basic_stringbuf',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02670.html',1,'std']]],
   ['basic_5fstringstream_32',['basic_stringstream',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02682.html',1,'std']]],
-  ['basicblock_33',['BasicBlock',['../classJLang_1_1mir_1_1BasicBlock.html',1,'JLang::mir']]],
+  ['basicblock_33',['BasicBlock',['../classGyoji_1_1mir_1_1BasicBlock.html',1,'Gyoji::mir']]],
   ['basicblockoperation_34',['BasicBlockOperation',['../classBasicBlockOperation.html',1,'']]],
   ['bernoulli_5fdistribution_35',['bernoulli_distribution',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a05554.html',1,'std']]],
   ['bidirectional_5fiterator_5ftag_36',['bidirectional_iterator_tag',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07190.html',1,'std']]],

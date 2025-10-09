@@ -1,5 +1,0 @@
-<map id="JLang::frontend::tree::TypeSpecifierSimple" name="JLang::frontend::tree::TypeSpecifierSimple">
-<area shape="rect" id="Node000001" title="Represents a simple type." alt="" coords="5,93,167,133"/>
-<area shape="rect" id="Node000002" href="$classJLang_1_1frontend_1_1ast_1_1SyntaxNode.html" title=" " alt="" coords="12,5,160,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,59,89,93,83,93,83,59"/>
-</map>

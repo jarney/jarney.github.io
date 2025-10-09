@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['accessmodifier_0',['AccessModifier',['../classJLang_1_1frontend_1_1tree_1_1AccessModifier.html',1,'JLang::frontend::tree']]],
-  ['accessqualifier_1',['AccessQualifier',['../classJLang_1_1frontend_1_1tree_1_1AccessQualifier.html',1,'JLang::frontend::tree']]],
+  ['accessmodifier_0',['AccessModifier',['../classGyoji_1_1frontend_1_1tree_1_1AccessModifier.html',1,'Gyoji::frontend::tree']]],
+  ['accessqualifier_1',['AccessQualifier',['../classGyoji_1_1frontend_1_1tree_1_1AccessQualifier.html',1,'Gyoji::frontend::tree']]],
   ['add_5fconst_2',['add_const',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a03526.html',1,'std']]],
   ['add_5fcv_3',['add_cv',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a03534.html',1,'std']]],
   ['add_5flvalue_5freference_4',['add_lvalue_reference',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a03550.html',1,'std']]],
@@ -18,10 +18,10 @@ var searchData=
   ['allocator_5ftraits_3c_20allocator_3c_20void_20_3e_20_3e_15',['allocator_traits&lt; allocator&lt; void &gt; &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a03810.html',1,'std']]],
   ['allocator_5ftraits_3c_20pmr_3a_3apolymorphic_5fallocator_3c_20_5ftp_20_3e_20_3e_16',['allocator_traits&lt; pmr::polymorphic_allocator&lt; _Tp &gt; &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a05146.html',1,'std']]],
   ['always_5fadjustor_17',['always_adjustor',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a11178.html',1,'__gnu_cxx::limit_condition::always_adjustor'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a11202.html',1,'__gnu_cxx::random_condition::always_adjustor']]],
-  ['analysispassunreachable_18',['AnalysisPassUnreachable',['../classJLang_1_1analysis_1_1AnalysisPassUnreachable.html',1,'JLang::analysis']]],
+  ['analysispassunreachable_18',['AnalysisPassUnreachable',['../classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html',1,'Gyoji::analysis']]],
   ['annotate_5fbase_19',['annotate_base',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a11158.html',1,'__gnu_cxx']]],
   ['any_20',['any',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a10482.html',1,'std::experimental::fundamentals_v1']]],
-  ['argument_21',['Argument',['../classJLang_1_1mir_1_1Argument.html',1,'JLang::mir']]],
+  ['argument_21',['Argument',['../classGyoji_1_1mir_1_1Argument.html',1,'Gyoji::mir']]],
   ['array_22',['array',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01918.html',1,'std']]],
   ['associative_5ftag_23',['associative_tag',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a11698.html',1,'__gnu_pbds']]],
   ['atomic_24',['atomic',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01934.html',1,'std']]],

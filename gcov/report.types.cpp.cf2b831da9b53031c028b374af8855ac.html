@@ -19,7 +19,7 @@
   <table class="legend">
     <tr>
       <th scope="row">Directory:</th>
-      <td>src/</td>
+      <td>./</td>
     </tr>
     <tr>
       <th scope="row">File:</th>
@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2025-10-07 12:31:33</td>
+      <td>2025-10-09 15:46:52</td>
     </tr>
   </table>
 </div>
@@ -73,15 +73,15 @@
       <th>Call count</th>
       <th>Block coverage</th>
     </tr>
-    <tr><td><a href="#l14">JLang::mir::Types::Types() (line 14)</a></td><td>called 32 times, returned 32 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l97">JLang::mir::Types::define_type(std::unique_ptr&lt;JLang::mir::Type, std::default_delete&lt;JLang::mir::Type&gt; &gt;) (line 97)</a></td><td>called 598 times, returned 598 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l109">JLang::mir::Types::dump(_IO_FILE*) const (line 109)</a></td><td>called 32 times, returned 32 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l81">JLang::mir::Types::get_array_of(JLang::mir::Type const*, unsigned long, JLang::context::SourceReference const&amp;) (line 81)</a></td><td>called 2 times, returned 2 times</td><td>97.0%</td></tr>
-    <tr><td><a href="#l50">JLang::mir::Types::get_pointer_to(JLang::mir::Type const*, JLang::context::SourceReference const&amp;) (line 50)</a></td><td>called 144 times, returned 144 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l65">JLang::mir::Types::get_reference_to(JLang::mir::Type const*, JLang::context::SourceReference const&amp;) (line 65)</a></td><td>called 8 times, returned 8 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l41">JLang::mir::Types::get_type(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;) const (line 41)</a></td><td>called 2750 times, returned 2750 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l104">JLang::mir::Types::get_types[abi:cxx11]() const (line 104)</a></td><td>called 104 times, returned 104 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l37">JLang::mir::Types::~Types() (line 37)</a></td><td>called 32 times, returned 32 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l14">Gyoji::mir::Types::Types() (line 14)</a></td><td>called 16 times, returned 16 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l97">Gyoji::mir::Types::define_type(std::unique_ptr&lt;Gyoji::mir::Type, std::default_delete&lt;Gyoji::mir::Type&gt; &gt;) (line 97)</a></td><td>called 299 times, returned 299 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l109">Gyoji::mir::Types::dump(_IO_FILE*) const (line 109)</a></td><td>called 16 times, returned 16 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l81">Gyoji::mir::Types::get_array_of(Gyoji::mir::Type const*, unsigned long, Gyoji::context::SourceReference const&amp;) (line 81)</a></td><td>called 1 time, returned 1 time</td><td>97.0%</td></tr>
+    <tr><td><a href="#l50">Gyoji::mir::Types::get_pointer_to(Gyoji::mir::Type const*, Gyoji::context::SourceReference const&amp;) (line 50)</a></td><td>called 72 times, returned 72 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l65">Gyoji::mir::Types::get_reference_to(Gyoji::mir::Type const*, Gyoji::context::SourceReference const&amp;) (line 65)</a></td><td>called 4 times, returned 4 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l41">Gyoji::mir::Types::get_type(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;) const (line 41)</a></td><td>called 1376 times, returned 1376 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l104">Gyoji::mir::Types::get_types[abi:cxx11]() const (line 104)</a></td><td>called 52 times, returned 52 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l37">Gyoji::mir::Types::~Types() (line 37)</a></td><td>called 16 times, returned 16 times</td><td>100.0%</td></tr>
   </table>
 </details>
 
@@ -101,7 +101,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;jlang-mir/types.hpp&gt;</span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gyoji-mir/types.hpp&gt;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l2" href="#l2">2</a></td>
@@ -129,14 +129,14 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">context</span><span class="p">;</span></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Gyoji</span><span class="o">::</span><span class="nn">context</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l6" href="#l6">6</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">JLang</span><span class="o">::</span><span class="nn">mir</span><span class="p">;</span></td>
+      <td class="src "><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Gyoji</span><span class="o">::</span><span class="nn">mir</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l7" href="#l7">7</a></td>
@@ -191,7 +191,7 @@
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">Types</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
@@ -233,28 +233,28 @@
       <td class="lineno"><a id="l20" href="#l20">20</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;i8&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_i8</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;i16&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_i16</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l22" href="#l22">22</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;i32&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_i32</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;i64&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_i64</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
@@ -268,28 +268,28 @@
       <td class="lineno"><a id="l25" href="#l25">25</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;u8&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_u8</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;u16&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_u16</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l27" href="#l27">27</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;u32&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_u32</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l28" href="#l28">28</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;u64&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_u64</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
@@ -303,14 +303,14 @@
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;f32&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_f32</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;f64&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_f64</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
@@ -324,21 +324,21 @@
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;bool&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_bool</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l34" href="#l34">34</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;void&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_PRIMITIVE_void</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">zero_source_ref</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l35" href="#l35">35</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -352,14 +352,14 @@
       <td class="lineno"><a id="l37" href="#l37">37</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="n">Types</span><span class="o">::~</span><span class="n">Types</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l38" href="#l38">38</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -380,7 +380,7 @@
       <td class="lineno"><a id="l41" href="#l41">41</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2750</td>
+      <td class="linecount coveredLine">1376</td>
       <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">get_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
@@ -394,7 +394,7 @@
       <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2750</td>
+      <td class="linecount coveredLine">1376</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">type_map</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">type</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -403,19 +403,19 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 2 taken 190 times.</div>
-          <div class="takenBranch">&check; Branch 3 taken 2560 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 95 times.</div>
+          <div class="takenBranch">&check; Branch 3 taken 1281 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">2750</td>
+      <td class="linecount coveredLine">1376</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">type_map</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l45" href="#l45">45</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">190</td>
+      <td class="linecount coveredLine">95</td>
       <td class="src coveredLine"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -429,7 +429,7 @@
       <td class="lineno"><a id="l47" href="#l47">47</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2560</td>
+      <td class="linecount coveredLine">1281</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">get</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
@@ -450,7 +450,7 @@
       <td class="lineno"><a id="l50" href="#l50">50</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">144</td>
+      <td class="linecount coveredLine">72</td>
       <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">get_pointer_to</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">_type</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SourceReference</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">src_ref</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
@@ -464,14 +464,14 @@
       <td class="lineno"><a id="l52" href="#l52">52</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">144</td>
+      <td class="linecount coveredLine">72</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">pointer_type_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_type</span><span class="o">-&gt;</span><span class="n">get_name</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l53" href="#l53">53</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">144</td>
+      <td class="linecount coveredLine">72</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="o">*</span><span class="w"> </span><span class="n">pointer_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_type</span><span class="p">(</span><span class="n">pointer_type_name</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -480,19 +480,19 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 74 times.</div>
-          <div class="takenBranch">&check; Branch 1 taken 70 times.</div>
+          <div class="takenBranch">&check; Branch 0 taken 37 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 35 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">144</td>
+      <td class="linecount coveredLine">72</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pointer_type</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l55" href="#l55">55</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">74</td>
+      <td class="linecount coveredLine">37</td>
       <td class="src coveredLine"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">pointer_type</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -506,42 +506,42 @@
       <td class="lineno"><a id="l57" href="#l57">57</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">70</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">JLang</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pointer_owned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pointer_type_name</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_POINTER</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
+      <td class="linecount coveredLine">35</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">Gyoji</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pointer_owned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pointer_type_name</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_POINTER</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l58" href="#l58">58</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">70</td>
+      <td class="linecount coveredLine">35</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">pointer_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pointer_owned</span><span class="p">.</span><span class="n">get</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l59" href="#l59">59</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">70</td>
+      <td class="linecount coveredLine">35</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">pointer_owned</span><span class="o">-&gt;</span><span class="n">complete_pointer_definition</span><span class="p">(</span><span class="n">_type</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l60" href="#l60">60</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">70</td>
+      <td class="linecount coveredLine">35</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">pointer_owned</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l61" href="#l61">61</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">70</td>
+      <td class="linecount coveredLine">35</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">pointer_type</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l62" href="#l62">62</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">144</td>
+      <td class="linecount coveredLine">72</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -562,7 +562,7 @@
       <td class="lineno"><a id="l65" href="#l65">65</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">8</td>
+      <td class="linecount coveredLine">4</td>
       <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">get_reference_to</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">_type</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SourceReference</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">src_ref</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
@@ -576,7 +576,7 @@
       <td class="lineno"><a id="l67" href="#l67">67</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">8</td>
+      <td class="linecount coveredLine">4</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">pointer_type_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_type</span><span class="o">-&gt;</span><span class="n">get_name</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;&amp;&quot;</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -590,7 +590,7 @@
       <td class="lineno"><a id="l69" href="#l69">69</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">8</td>
+      <td class="linecount coveredLine">4</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="o">*</span><span class="w"> </span><span class="n">pointer_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_type</span><span class="p">(</span><span class="n">pointer_type_name</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -599,19 +599,19 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
-          <div class="takenBranch">&check; Branch 1 taken 6 times.</div>
+          <div class="takenBranch">&check; Branch 0 taken 1 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 3 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">8</td>
+      <td class="linecount coveredLine">4</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pointer_type</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l71" href="#l71">71</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
+      <td class="linecount coveredLine">1</td>
       <td class="src coveredLine"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">pointer_type</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -625,42 +625,42 @@
       <td class="lineno"><a id="l73" href="#l73">73</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">6</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">JLang</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pointer_owned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pointer_type_name</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_REFERENCE</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
+      <td class="linecount coveredLine">3</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">Gyoji</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pointer_owned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pointer_type_name</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_REFERENCE</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l74" href="#l74">74</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">6</td>
+      <td class="linecount coveredLine">3</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">pointer_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pointer_owned</span><span class="p">.</span><span class="n">get</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l75" href="#l75">75</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">6</td>
+      <td class="linecount coveredLine">3</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">pointer_owned</span><span class="o">-&gt;</span><span class="n">complete_pointer_definition</span><span class="p">(</span><span class="n">_type</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l76" href="#l76">76</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">6</td>
+      <td class="linecount coveredLine">3</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">pointer_owned</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l77" href="#l77">77</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">6</td>
+      <td class="linecount coveredLine">3</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">pointer_type</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l78" href="#l78">78</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">8</td>
+      <td class="linecount coveredLine">4</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -681,7 +681,7 @@
       <td class="lineno"><a id="l81" href="#l81">81</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
+      <td class="linecount coveredLine">1</td>
       <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">get_array_of</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">_type</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">_length</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SourceReference</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">src_ref</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
@@ -695,7 +695,7 @@
       <td class="lineno"><a id="l83" href="#l83">83</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">6</td>
+      <td class="linecount coveredLine">3</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">array_type_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_type</span><span class="o">-&gt;</span><span class="n">get_name</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">_length</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;]&quot;</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -709,7 +709,7 @@
       <td class="lineno"><a id="l85" href="#l85">85</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
+      <td class="linecount coveredLine">1</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="o">*</span><span class="w"> </span><span class="n">array_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_type</span><span class="p">(</span><span class="n">array_type_name</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -719,11 +719,11 @@
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
           <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
-          <div class="takenBranch">&check; Branch 1 taken 2 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 1 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount partialCoveredLine">2</td>
+      <td class="linecount partialCoveredLine">1</td>
       <td class="src partialCoveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">array_type</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
@@ -744,42 +744,42 @@
       <td class="lineno"><a id="l89" href="#l89">89</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">JLang</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">array_owned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">array_type_name</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_ARRAY</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
+      <td class="linecount coveredLine">1</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">Gyoji</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">array_owned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">array_type_name</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="o">::</span><span class="n">TYPE_ARRAY</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l90" href="#l90">90</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
+      <td class="linecount coveredLine">1</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">array_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array_owned</span><span class="p">.</span><span class="n">get</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l91" href="#l91">91</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
+      <td class="linecount coveredLine">1</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">array_owned</span><span class="o">-&gt;</span><span class="n">complete_array_definition</span><span class="p">(</span><span class="n">_type</span><span class="p">,</span><span class="w"> </span><span class="n">_length</span><span class="p">,</span><span class="w"> </span><span class="n">src_ref</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l92" href="#l92">92</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
+      <td class="linecount coveredLine">1</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">define_type</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">array_owned</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l93" href="#l93">93</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
+      <td class="linecount coveredLine">1</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">array_type</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l94" href="#l94">94</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2</td>
+      <td class="linecount coveredLine">1</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -800,8 +800,8 @@
       <td class="lineno"><a id="l97" href="#l97">97</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">598</td>
-      <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">define_type</span><span class="p">(</span><span class="n">JLang</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></td>
+      <td class="linecount coveredLine">299</td>
+      <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">define_type</span><span class="p">(</span><span class="n">Gyoji</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l98" href="#l98">98</a></td>
@@ -814,21 +814,21 @@
       <td class="lineno"><a id="l99" href="#l99">99</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">598</td>
+      <td class="linecount coveredLine">299</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">type</span><span class="o">-&gt;</span><span class="n">get_name</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l100" href="#l100">100</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">598</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">type_map</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">JLang</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">type_name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">type</span><span class="p">)));</span></td>
+      <td class="linecount coveredLine">299</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">type_map</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Gyoji</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">type_name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">type</span><span class="p">)));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l101" href="#l101">101</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">598</td>
+      <td class="linecount coveredLine">299</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -843,20 +843,20 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">JLang</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span></td>
+      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Gyoji</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l104" href="#l104">104</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">104</td>
+      <td class="linecount coveredLine">52</td>
       <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">get_types</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l105" href="#l105">105</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">104</td>
+      <td class="linecount coveredLine">52</td>
       <td class="src coveredLine"><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">type_map</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -884,7 +884,7 @@
       <td class="lineno"><a id="l109" href="#l109">109</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="n">Types</span><span class="o">::</span><span class="n">dump</span><span class="p">(</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
@@ -900,19 +900,19 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 5 taken 598 times.</div>
-          <div class="takenBranch">&check; Branch 6 taken 32 times.</div>
+          <div class="takenBranch">&check; Branch 5 taken 299 times.</div>
+          <div class="takenBranch">&check; Branch 6 taken 16 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">630</td>
+      <td class="linecount coveredLine">315</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">type_map</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l112" href="#l112">112</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">598</td>
+      <td class="linecount coveredLine">299</td>
       <td class="src coveredLine"><span class="w">	</span><span class="n">t</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -926,7 +926,7 @@
       <td class="lineno"><a id="l114" href="#l114">114</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32</td>
+      <td class="linecount coveredLine">16</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">

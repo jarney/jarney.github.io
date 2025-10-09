@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gyoji Programming Language</title>
+</head>
+<body>
+
+<div class="sidenav">
+  <h1><a href="index.html">About</a></h1>
+  <h1><a href="examples.html">Examples</a></h1>
+  <h1><a href="https://github.com/jarney/gyoji">Source Code</a></h1>
+  <h1><a href="architecture.html">Architecture</a></h1>
+  <h1><a href="help-wanted.html">Help Wanted</a></h1>
+  <h1><a href="goals.html">Goals</a></h1>
+  <h1><a href="doxygen.html">Doxygen</a></h1>
+  <h1><a href="code-coverage.html">Code Coverage</a></h1>
+  <h1><a href="support.html">Support</a></h1>
+</div>
+
+<div class="main">
+  <h1>Gyoji Programming Language</h1>
+<h2>Examples</h2>
+
+Learning languages is best done by example.  The
+following code fragments illustrate the constructs
+supported by the language and describe some of the
+differences between Gyoji and other programming
+languages like C, Java, C++, and Rust since they
+are the most comparable.
+
+<h3>Hello World</h3>
+<p>
+  Let's get this out of the way.  How do
+  you make hello world?
+</p>
+
+<p>
+  Gyoji does not have a standard library, so all
+  function calls like "strlen" and "write" rely on
+  the C standard library or other libraries.  This
+  is not a limitation, instead, this makes the
+  language usable in a number of environments which
+  would otherwise be unsuitable because it can produce
+  valid code even with no dependencies.
+</p>
+
+<pre>
+u32 strlen(u8*);
+u32 write(u32 fd, u8* data, u32 size);
+
+u32 main(u32 argc, u8** argv)
+{
+    u8* s = "Hello World\n";
+    write(0, s, strlen(s));
+    return 0;
+}
+</pre>
+
+<p>
+  The first think you may notice about this is the type
+  declarations.  Instead of the C, Java, C++ declarations
+  of 'int' and 'unsigned int', Gyoji is explicit about the
+  numeric boundaries of the nubmers you can declare.
+  This is done so that there is no question about the size
+  of declarations or what the allowed values are.
+</p>
+
+<p>
+  Lines 1,2 declare external C functions that perform
+  a string length and write to stdout respectively.
+</p>
+<p>
+  Line 4 starts the declaration of a standard C main function.
+  The signature is equivalent to the "int main(int argc, char **argv)"
+  that is used in C and C++.  Unlike Java, however, it requires
+  a return-value so that the program can easily signal to the OS
+  the exit status.
+</p>
+<p>
+  The Line 6 declares a string literal which will be placed
+  in the data segment of the program and "s" will be a pointer
+  to a u8 (char) at that location.
+</p>
+<p>
+  Line 7 makes a function call to the Posix "write" function
+  which takes a file descriptor (0) and writes to it
+  the value pointed to by 's' for the number of bytes
+  given by the "strlen" function.
+</p>
+<p>
+  Line 8 returns from the function and ends execution.
+</p>
+
+<h3>Conditionals</h3>
+Any programming language needs the ability to make
+decisions.  This is done in the familiar style of C
+and C++, but with a twist.  
+
+<pre>
+  u32 a = 2;
+  if (a == 2u32) {
+      // do something if the expression is true.
+  }
+</pre>
+
+<p>
+  The twist here is that the expression inside the "if" statement
+  MUST evaluate to a "bool" value.  That is, the practice in C and C++
+  of passing integers and pointers to 'if' directly is forbidden.
+</p>
+
+<pre>
+  u32 a = 2;
+  if (a) { // This is an error because a is a u32 and not a bool.
+      // do something if the expression is true.
+  }
+</pre>
+
+<p>
+  This choice was made to ensure that it is always
+  clear when the statement will execute and eliminates
+  sometimes unknown or unforeseen "casts" to different types
+  which could affect control-flow.  Consider a C++ block
+  which has an implicit constructor that allows conversion of
+  an class to a bool.  Calling this cast operation may not
+  be obvious and may not be what a reader of the code
+  would expect.
+</p>
+
+<pre>
+  // Foo contains a cast to int.
+  class Foo {
+       operator int() const { return 1; }
+  };
+  ...
+  Foo f;
+  if (f) {  // It's not obvious that this calls a function
+      // Do something
+  }
+</pre>
+
+<p>
+  Rather than doing something unexpected, it is worthwhile to avoid
+  such accidents and keep the langugage minimal in the process,
+  so this type of thing just isn't allowed.
+</p>
+
+<p>
+  In addition, let's consider another fragment of C that is invalid
+  in Gyoji.  if statements (and most conditionals) REQUIRE curly-braces
+  in order to work.  This removes the so-called "dangling else" ambiguity
+  of the langugage and prevents mistakes that are pretty common in
+  C and C++:
+</p>
+
+This is not allowed.  If you don't read carefully, you may miss the fact
+that the "return" here is actually unconditional.  It's easy to miss that
+fact because it's indended (unfortunately).  While we don't go so far
+as to enforce indentation like Python, we do at least prevent this type
+of accident by requiring "{}" around the conditional statements.
+<pre>
+  if (condition)
+      print("Hello");
+      return 5;
+</pre>
+
+<h2>While loops</h2>
+
+<p>
+Again, like C and C++, while loops are allowed
+and function pretty much the same except that like 'if'
+statements, the condition in the 'while' must evaluate
+to a 'bool' value.  For all of the same reasons as 'if',
+no implicit casting is allowed.
+</p>
+
+<p>
+  This example also shows off some numeric operations.  The '+,-,*,/,%' operators
+  work pretty much exactly as they do in C.  Also, there are operators like '&gt;&gt;', '&lt;&lt;',
+  '|', '^', '&amp;', '&amp;&amp' and pretty much the whole complement of
+  binary operations complete with the usual precedence rules.
+</p>
+  
+
+<pre>
+u32 print_value(u32 number);
+
+u32 main(u32 argc, u8**argv)
+{
+    u32 a = 4u32;
+
+    while (a < 10) {
+        if ((a % 2) == 0) {
+            print_value(a);
+        }
+        else {
+            print_value(17u32);
+        }
+        if (a == 6) {
+            print_value(0xffff);
+            break;
+        }
+    }
+    return 0;
+}
+</pre>
+                   
+
+<h3>For loops</h3>
+<p>
+  One of the basic features of any
+  programming language is the ability to
+  loop over some range.  Gyoji uses
+  essentially the same syntax as C, Java,
+  and C++ for this task.  Iteration over
+  containers and collections is not supported
+  although this may be supported in future.
+</p>
+<pre>
+u32 print_value(u32 number);
+
+u32 main(u32 argc, u8**argv)
+{
+        for (u32 a = 0; a < 20; a += 2) {
+            print_value(a);
+        }
+}  
+</pre>
+  </body>
+</html>

@@ -1,5 +1,0 @@
-<map id="JLang::frontend::tree::TypeSpecifierPointerTo" name="JLang::frontend::tree::TypeSpecifierPointerTo">
-<area shape="rect" id="Node000001" title="Represents an unsafe poniter to a specific type." alt="" coords="5,93,181,133"/>
-<area shape="rect" id="Node000002" href="$classJLang_1_1frontend_1_1ast_1_1SyntaxNode.html" title=" " alt="" coords="19,5,167,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,59,96,93,91,93,91,59"/>
-</map>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JLang Compiler: /home/jona/NetBeansProjects/jos/compiler/jlang2/src/misc/jlang-misc/input-source-file.hpp Source File</title>
+<title>Gyoji Compiler: /home/jona/NetBeansProjects/jos/compiler/jlang2/src/misc/gyoji-misc/input-source-file.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">JLang Compiler
+   <div id="projectname">Gyoji Compiler
    </div>
   </td>
  </tr>
@@ -75,26 +75,26 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_88826aa2a10e1882b573f502bc7f4b55.html">misc</a></li><li class="navelem"><a class="el" href="dir_fa9d8435aa47ab592f754f365fb6b0b8.html">jlang-misc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_88826aa2a10e1882b573f502bc7f4b55.html">misc</a></li><li class="navelem"><a class="el" href="dir_3fdc37345a3c661b481096bde3374569.html">gyoji-misc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">input-source-file.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;jlang-misc/input-source.hpp&gt;</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;gyoji-misc/input-source.hpp&gt;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>JLang::misc {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>Gyoji::misc {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classJLang_1_1misc_1_1InputSourceFile.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classJLang_1_1misc_1_1InputSourceFile.html">InputSourceFile</a> : <span class="keyword">public</span> <a class="code hl_class" href="classJLang_1_1misc_1_1InputSource.html">InputSource</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classGyoji_1_1misc_1_1InputSourceFile.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1misc_1_1InputSourceFile.html">InputSourceFile</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyoji_1_1misc_1_1InputSource.html">InputSource</a> {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="classJLang_1_1misc_1_1InputSourceFile.html">InputSourceFile</a>(<span class="keywordtype">int</span> _fd);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="classJLang_1_1misc_1_1InputSourceFile.html#a30db6d30ad34865ff4fa1f0e479f1ba8">~InputSourceFile</a>();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classJLang_1_1misc_1_1InputSourceFile.html#ad4663c29a523e3032ff7727fb4b4967d">read</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> &amp;result, <span class="keywordtype">int</span> max_size);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="classGyoji_1_1misc_1_1InputSourceFile.html">InputSourceFile</a>(<span class="keywordtype">int</span> _fd);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="classGyoji_1_1misc_1_1InputSourceFile.html#a30db6d30ad34865ff4fa1f0e479f1ba8">~InputSourceFile</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGyoji_1_1misc_1_1InputSourceFile.html#ad4663c29a523e3032ff7727fb4b4967d">read</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> &amp;result, <span class="keywordtype">int</span> max_size);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> fd;</div>
@@ -102,10 +102,10 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
-<div class="ttc" id="aclassJLang_1_1misc_1_1InputSourceFile_html"><div class="ttname"><a href="classJLang_1_1misc_1_1InputSourceFile.html">JLang::misc::InputSourceFile</a></div><div class="ttdoc">This is an input source for files.</div><div class="ttdef"><b>Definition</b> input-source-file.hpp:16</div></div>
-<div class="ttc" id="aclassJLang_1_1misc_1_1InputSourceFile_html_a30db6d30ad34865ff4fa1f0e479f1ba8"><div class="ttname"><a href="classJLang_1_1misc_1_1InputSourceFile.html#a30db6d30ad34865ff4fa1f0e479f1ba8">JLang::misc::InputSourceFile::~InputSourceFile</a></div><div class="ttdeci">~InputSourceFile()</div><div class="ttdoc">Move along, nothing to see here.</div><div class="ttdef"><b>Definition</b> input-source-file.cpp:10</div></div>
-<div class="ttc" id="aclassJLang_1_1misc_1_1InputSourceFile_html_ad4663c29a523e3032ff7727fb4b4967d"><div class="ttname"><a href="classJLang_1_1misc_1_1InputSourceFile.html#ad4663c29a523e3032ff7727fb4b4967d">JLang::misc::InputSourceFile::read</a></div><div class="ttdeci">void read(char *buf, int &amp;result, int max_size)</div><div class="ttdoc">Method to read input from the file.</div><div class="ttdef"><b>Definition</b> input-source-file.cpp:13</div></div>
-<div class="ttc" id="aclassJLang_1_1misc_1_1InputSource_html"><div class="ttname"><a href="classJLang_1_1misc_1_1InputSource.html">JLang::misc::InputSource</a></div><div class="ttdoc">Input Source used by lexer.</div><div class="ttdef"><b>Definition</b> input-source.hpp:14</div></div>
+<div class="ttc" id="aclassGyoji_1_1misc_1_1InputSourceFile_html"><div class="ttname"><a href="classGyoji_1_1misc_1_1InputSourceFile.html">Gyoji::misc::InputSourceFile</a></div><div class="ttdoc">This is an input source for files.</div><div class="ttdef"><b>Definition</b> input-source-file.hpp:16</div></div>
+<div class="ttc" id="aclassGyoji_1_1misc_1_1InputSourceFile_html_a30db6d30ad34865ff4fa1f0e479f1ba8"><div class="ttname"><a href="classGyoji_1_1misc_1_1InputSourceFile.html#a30db6d30ad34865ff4fa1f0e479f1ba8">Gyoji::misc::InputSourceFile::~InputSourceFile</a></div><div class="ttdeci">~InputSourceFile()</div><div class="ttdoc">Move along, nothing to see here.</div><div class="ttdef"><b>Definition</b> input-source-file.cpp:10</div></div>
+<div class="ttc" id="aclassGyoji_1_1misc_1_1InputSourceFile_html_ad4663c29a523e3032ff7727fb4b4967d"><div class="ttname"><a href="classGyoji_1_1misc_1_1InputSourceFile.html#ad4663c29a523e3032ff7727fb4b4967d">Gyoji::misc::InputSourceFile::read</a></div><div class="ttdeci">void read(char *buf, int &amp;result, int max_size)</div><div class="ttdoc">Method to read input from the file.</div><div class="ttdef"><b>Definition</b> input-source-file.cpp:13</div></div>
+<div class="ttc" id="aclassGyoji_1_1misc_1_1InputSource_html"><div class="ttname"><a href="classGyoji_1_1misc_1_1InputSource.html">Gyoji::misc::InputSource</a></div><div class="ttdoc">Input Source used by lexer.</div><div class="ttdef"><b>Definition</b> input-source.hpp:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->
 <!-- start footer part -->
