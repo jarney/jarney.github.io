@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Stream of tokens read by the parser to provide context for errors.  
+ <a href="classGyoji_1_1context_1_1TokenStream.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="token-stream_8hpp_source.html">token-stream.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -103,7 +106,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a96bc5bb4a3954d98e292cf816f0a2d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The token stream represents the list of all tokens that were encountered while parsing the input file. Each token corresponds to a match rule in the lexical analysis stage (gyoji.l). The tokens also contain metadata indicating the location where the token was found as well as the rule that matched the token. The token stream can be used to exactly reproduce the input and is useful in constructing structured error messages where it is useful to have some context of the original source file. </p>
+<div class="textblock"><p>Stream of tokens read by the parser to provide context for errors. </p>
+<p>The token stream represents the list of all tokens that were encountered while parsing the input file. Each token corresponds to a match rule in the lexical analysis stage (gyoji.l). The tokens also contain metadata indicating the location where the token was found as well as the rule that matched the token. The token stream can be used to exactly reproduce the input and is useful in constructing structured error messages where it is useful to have some context of the original source file. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa9190a1864f989c530aa6c470750d2d8" name="aa9190a1864f989c530aa6c470750d2d8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9190a1864f989c530aa6c470750d2d8">&#9670;&#160;</a></span>TokenStream()</h2>

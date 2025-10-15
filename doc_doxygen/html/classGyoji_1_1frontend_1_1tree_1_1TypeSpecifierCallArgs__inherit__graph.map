@@ -1,5 +1,5 @@
 <map id="Gyoji::frontend::tree::TypeSpecifierCallArgs" name="Gyoji::frontend::tree::TypeSpecifierCallArgs">
 <area shape="rect" id="Node000001" title="Represents arguments to a template type." alt="" coords="5,93,176,133"/>
-<area shape="rect" id="Node000002" href="$classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title=" " alt="" coords="17,5,164,45"/>
+<area shape="rect" id="Node000002" href="$classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title="Weakly&#45;typed syntax node." alt="" coords="17,5,164,45"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,59,93,93,88,93,88,59"/>
 </map>

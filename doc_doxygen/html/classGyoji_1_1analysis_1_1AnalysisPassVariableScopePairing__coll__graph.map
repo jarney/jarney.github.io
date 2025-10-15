@@ -1,0 +1,5 @@
+<map id="Gyoji::analysis::AnalysisPassVariableScopePairing" name="Gyoji::analysis::AnalysisPassVariableScopePairing">
+<area shape="rect" id="Node000001" title="This pass ensures that every variable that has been declared is also paired with an un&#45;declare." alt="" coords="17,79,204,119"/>
+<area shape="rect" id="Node000002" href="$classGyoji_1_1analysis_1_1AnalysisPass.html" title="Abstract interface to analysis passes." alt="" coords="5,5,216,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,44,113,79,108,79,108,44"/>
+</map>

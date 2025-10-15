@@ -19,7 +19,7 @@
   <table class="legend">
     <tr>
       <th scope="row">Directory:</th>
-      <td>./</td>
+      <td>src/</td>
     </tr>
     <tr>
       <th scope="row">File:</th>
@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2025-10-09 15:46:52</td>
+      <td>2025-10-15 09:43:47</td>
     </tr>
   </table>
 </div>
@@ -41,9 +41,9 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>29</td>
+      <td>30</td>
       <td>31</td>
-      <td class="coverage-high">93.5%</td>
+      <td class="coverage-high">96.8%</td>
     </tr>
     <tr>
       <th scope="row">Functions:</th>
@@ -53,9 +53,9 @@
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>4</td>
+      <td>5</td>
       <td>6</td>
-      <td class="coverage-low">66.7%</td>
+      <td class="coverage-medium">83.3%</td>
     </tr>
   </table>
 </div>
@@ -73,15 +73,15 @@
       <th>Call count</th>
       <th>Block coverage</th>
     </tr>
-    <tr><td><a href="#l5">Gyoji::mir::Symbol::Symbol(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, Gyoji::mir::Type const*) (line 5)</a></td><td>called 156 times, returned 156 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l14">Gyoji::mir::Symbol::get_name[abi:cxx11]() const (line 14)</a></td><td>called 156 times, returned 156 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l18">Gyoji::mir::Symbol::get_type() const (line 18)</a></td><td>called 222 times, returned 222 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l10">Gyoji::mir::Symbol::~Symbol() (line 10)</a></td><td>called 156 times, returned 156 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l23">Gyoji::mir::Symbols::Symbols() (line 23)</a></td><td>called 16 times, returned 16 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l30">Gyoji::mir::Symbols::define_symbol(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, Gyoji::mir::Type const*) (line 30)</a></td><td>called 156 times, returned 156 times</td><td>92.0%</td></tr>
-    <tr><td><a href="#l40">Gyoji::mir::Symbols::dump(_IO_FILE*) const (line 40)</a></td><td>called 15 times, returned 15 times</td><td>100.0%</td></tr>
-    <tr><td><a href="#l52">Gyoji::mir::Symbols::get_symbol(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;) const (line 52)</a></td><td>called 66 times, returned 66 times</td><td>89.0%</td></tr>
-    <tr><td><a href="#l26">Gyoji::mir::Symbols::~Symbols() (line 26)</a></td><td>called 16 times, returned 16 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l5">Gyoji::mir::Symbol::Symbol(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, Gyoji::mir::Type const*) (line 5)</a></td><td>called 316 times, returned 316 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l14">Gyoji::mir::Symbol::get_name[abi:cxx11]() const (line 14)</a></td><td>called 316 times, returned 316 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l18">Gyoji::mir::Symbol::get_type() const (line 18)</a></td><td>called 712 times, returned 712 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l10">Gyoji::mir::Symbol::~Symbol() (line 10)</a></td><td>called 316 times, returned 316 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l23">Gyoji::mir::Symbols::Symbols() (line 23)</a></td><td>called 32 times, returned 32 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l30">Gyoji::mir::Symbols::define_symbol(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, Gyoji::mir::Type const*) (line 30)</a></td><td>called 320 times, returned 320 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l40">Gyoji::mir::Symbols::dump(_IO_FILE*) const (line 40)</a></td><td>called 30 times, returned 30 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l52">Gyoji::mir::Symbols::get_symbol(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;) const (line 52)</a></td><td>called 396 times, returned 396 times</td><td>89.0%</td></tr>
+    <tr><td><a href="#l26">Gyoji::mir::Symbols::~Symbols() (line 26)</a></td><td>called 32 times, returned 32 times</td><td>100.0%</td></tr>
   </table>
 </details>
 
@@ -128,28 +128,28 @@
       <td class="lineno"><a id="l5" href="#l5">5</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="n">Symbol</span><span class="o">::</span><span class="n">Symbol</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">_name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">_type</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l6" href="#l6">6</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">name</span><span class="p">(</span><span class="n">_name</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l7" href="#l7">7</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p">(</span><span class="n">_type</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l8" href="#l8">8</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -163,14 +163,14 @@
       <td class="lineno"><a id="l10" href="#l10">10</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="n">Symbol</span><span class="o">::~</span><span class="n">Symbol</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l11" href="#l11">11</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -191,14 +191,14 @@
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="n">Symbol</span><span class="o">::</span><span class="n">get_name</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l15" href="#l15">15</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -219,14 +219,14 @@
       <td class="lineno"><a id="l18" href="#l18">18</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">712</td>
       <td class="src coveredLine"><span class="n">Symbol</span><span class="o">::</span><span class="n">get_type</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l19" href="#l19">19</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">712</td>
       <td class="src coveredLine"><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">type</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -254,14 +254,14 @@
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">16</td>
+      <td class="linecount coveredLine">32</td>
       <td class="src coveredLine"><span class="n">Symbols</span><span class="o">::</span><span class="n">Symbols</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">16</td>
+      <td class="linecount coveredLine">32</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -275,14 +275,14 @@
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">16</td>
+      <td class="linecount coveredLine">32</td>
       <td class="src coveredLine"><span class="n">Symbols</span><span class="o">::~</span><span class="n">Symbols</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l27" href="#l27">27</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">16</td>
+      <td class="linecount coveredLine">32</td>
       <td class="src coveredLine"><span class="p">{}</span></td>
     </tr>
     <tr class="source-line">
@@ -303,7 +303,7 @@
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">320</td>
       <td class="src coveredLine"><span class="n">Symbols</span><span class="o">::</span><span class="n">define_symbol</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">symbol_type</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
@@ -317,29 +317,29 @@
       <td class="lineno"><a id="l32" href="#l32">32</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">320</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">symbols</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
+        <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 3 taken 156 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 4 times.</div>
+          <div class="takenBranch">&check; Branch 3 taken 316 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount partialCoveredLine">156</td>
-      <td class="src partialCoveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">symbols</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
+      <td class="linecount coveredLine">320</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">symbols</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l34" href="#l34">34</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">	</span><span class="k">return</span><span class="p">;</span></td>
+      <td class="linecount coveredLine">4</td>
+      <td class="src coveredLine"><span class="w">	</span><span class="k">return</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l35" href="#l35">35</a></td>
@@ -352,7 +352,7 @@
       <td class="lineno"><a id="l36" href="#l36">36</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">symbols</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Symbol</span><span class="o">&gt;</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">symbol_type</span><span class="p">)));</span></td>
     </tr>
     <tr class="source-line">
@@ -380,7 +380,7 @@
       <td class="lineno"><a id="l40" href="#l40">40</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">15</td>
+      <td class="linecount coveredLine">30</td>
       <td class="src coveredLine"><span class="n">Symbols</span><span class="o">::</span><span class="n">dump</span><span class="p">(</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
@@ -396,40 +396,40 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 4 taken 156 times.</div>
-          <div class="takenBranch">&check; Branch 5 taken 15 times.</div>
+          <div class="takenBranch">&check; Branch 4 taken 316 times.</div>
+          <div class="takenBranch">&check; Branch 5 taken 30 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">171</td>
+      <td class="linecount coveredLine">346</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">symbol</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">symbols</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="w">	</span><span class="k">const</span><span class="w"> </span><span class="n">Gyoji</span><span class="o">::</span><span class="n">owned</span><span class="o">&lt;</span><span class="n">Symbol</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sym</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">symbol</span><span class="p">.</span><span class="n">second</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l44" href="#l44">44</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">312</td>
+      <td class="linecount coveredLine">632</td>
       <td class="src coveredLine"><span class="w">        </span><span class="n">fprintf</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;    %s : %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l45" href="#l45">45</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">312</td>
+      <td class="linecount coveredLine">632</td>
       <td class="src coveredLine"><span class="w">		</span><span class="n">sym</span><span class="o">-&gt;</span><span class="n">get_name</span><span class="p">().</span><span class="n">c_str</span><span class="p">(),</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l46" href="#l46">46</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">156</td>
+      <td class="linecount coveredLine">316</td>
       <td class="src coveredLine"><span class="w">		</span><span class="n">sym</span><span class="o">-&gt;</span><span class="n">get_type</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_name</span><span class="p">().</span><span class="n">c_str</span><span class="p">());</span></td>
     </tr>
     <tr class="source-line">
@@ -443,7 +443,7 @@
       <td class="lineno"><a id="l48" href="#l48">48</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">15</td>
+      <td class="linecount coveredLine">30</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -471,7 +471,7 @@
       <td class="lineno"><a id="l52" href="#l52">52</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">66</td>
+      <td class="linecount coveredLine">396</td>
       <td class="src coveredLine"><span class="n">Symbols</span><span class="o">::</span><span class="n">get_symbol</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
     <tr class="source-line">
@@ -485,7 +485,7 @@
       <td class="lineno"><a id="l54" href="#l54">54</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">66</td>
+      <td class="linecount coveredLine">396</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">symbols</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -495,11 +495,11 @@
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 3 taken 66 times.</div>
+          <div class="takenBranch">&check; Branch 3 taken 396 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount partialCoveredLine">66</td>
+      <td class="linecount partialCoveredLine">396</td>
       <td class="src partialCoveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">symbols</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
@@ -520,7 +520,7 @@
       <td class="lineno"><a id="l58" href="#l58">58</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">66</td>
+      <td class="linecount coveredLine">396</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">get</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">

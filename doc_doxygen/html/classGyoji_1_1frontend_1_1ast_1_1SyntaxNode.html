@@ -81,13 +81,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Weakly-typed syntax node.  
+ <a href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="syntax-node_8hpp_source.html">syntax-node.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Gyoji::frontend::ast::SyntaxNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode__inherit__graph.png" border="0" usemap="#aGyoji_1_1frontend_1_1ast_1_1SyntaxNode_inherit__map" alt="Inheritance graph"/></div>
 <map name="aGyoji_1_1frontend_1_1ast_1_1SyntaxNode_inherit__map" id="aGyoji_1_1frontend_1_1ast_1_1SyntaxNode_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,741,152,781"/>
+<area shape="rect" title="Weakly&#45;typed syntax node." alt="" coords="5,741,152,781"/>
 <area shape="rect" href="classGyoji_1_1frontend_1_1tree_1_1AccessModifier.html" title="Declares PUBLIC, PROTECTED, or PRIVATE access to functions and members." alt="" coords="249,5,402,45"/>
 <area shape="poly" title=" " alt="" coords="78,728,86,584,105,382,121,280,141,186,166,109,181,79,198,55,221,38,247,28,249,33,223,43,202,59,186,81,171,111,146,187,126,281,110,383,91,584,84,728"/>
 <area shape="rect" href="classGyoji_1_1frontend_1_1tree_1_1AccessQualifier.html" title="This indicates the type of access that may be permitted as UNSPECIFIED, CONST, or VOLATILE." alt="" coords="249,69,402,109"/>
@@ -159,12 +162,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a78a95d9528d5956280495e7e2d6f9f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The syntax tree can be viewed as a tree of nodes that follow the structure of the parsed grammar.</p>
-<p>This view of the syntax tree can be processed in a weakly-typed sense where each node of type <a class="el" href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html">SyntaxNode</a> may have zero or more children that represent grammar productions below them.</p>
+<div class="textblock"><p>Weakly-typed syntax node. </p>
+<p>The syntax tree can be viewed as a tree of nodes that follow the structure of the parsed grammar.</p>
+<p>This view of the syntax tree can be processed in a weakly-typed sense where each node of type <a class="el" href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title="Weakly-typed syntax node.">SyntaxNode</a> may have zero or more children that represent grammar productions below them.</p>
 <p>Each of these nodes can also, optionally, be examined to find the specific strongly-typed tree node corresponding to the data parsed.</p>
-<p>For example, the top-level <a class="el" href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html">SyntaxNode</a> will hold a TranslationUnit so that it can be extracted:</p>
+<p>For example, the top-level <a class="el" href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title="Weakly-typed syntax node.">SyntaxNode</a> will hold a TranslationUnit so that it can be extracted:</p>
 <pre>
-    <a class="el" href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html">SyntaxNode</a> *s;
+    <a class="el" href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title="Weakly-typed syntax node.">SyntaxNode</a> *s;
     if (s-&gt;holds_alternative&lt;TranslationUnit&gt;()) {
         const TranslationUnit &amp; tu = s-&gt;<a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01692.html#ab1f99c12f318a1219d97e23d526b94d2">get&lt;TranslationUnit&gt;()</a>;
     }
@@ -295,7 +299,7 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method is provided so that callers of derived classes can be sure to get access to the <a class="el" href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html">SyntaxNode</a> base-class instance. </p>
+<p>This method is provided so that callers of derived classes can be sure to get access to the <a class="el" href="classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title="Weakly-typed syntax node.">SyntaxNode</a> base-class instance. </p>
 
 </div>
 </div>

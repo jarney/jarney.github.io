@@ -1,6 +1,6 @@
 <map id="Gyoji::frontend::tree::Terminal" name="Gyoji::frontend::tree::Terminal">
 <area shape="rect" id="Node000001" title="Represents tokens from the lexer used to represent keywords and identifiers found in the source." alt="" coords="589,41,743,81"/>
-<area shape="rect" id="Node000002" href="$classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title=" " alt="" coords="281,5,428,45"/>
+<area shape="rect" id="Node000002" href="$classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title="Weakly&#45;typed syntax node." alt="" coords="281,5,428,45"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,33,589,50,589,55,441,38"/>
 <area shape="rect" id="Node000003" href="/home/jona/NetBeansProjects/jos/compiler/jlang2/doc/libstdc++.tag$a07426.html" title=" " alt="" coords="248,70,461,125"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="474,81,589,68,589,73,475,86"/>

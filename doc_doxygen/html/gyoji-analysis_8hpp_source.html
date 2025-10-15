@@ -86,61 +86,92 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;gyoji-mir.hpp&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;gyoji-context.hpp&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespaceGyoji.html">    5</a></span><span class="keyword">namespace </span>Gyoji::analysis {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">class </span>AnalysisPass {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    AnalysisPass(Gyoji::context::CompilerContext &amp; _compiler_context, <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::string</a> _name);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    ~AnalysisPass();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    Gyoji::context::CompilerContext &amp; get_compiler_context() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::string</a> &amp; get_name() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Gyoji::context::CompilerContext &amp; compiler_context;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::string</a> name;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    };</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">class </span>AnalysisPassTypeResolution : <span class="keyword">public</span> AnalysisPass {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    AnalysisPassTypeResolution(Gyoji::context::CompilerContext &amp; _compiler_context);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ~AnalysisPassTypeResolution();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> check_type(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Type.html">Gyoji::mir::Type</a> &amp; type) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">   44</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">AnalysisPassUnreachable</a> : <span class="keyword">public</span> AnalysisPass {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">AnalysisPassUnreachable</a>(Gyoji::context::CompilerContext &amp; _compiler_context);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">~AnalysisPassUnreachable</a>();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Function.html">Gyoji::mir::Function</a> &amp; function) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="namespaceGyoji.html">   36</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyoji_1_1analysis.html">Gyoji::analysis</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classGyoji_1_1analysis_1_1AnalysisPass.html">   49</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPass.html">AnalysisPass</a> {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPass.html">AnalysisPass</a>(<a class="code hl_class" href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a> &amp; _compiler_context, <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::string</a> _name);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPass.html">~AnalysisPass</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_class" href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a> &amp; get_compiler_context() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::string</a> &amp; get_name() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_class" href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a> &amp; compiler_context;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::string</a> name;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">class </span>AnalysisPassBorrowChecker : <span class="keyword">public</span> AnalysisPass {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    AnalysisPassBorrowChecker(Gyoji::context::CompilerContext &amp; _compiler_context);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    ~AnalysisPassBorrowChecker();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Function.html">Gyoji::mir::Function</a> &amp; function) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    };</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classGyoji_1_1analysis_1_1AnalysisPassTypeResolution.html">   72</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassTypeResolution.html">AnalysisPassTypeResolution</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPass.html">AnalysisPass</a> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassTypeResolution.html">AnalysisPassTypeResolution</a>(<a class="code hl_class" href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a> &amp; _compiler_context);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassTypeResolution.html">~AnalysisPassTypeResolution</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> check_type(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Type.html">Gyoji::mir::Type</a> &amp; type) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="};">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">   99</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">AnalysisPassUnreachable</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPass.html">AnalysisPass</a> {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">AnalysisPassUnreachable</a>(<a class="code hl_class" href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a> &amp; _compiler_context);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">~AnalysisPassUnreachable</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Function.html">Gyoji::mir::Function</a> &amp; function) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    };</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="};">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classGyoji_1_1analysis_1_1AnalysisPassBorrowChecker.html">  116</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassBorrowChecker.html">AnalysisPassBorrowChecker</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPass.html">AnalysisPass</a> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassBorrowChecker.html">AnalysisPassBorrowChecker</a>(<a class="code hl_class" href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a> &amp; _compiler_context);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassBorrowChecker.html">~AnalysisPassBorrowChecker</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Function.html">Gyoji::mir::Function</a> &amp; function) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    };</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="};">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classGyoji_1_1analysis_1_1AnalysisPassReturnValues.html">  134</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassReturnValues.html">AnalysisPassReturnValues</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPass.html">AnalysisPass</a> {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassReturnValues.html">AnalysisPassReturnValues</a>();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassReturnValues.html">~AnalysisPassReturnValues</a>();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    };</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="};">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html">  151</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html">AnalysisPassVariableScopePairing</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPass.html">AnalysisPass</a> {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html">AnalysisPassVariableScopePairing</a>();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_class" href="classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html">~AnalysisPassVariableScopePairing</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> check(<span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp; mir) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    };</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>};</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
 <div class="ttc" id="aa04482_html"><div class="ttname"><a href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04482.html">std::basic_string</a></div></div>
-<div class="ttc" id="aclassGyoji_1_1analysis_1_1AnalysisPassUnreachable_html"><div class="ttname"><a href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">Gyoji::analysis::AnalysisPassUnreachable</a></div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:44</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1Function_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Function.html">Gyoji::mir::Function</a></div><div class="ttdoc">Function inside a translation unit.</div><div class="ttdef"><b>Definition</b> functions.hpp:253</div></div>
+<div class="ttc" id="aclassGyoji_1_1analysis_1_1AnalysisPassBorrowChecker_html"><div class="ttname"><a href="classGyoji_1_1analysis_1_1AnalysisPassBorrowChecker.html">Gyoji::analysis::AnalysisPassBorrowChecker</a></div><div class="ttdoc">Performs the borrow-checker algorithm.</div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:116</div></div>
+<div class="ttc" id="aclassGyoji_1_1analysis_1_1AnalysisPassReturnValues_html"><div class="ttname"><a href="classGyoji_1_1analysis_1_1AnalysisPassReturnValues.html">Gyoji::analysis::AnalysisPassReturnValues</a></div><div class="ttdoc">Performs checks for return-value consistency.</div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:134</div></div>
+<div class="ttc" id="aclassGyoji_1_1analysis_1_1AnalysisPassTypeResolution_html"><div class="ttname"><a href="classGyoji_1_1analysis_1_1AnalysisPassTypeResolution.html">Gyoji::analysis::AnalysisPassTypeResolution</a></div><div class="ttdoc">Check that all types have been fully declared before use.</div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:72</div></div>
+<div class="ttc" id="aclassGyoji_1_1analysis_1_1AnalysisPassUnreachable_html"><div class="ttname"><a href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">Gyoji::analysis::AnalysisPassUnreachable</a></div><div class="ttdoc">Checks for the existence of unreachable code.</div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:99</div></div>
+<div class="ttc" id="aclassGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing_html"><div class="ttname"><a href="classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html">Gyoji::analysis::AnalysisPassVariableScopePairing</a></div><div class="ttdoc">This pass ensures that every variable that has been declared is also paired with an un-declare.</div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:151</div></div>
+<div class="ttc" id="aclassGyoji_1_1analysis_1_1AnalysisPass_html"><div class="ttname"><a href="classGyoji_1_1analysis_1_1AnalysisPass.html">Gyoji::analysis::AnalysisPass</a></div><div class="ttdoc">Abstract interface to analysis passes.</div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:49</div></div>
+<div class="ttc" id="aclassGyoji_1_1context_1_1CompilerContext_html"><div class="ttname"><a href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a></div><div class="ttdoc">Compiler Context.</div><div class="ttdef"><b>Definition</b> gyoji-context.hpp:30</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1Function_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Function.html">Gyoji::mir::Function</a></div><div class="ttdoc">Function inside a translation unit.</div><div class="ttdef"><b>Definition</b> functions.hpp:303</div></div>
 <div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a></div><div class="ttdoc">The middle-tier intermediate representation (MIR) of a translation unit.</div><div class="ttdef"><b>Definition</b> gyoji-mir.hpp:57</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1Type_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Type.html">Gyoji::mir::Type</a></div><div class="ttdoc">This represents a type as declared in a translation unit.</div><div class="ttdef"><b>Definition</b> types.hpp:265</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1Type_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Type.html">Gyoji::mir::Type</a></div><div class="ttdoc">This represents a type as declared in a translation unit.</div><div class="ttdef"><b>Definition</b> types.hpp:299</div></div>
+<div class="ttc" id="anamespaceGyoji_1_1analysis_html"><div class="ttname"><a href="namespaceGyoji_1_1analysis.html">Gyoji::analysis</a></div><div class="ttdoc">Analysis pass performs checks to ensure semantic consistency.</div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->
 <!-- start footer part -->

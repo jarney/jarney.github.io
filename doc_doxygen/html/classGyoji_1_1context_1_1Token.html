@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a token read from the input stream.  
+ <a href="classGyoji_1_1context_1_1Token.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="token-stream_8hpp_source.html">token-stream.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -95,7 +98,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2e30909a1427f68833a6f72c4aa7db85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A token represents the result of the lexical analysis and contains the line number and column number of where the token was found as well as the type of token and the literal value of the token from the input. Some tokens participate in the grammar such as language keywords while others represent whitespace or comments. </p>
+<div class="textblock"><p>Represents a token read from the input stream. </p>
+<p>A token represents the result of the lexical analysis and contains the line number and column number of where the token was found as well as the type of token and the literal value of the token from the input. Some tokens participate in the grammar such as language keywords while others represent whitespace or comments.</p>
+<p>While it might seem that this belongs in the lex/parse code of the front-end, this token is less concrete in the sense that it is actually agnostic of the way the data is broken up and parsed. This token stream can actually be re-used for multiple different lexical and syntactical structures.</p>
+<p>It also carries the source location where the token was read from so that its source-reference can be used to derive and report the location of any errors. It is declared in the compiler context because the token stream must have a lifetime at least as long as the error reporting system because the errors hold references to the tokens and their source references. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6e377c5232fca1148a4d64d52a0fee50" name="a6e377c5232fca1148a4d64d52a0fee50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e377c5232fca1148a4d64d52a0fee50">&#9670;&#160;</a></span>Token()</h2>

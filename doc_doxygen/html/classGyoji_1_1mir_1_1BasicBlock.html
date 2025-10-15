@@ -97,6 +97,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ee299355701318182a9a28ca9deee3e" id="r_a2ee299355701318182a9a28ca9deee3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1mir_1_1BasicBlock.html#a2ee299355701318182a9a28ca9deee3e">add_operation</a> (<a class="el" href="namespaceGyoji.html#ae61c662eaf008320ce4b1b27df1fa074">Gyoji::owned</a>&lt; <a class="el" href="classGyoji_1_1mir_1_1Operation.html">Operation</a> &gt; operation)</td></tr>
 <tr class="memdesc:a2ee299355701318182a9a28ca9deee3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an <a class="el" href="classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction-set of the MIR.">Operation</a> to the block.  <br /></td></tr>
 <tr class="separator:a2ee299355701318182a9a28ca9deee3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4a93fe4c9d5797660cd10aa5476be6" id="r_a6a4a93fe4c9d5797660cd10aa5476be6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1mir_1_1BasicBlock.html#a6a4a93fe4c9d5797660cd10aa5476be6">size</a> () const</td></tr>
+<tr class="memdesc:a6a4a93fe4c9d5797660cd10aa5476be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of operations in this block.  <br /></td></tr>
+<tr class="separator:a6a4a93fe4c9d5797660cd10aa5476be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8fd976106581a4fb54baa44c5c4c924" id="r_ac8fd976106581a4fb54baa44c5c4c924"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1mir_1_1BasicBlock.html#ac8fd976106581a4fb54baa44c5c4c924">insert_operation</a> (size_t position, <a class="el" href="namespaceGyoji.html#ae61c662eaf008320ce4b1b27df1fa074">Gyoji::owned</a>&lt; <a class="el" href="classGyoji_1_1mir_1_1Operation.html">Operation</a> &gt; operation)</td></tr>
+<tr class="memdesc:ac8fd976106581a4fb54baa44c5c4c924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert operations at a specific point.  <br /></td></tr>
+<tr class="separator:ac8fd976106581a4fb54baa44c5c4c924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e0762ee4fd32c8d2f9b4dce8b3d47e" id="r_a19e0762ee4fd32c8d2f9b4dce8b3d47e"><td class="memItemLeft" align="right" valign="top">const <a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector</a>&lt; <a class="el" href="namespaceGyoji.html#ae61c662eaf008320ce4b1b27df1fa074">Gyoji::owned</a>&lt; <a class="el" href="classGyoji_1_1mir_1_1Operation.html">Operation</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1mir_1_1BasicBlock.html#a19e0762ee4fd32c8d2f9b4dce8b3d47e">get_operations</a> () const</td></tr>
 <tr class="memdesc:a19e0762ee4fd32c8d2f9b4dce8b3d47e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to list of <a class="el" href="classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction-set of the MIR.">Operation</a> of basic block.  <br /></td></tr>
 <tr class="separator:a19e0762ee4fd32c8d2f9b4dce8b3d47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,6 +236,59 @@ Public Member Functions</h2></td></tr>
 
 <p>Access to list of <a class="el" href="classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction-set of the MIR.">Operation</a> of basic block. </p>
 <p>This method returns the list of operations defined in this basic block. The list is returned as an immutable reference to owned pointers. The caller may not aquire ownership through this method, but may get access to the functions by de-referencing the pointer. The pointer is guaranteed to be valid because this basic block owns them and they cannot be removed once created. The returned reference must not live longer than this container. </p>
+
+</div>
+</div>
+<a id="ac8fd976106581a4fb54baa44c5c4c924" name="ac8fd976106581a4fb54baa44c5c4c924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8fd976106581a4fb54baa44c5c4c924">&#9670;&#160;</a></span>insert_operation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BasicBlock::insert_operation </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceGyoji.html#ae61c662eaf008320ce4b1b27df1fa074">Gyoji::owned</a>&lt; <a class="el" href="classGyoji_1_1mir_1_1Operation.html">Operation</a> &gt;&#160;</td>
+          <td class="paramname"><em>operation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert operations at a specific point. </p>
+<p>This inserts the given operation at the specific position in this block instead of appending it to the end. Note that any other insert points will need to have their position shifted down if other operations are required to be inserted.</p>
+<p>This is mainly used to 'fix up' the 'goto' statement which needs to insert the 'undeclare' and possibly destructor calls before the goto operation in order to ensure that any variables that should be going out of scope are removed correctly.</p>
+<p>Fortunately in the case of 'goto', this will always terminate the basic block, so we don't need to worry about shifting insert points because the next goto statement will always be in a different basic block. </p>
+
+</div>
+</div>
+<a id="a6a4a93fe4c9d5797660cd10aa5476be6" name="a6a4a93fe4c9d5797660cd10aa5476be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4a93fe4c9d5797660cd10aa5476be6">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t BasicBlock::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the number of operations in this block. </p>
+<p>Returns the number of operations contained in this basic block. This is used to form a 'FunctionPoint' where we can insert operations at this point. This is used mainly by the 'goto' operation which needs to insert instructions that won't be determined until after the entire function has been processed, so we must 'fix up' the goto jump statement in order to 'unwind' variables declared in this scope that won't be available in the scope we're jumping to. </p>
 
 </div>
 </div>

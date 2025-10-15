@@ -1,5 +1,5 @@
 <map id="Gyoji::frontend::ast::SyntaxNode" name="Gyoji::frontend::ast::SyntaxNode">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,741,152,781"/>
+<area shape="rect" id="Node000001" title="Weakly&#45;typed syntax node." alt="" coords="5,741,152,781"/>
 <area shape="rect" id="Node000002" href="$classGyoji_1_1frontend_1_1tree_1_1AccessModifier.html" title="Declares PUBLIC, PROTECTED, or PRIVATE access to functions and members." alt="" coords="249,5,402,45"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,728,86,584,105,382,121,280,141,186,166,109,181,79,198,55,221,38,247,28,249,33,223,43,202,59,186,81,171,111,146,187,126,281,110,383,91,584,84,728"/>
 <area shape="rect" id="Node000003" href="$classGyoji_1_1frontend_1_1tree_1_1AccessQualifier.html" title="This indicates the type of access that may be permitted as UNSPECIFIED, CONST, or VOLATILE." alt="" coords="249,69,402,109"/>

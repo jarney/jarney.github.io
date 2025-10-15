@@ -1,5 +1,5 @@
 <map id="Gyoji::frontend::tree::TranslationUnit" name="Gyoji::frontend::tree::TranslationUnit">
 <area shape="rect" id="Node000001" title="Represents the top&#45;level syntax unit for a source file." alt="" coords="5,93,159,133"/>
-<area shape="rect" id="Node000002" href="$classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title=" " alt="" coords="9,5,155,45"/>
+<area shape="rect" id="Node000002" href="$classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html" title="Weakly&#45;typed syntax node." alt="" coords="9,5,155,45"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,59,85,93,79,93,79,59"/>
 </map>

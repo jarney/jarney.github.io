@@ -73,8 +73,8 @@ $(function() {
   <div class="headertitle"><div class="title">TODO list</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md6"></a> </p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md2"></a> </p>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Syntax processing</h1>
 <ul>
 <li>Build more unit-tests to verify that the syntax is what we expect and the operator precedence rules work correctly.</li>
@@ -84,13 +84,13 @@ Syntax processing</h1>
 <li>Support for a pre-processor like CPP so we can build and use header files. Need to allow #line directives to be used to update the 'context' so that error messages are attributed to the correct source. This will be slightly tricky in the lexer to make sure we don't get offset from the proper location.</li>
 <li>Allow declarations to come from translation units (current) and in future, annotate the .o and .a files with 'extra' ELF data that allows us to 'compile' against a library without a header file (because the relevant declarations are already present in the ELF). This requires reading the ELF headers and specific sections. Annotate with specific compiler ABI tag so we can structure it in a way that survives future versions and is backward-compatible.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 Borrow checker</h1>
 <ul>
 <li>Implement the inputs to the borrow checker, going through the polonius rules and putting the 'facts' together that it will need.</li>
 <li>Figure out the 'reasoning' engine we want to use for it. Probably some type of HornSAT solver, possibly even one that we can incorporate into the standard library so we can write the borrow checker in <a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> itself instead of in C</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Semantic processing</h1>
 <ul>
 <li>Merge blocks for assignments in control-flow statements. i.e. the PHI operation in LLVM</li>
@@ -116,23 +116,23 @@ Semantic processing</h1>
 <p class="startli">We have the basics of this, but we should try to</p>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Bootstrapping</h1>
 <ul>
 <li>Figure out what parts of the compiler we can <em>already</em> write in J. Need to pick out specific points that can easily be implemented.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Marketing (after we've bootstrapped)</h1>
 <ul>
 <li>Figure out how to compile down to WASM modules so we can build a website that has the compiler inside it.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Compiler stability/elegance</h1>
 <ul>
 <li>Size of "tree.o" Investigate why the libjlang-frontend.a is so damn big. It mostly seems to be "tree.o" which isn't too surprising since it's really the biggest cpp file, but it doesn't seem complicated so it's a bit of a surprise why the code generated is so big.</li>
 <li>Factor out the "docs" and valgrind tests so that we can make doxygen, graphviz, and gcov into optional dependencies.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Compilation: Resolve some design questions</h2>
 <p>Some rules for classes and such:</p><ul>
 <li>Single inheritance only</li>
@@ -141,7 +141,7 @@ Compilation: Resolve some design questions</h2>
 <li>Do we need keywords for 'super' and 'this' We do need these, but we should be super-careful about them leaking for memory safety reasons.</li>
 <li>This design should give us just enough OO stuff without cluttering the design and causing too much bloat.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Start writing the standard library in Gyoji</h2>
 <ul>
 <li>Basic string manipulation functions</li>

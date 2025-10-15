@@ -21,11 +21,13 @@ var searchData=
   ['functionargument_18',['FunctionArgument',['../classGyoji_1_1mir_1_1FunctionArgument.html',1,'Gyoji::mir']]],
   ['functiondefinitionarg_19',['FunctionDefinitionArg',['../classGyoji_1_1frontend_1_1tree_1_1FunctionDefinitionArg.html',1,'Gyoji::frontend::tree']]],
   ['functiondefinitionarglist_20',['FunctionDefinitionArgList',['../classGyoji_1_1frontend_1_1tree_1_1FunctionDefinitionArgList.html',1,'Gyoji::frontend::tree']]],
-  ['functionlabel_21',['FunctionLabel',['../classGyoji_1_1frontend_1_1FunctionLabel.html',1,'Gyoji::frontend']]],
-  ['functionresolver_22',['FunctionResolver',['../classGyoji_1_1frontend_1_1FunctionResolver.html',1,'Gyoji::frontend']]],
-  ['functions_23',['Functions',['../classGyoji_1_1mir_1_1Functions.html',1,'Gyoji::mir']]],
-  ['future_24',['future',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02554.html',1,'std']]],
-  ['future_3c_20_5fres_20_26_20_3e_25',['future&lt; _Res &amp; &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02578.html',1,'std']]],
-  ['future_3c_20void_20_3e_26',['future&lt; void &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02582.html',1,'std']]],
-  ['future_5ferror_27',['future_error',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02550.html',1,'std']]]
+  ['functiondefinitionresolver_21',['FunctionDefinitionResolver',['../classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionResolver.html',1,'Gyoji::frontend::lowering']]],
+  ['functionlabel_22',['FunctionLabel',['../classGyoji_1_1frontend_1_1lowering_1_1FunctionLabel.html',1,'Gyoji::frontend::lowering']]],
+  ['functionpoint_23',['FunctionPoint',['../classGyoji_1_1frontend_1_1lowering_1_1FunctionPoint.html',1,'Gyoji::frontend::lowering']]],
+  ['functionresolver_24',['FunctionResolver',['../classGyoji_1_1frontend_1_1lowering_1_1FunctionResolver.html',1,'Gyoji::frontend::lowering']]],
+  ['functions_25',['Functions',['../classGyoji_1_1mir_1_1Functions.html',1,'Gyoji::mir']]],
+  ['future_26',['future',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02554.html',1,'std']]],
+  ['future_3c_20_5fres_20_26_20_3e_27',['future&lt; _Res &amp; &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02578.html',1,'std']]],
+  ['future_3c_20void_20_3e_28',['future&lt; void &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02582.html',1,'std']]],
+  ['future_5ferror_29',['future_error',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a02550.html',1,'std']]]
 ];

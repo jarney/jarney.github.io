@@ -1,7 +1,7 @@
 var searchData=
 [
   ['has_5fdata_0',['has_data',['../classGyoji_1_1frontend_1_1ast_1_1SyntaxNode.html#a53d4f679e6ccc18ac002c449dd9c1ec5',1,'Gyoji::frontend::ast::SyntaxNode']]],
-  ['has_5ferrors_1',['has_errors',['../classGyoji_1_1frontend_1_1ParseResult.html#ae517032eccf1f275d5bede752a5ecab7',1,'Gyoji::frontend::ParseResult']]],
+  ['has_5ferrors_1',['has_errors',['../classGyoji_1_1context_1_1CompilerContext.html#a775feada4ee0b41230b7ccccfcf3c920',1,'Gyoji::context::CompilerContext::has_errors()'],['../classGyoji_1_1frontend_1_1ParseResult.html#ae517032eccf1f275d5bede752a5ecab7',1,'Gyoji::frontend::ParseResult::has_errors()']]],
   ['has_5ffacet_2',['has_facet',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01634.html#ga9a7251826c387ab1fc71a629e5322168',1,'std::has_facet(const locale &amp;__loc) noexcept'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01634.html#ga9a7251826c387ab1fc71a629e5322168',1,'std::has_facet(const locale &amp;__loc) noexcept']]],
   ['has_5ftranslation_5funit_3',['has_translation_unit',['../classGyoji_1_1frontend_1_1ParseResult.html#af2a9e2657ef463022cb1b5e62b883089',1,'Gyoji::frontend::ParseResult']]],
   ['hash_4',['hash',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04970.html#ac70cace45e39beb108d6b6fbe6748ba3',1,'std::collate::hash()'],['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a04970.html#ac70cace45e39beb108d6b6fbe6748ba3',1,'std::collate_byname::hash()']]],

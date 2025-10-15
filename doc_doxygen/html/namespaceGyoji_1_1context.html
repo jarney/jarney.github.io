@@ -79,18 +79,37 @@ $(function() {
   <div class="headertitle"><div class="title">Gyoji::context Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The context namespace deals with objects that should last the entire scope of compilation.  
+<a href="namespaceGyoji_1_1context.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1context_1_1CompilerContext.html">CompilerContext</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiler Context.  <a href="classGyoji_1_1context_1_1CompilerContext.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1context_1_1Error.html">Error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An error reported during compilation.  <a href="classGyoji_1_1context_1_1Error.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1context_1_1ErrorMessage.html">ErrorMessage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message about a specific location in the code.  <a href="classGyoji_1_1context_1_1ErrorMessage.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1context_1_1Errors.html">Errors</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for errors reported.  <a href="classGyoji_1_1context_1_1Errors.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1context_1_1SourceReference.html">SourceReference</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">References a location in the source-file.  <a href="classGyoji_1_1context_1_1SourceReference.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1context_1_1Token.html">Token</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a token read from the input stream.  <a href="classGyoji_1_1context_1_1Token.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1context_1_1TokenStream.html">TokenStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream of tokens read by the parser to provide context for errors.  <a href="classGyoji_1_1context_1_1TokenStream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The errors namespace contains code related to reporting errors about the source code. Errors may arise in any stage of the pipeline processing starting at the lexical analysis stage through the syntax, type system, and code generation levels. This class generalizes all error handling at all levels so that each level can introduce errors that can be reported with a common format so that it can be reported with the full context of where the error originated. </p>
+<div class="textblock"><p>The context namespace deals with objects that should last the entire scope of compilation. </p>
+<p>The compiler context namespace is a container for objects that may be used at any stage throughout the compilation process from initial ingestion to analysis and error reporting. </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->
 <!-- start footer part -->

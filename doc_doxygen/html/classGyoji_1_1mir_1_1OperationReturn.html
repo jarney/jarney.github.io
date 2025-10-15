@@ -82,7 +82,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Return from a function.  
+<p>Return from a function with a value.  
  <a href="classGyoji_1_1mir_1_1OperationReturn.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="operations_8hpp_source.html">operations.hpp</a>&gt;</code></p>
@@ -91,7 +91,7 @@ Inheritance diagram for Gyoji::mir::OperationReturn:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGyoji_1_1mir_1_1OperationReturn__inherit__graph.png" border="0" usemap="#aGyoji_1_1mir_1_1OperationReturn_inherit__map" alt="Inheritance graph"/></div>
 <map name="aGyoji_1_1mir_1_1OperationReturn_inherit__map" id="aGyoji_1_1mir_1_1OperationReturn_inherit__map">
-<area shape="rect" title="Return from a function." alt="" coords="5,79,207,104"/>
+<area shape="rect" title="Return from a function with a value." alt="" coords="5,79,207,104"/>
 <area shape="rect" href="classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="27,5,185,31"/>
 <area shape="poly" title=" " alt="" coords="109,44,109,79,103,79,103,44"/>
 </map>
@@ -101,10 +101,10 @@ Collaboration diagram for Gyoji::mir::OperationReturn:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGyoji_1_1mir_1_1OperationReturn__coll__graph.png" border="0" usemap="#aGyoji_1_1mir_1_1OperationReturn_coll__map" alt="Collaboration graph"/></div>
 <map name="aGyoji_1_1mir_1_1OperationReturn_coll__map" id="aGyoji_1_1mir_1_1OperationReturn_coll__map">
-<area shape="rect" title="Return from a function." alt="" coords="95,272,296,297"/>
+<area shape="rect" title="Return from a function with a value." alt="" coords="95,272,296,297"/>
 <area shape="rect" href="classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="116,197,275,223"/>
 <area shape="poly" title=" " alt="" coords="198,237,198,272,193,272,193,237"/>
-<area shape="rect" href="classGyoji_1_1context_1_1SourceReference.html" title=" " alt="" coords="5,109,236,135"/>
+<area shape="rect" href="classGyoji_1_1context_1_1SourceReference.html" title="References a location in the source&#45;file." alt="" coords="5,109,236,135"/>
 <area shape="poly" title=" " alt="" coords="142,143,187,195,183,199,138,147"/>
 <area shape="rect" target="_parent" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html" title=" " alt="" coords="260,109,419,135"/>
 <area shape="poly" title=" " alt="" coords="310,144,216,199,214,195,307,139"/>
@@ -216,13 +216,15 @@ Additional Inherited Members</h2></td></tr>
 , <a class="el" href="classGyoji_1_1mir_1_1Operation.html#ae881782e3ea035c7e9d4f5f6a450cbd1ac2d4c6014db1ae6dbe7652ce85d91d93">OP_JUMP_CONDITIONAL</a>
 , <a class="el" href="classGyoji_1_1mir_1_1Operation.html#ae881782e3ea035c7e9d4f5f6a450cbd1af9bdc3d64cc319e04dcf12b8807adc61">OP_JUMP</a>
 , <a class="el" href="classGyoji_1_1mir_1_1Operation.html#ae881782e3ea035c7e9d4f5f6a450cbd1a8f30e4b4e8b74df90e88a584adef51ac">OP_RETURN</a>
+, <br />
+&#160;&#160;<a class="el" href="classGyoji_1_1mir_1_1Operation.html#ae881782e3ea035c7e9d4f5f6a450cbd1a9d954f07afad1e6ec5f321143b60a557">OP_RETURN_VOID</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ae881782e3ea035c7e9d4f5f6a450cbd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operations of the <a class="el" href="classGyoji_1_1mir_1_1MIR.html" title="The middle-tier intermediate representation (MIR) of a translation unit.">MIR</a> virtual-machine.  <a href="classGyoji_1_1mir_1_1Operation.html#ae881782e3ea035c7e9d4f5f6a450cbd1">More...</a><br /></td></tr>
 <tr class="separator:ae881782e3ea035c7e9d4f5f6a450cbd1 inherit pub_types_classGyoji_1_1mir_1_1Operation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Return from a function. </p>
+<div class="textblock"><p>Return from a function with a value. </p>
 <p>This opcode causes the virtual machine to exit from the current function and return to the caller, supplying the value given. The value given in the return is expected to be the same type as the function's return-value.</p>
 <p>This operand must be the last opcode in a basic block because it terminates the execution of that block and no further operations will be executed in that block. Any operations after a jump will be considered 'unreachable' and may trigger a compile error or dropped with a warning. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>

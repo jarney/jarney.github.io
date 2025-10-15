@@ -70,7 +70,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceGyoji.html">Gyoji</a></li><li class="navelem"><b>analysis</b></li><li class="navelem"><a class="el" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">AnalysisPassUnreachable</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceGyoji.html">Gyoji</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1analysis.html">analysis</a></li><li class="navelem"><a class="el" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">AnalysisPassUnreachable</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -80,11 +80,33 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="gyoji-analysis_8hpp_source.html">gyoji-analysis.hpp</a>&gt;</code></p>
+<p>Checks for the existence of unreachable code.  
+ <a href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html#details">More...</a></p>
 
-<p>Inherits Gyoji::analysis::AnalysisPass.</p>
+<p><code>#include &lt;<a class="el" href="gyoji-analysis_8hpp_source.html">gyoji-analysis.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Gyoji::analysis::AnalysisPassUnreachable:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyoji_1_1analysis_1_1AnalysisPassUnreachable__inherit__graph.png" border="0" usemap="#aGyoji_1_1analysis_1_1AnalysisPassUnreachable_inherit__map" alt="Inheritance graph"/></div>
+<map name="aGyoji_1_1analysis_1_1AnalysisPassUnreachable_inherit__map" id="aGyoji_1_1analysis_1_1AnalysisPassUnreachable_inherit__map">
+<area shape="rect" title="Checks for the existence of unreachable code." alt="" coords="20,79,201,119"/>
+<area shape="rect" href="classGyoji_1_1analysis_1_1AnalysisPass.html" title="Abstract interface to analysis passes." alt="" coords="5,5,216,31"/>
+<area shape="poly" title=" " alt="" coords="113,44,113,79,108,79,108,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Gyoji::analysis::AnalysisPassUnreachable:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyoji_1_1analysis_1_1AnalysisPassUnreachable__coll__graph.png" border="0" usemap="#aGyoji_1_1analysis_1_1AnalysisPassUnreachable_coll__map" alt="Collaboration graph"/></div>
+<map name="aGyoji_1_1analysis_1_1AnalysisPassUnreachable_coll__map" id="aGyoji_1_1analysis_1_1AnalysisPassUnreachable_coll__map">
+<area shape="rect" title="Checks for the existence of unreachable code." alt="" coords="20,79,201,119"/>
+<area shape="rect" href="classGyoji_1_1analysis_1_1AnalysisPass.html" title="Abstract interface to analysis passes." alt="" coords="5,5,216,31"/>
+<area shape="poly" title=" " alt="" coords="113,44,113,79,108,79,108,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This pass is intended to uncover basic blocks which contain instructions after the terminating instruction (most commonly after a jump, or return statement).</p>
+<div class="textblock"><p>Checks for the existence of unreachable code. </p>
+<p>This pass is intended to uncover basic blocks which contain instructions after the terminating instruction (most commonly after a jump, or return statement).</p>
 <p>These indicate that the code below those terminating statements is systematically and definitely unreachable. In this case, the program is invalid because it contains such constructs.</p>
 <p>The other thing we look for here are basic blocks which are disconnected from the graph, so they cannot be reached in any way. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
