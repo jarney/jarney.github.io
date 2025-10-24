@@ -106,7 +106,7 @@ Collaboration diagram for Gyoji::analysis::AnalysisPassVariableScopePairing:</di
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This pass ensures that every variable that has been declared is also paired with an un-declare. </p>
-<p>This analysis pass checks to make sure that for every path through the code, if a variable is declared, it is also un-declared and also guarantees that each of the constructors called for local variables is matched with a destructor, guaranteeing that it is safe to use constructor/destructor pairs in a way that matches the lexical scopes. </p>
+<p>This analysis pass checks to make sure that for every path through the code, if a variable is declared, it is also un-declared and also guarantees that each of the declared local variables is matched with a destructor, guaranteeing that it is safe to use scope guards in a way that matches the lexical scopes. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/analysis/<a class="el" href="gyoji-analysis_8hpp_source.html">gyoji-analysis.hpp</a></li>
 </ul>

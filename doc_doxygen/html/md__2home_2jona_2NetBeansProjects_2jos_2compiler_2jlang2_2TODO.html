@@ -73,13 +73,12 @@ $(function() {
   <div class="headertitle"><div class="title">TODO list</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md2"></a> </p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md2"></a> This is just a big random list of things that I'd still like to do with the language.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Syntax processing</h1>
 <ul>
 <li>Build more unit-tests to verify that the syntax is what we expect and the operator precedence rules work correctly.</li>
 <li>Check for various compiler errors and handle recovery a bit better. Probably defer this until we have more 'examples' of what goes wrong frequently and how to recover better.</li>
-<li>Support const-ness of variables and protect them from assignments.</li>
 <li>Error message context doesn't account for 'tabs' when formatting output for error arrows. This is a bit complicated because we need to decide how big a 'tab' is in order to format it correctly in all cases.</li>
 <li>Support for a pre-processor like CPP so we can build and use header files. Need to allow #line directives to be used to update the 'context' so that error messages are attributed to the correct source. This will be slightly tricky in the lexer to make sure we don't get offset from the proper location.</li>
 <li>Allow declarations to come from translation units (current) and in future, annotate the .o and .a files with 'extra' ELF data that allows us to 'compile' against a library without a header file (because the relevant declarations are already present in the ELF). This requires reading the ELF headers and specific sections. Annotate with specific compiler ABI tag so we can structure it in a way that survives future versions and is backward-compatible.</li>
@@ -88,32 +87,37 @@ Syntax processing</h1>
 Borrow checker</h1>
 <ul>
 <li>Implement the inputs to the borrow checker, going through the polonius rules and putting the 'facts' together that it will need.</li>
-<li>Figure out the 'reasoning' engine we want to use for it. Probably some type of HornSAT solver, possibly even one that we can incorporate into the standard library so we can write the borrow checker in <a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> itself instead of in C</li>
+<li>Make sure we can control the 'copy' of references. Maybe it's enough just to prevent references from being copied implicitly in structures, so a class containing a reference just can't be copied, but other classes are copied automatically by copying members. We shouldn't have to worry about providing a 'copy' or 'move' for classes.</li>
+<li>Write up a list of safety guarantees to provide and a 'proof' that the rules of the language enforce these rules. i.e. use-before-initialize would have a definition and the rules of the language should be 'provable' to meet this definition. Same for borrow rules.</li>
+<li>Figure out the 'reasoning' engine we want to use for it. Probably some type of HornSAT solver, possibly even one that we can incorporate into the standard library so we can write the borrow checker in <a class="el" href="namespaceGyoji.html" title="All aspects of the Gyoji language belong in this namespace.">Gyoji</a> itself instead of in C Look into CFG-SSA and the "dominating" relation for graphs. This is going to provide a good foundation for establishing reasoning and flowing facts through the flow control graph.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Semantic processing</h1>
 <ul>
-<li>Merge blocks for assignments in control-flow statements. i.e. the PHI operation in LLVM</li>
-<li>Clean up the interface to basic blocks so it's easier to grok</li>
-<li>Finish/audit remaining OP_ operations in MIR<ul>
-<li>Support them in syntax layer</li>
-<li>Support them in codegen layer</li>
-</ul>
-</li>
+<li>Support const-ness of variables and protect them from assignments.</li>
+<li>Merge blocks for assignments in control-flow statements. i.e. the PHI operation in LLVM (trinary operations)</li>
 <li>Finish/audit syntax tree parsing<ul>
-<li>Global variables, etc.</li>
+<li>Global variables are still missing.</li>
+<li>Trinary operations are still missing.</li>
 </ul>
 </li>
 <li>Include enough semantic information like 'live' and 'dead' storage as well as use and mutation of borrwowed items so that we have enough information to satisfy the borrow checker.</li>
 <li>Write a load of unit-tests for various operations to ensure that they behave the way we expect with operator precedence and other stuff. Focus on 'internal' consistency (i.e. we know what to expect)</li>
+<li>Build a global errors table and build out what we need to verify errors by checking whether a particular error is raised in an example fragment so we can verify that we're covering all of the various error conditions both at the semantic and syntax level.</li>
 <li>End result should be a unit-test that compiles a sample function, links against it, and runs it to verify its behavior for simple if/else and a few basic operations like arithmetic on u32. We can support other operations later as time allows, but we should have basic calculation and conditional support for this first pass.</li>
-<li>Support classes and enums since those aren't supported yet.<ul>
-<li>Class = structure with functions.</li>
+<li>Support class single inheritance<ul>
+<li>Maybe just not support this at all. Inheritance is kind-of evil anyway and most people favor composition nowadays anyway.</li>
+<li>Each inherited class is just another class with a member that is the supertype. Initialization can proceed in the obvious way by initializing the supertype member.</li>
+</ul>
+</li>
+<li>Enums since those aren't supported yet.<ul>
 <li>Enum = symbol with constant typed integers.</li>
+<li>Scope and namespace concerns.</li>
+<li>Should 'lower' to just 'constant integer' values.</li>
 </ul>
 </li>
 <li><p class="startli">Build some tests that verify compatibility with most of the expectations of the C-style expressions we know and love by using the preprocessor to execute the same expression in C and Jlang to make sure we get the same results in both cases.</p>
-<p class="startli">We have the basics of this, but we should try to</p>
+<p class="startli">We have the basics of this, but we should try to be more complete in terms of actually verifying that it works the way we would expect with things like operator precedence and such.</p>
 </li>
 </ul>
 <h1><a class="anchor" id="autotoc_md6"></a>
@@ -127,12 +131,18 @@ Marketing (after we've bootstrapped)</h1>
 <li>Figure out how to compile down to WASM modules so we can build a website that has the compiler inside it.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md8"></a>
+Code Generation</h1>
+<ul>
+<li>We support composite types as return-values from functions, and arguments to them, but they don't follow the C ABI because LLVM doesn't do this for us. We need to figure out hopefully just in the code-generation layer how to actually lower the MIR into ABI-compliant code for structure arguments and return-values.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Compiler stability/elegance</h1>
 <ul>
 <li>Size of "tree.o" Investigate why the libjlang-frontend.a is so damn big. It mostly seems to be "tree.o" which isn't too surprising since it's really the biggest cpp file, but it doesn't seem complicated so it's a bit of a surprise why the code generated is so big.</li>
+<li>Re-name 'resolver' to 'lowering'. Also, possibly break up the function resolver because it's gotten too big.</li>
 <li>Factor out the "docs" and valgrind tests so that we can make doxygen, graphviz, and gcov into optional dependencies.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Compilation: Resolve some design questions</h2>
 <p>Some rules for classes and such:</p><ul>
 <li>Single inheritance only</li>
@@ -141,7 +151,7 @@ Compilation: Resolve some design questions</h2>
 <li>Do we need keywords for 'super' and 'this' We do need these, but we should be super-careful about them leaking for memory safety reasons.</li>
 <li>This design should give us just enough OO stuff without cluttering the design and causing too much bloat.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Start writing the standard library in Gyoji</h2>
 <ul>
 <li>Basic string manipulation functions</li>

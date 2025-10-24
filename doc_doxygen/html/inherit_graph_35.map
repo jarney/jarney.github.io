@@ -1,45 +1,49 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="5,469,164,494"/>
-<area shape="rect" id="Node000001" href="$classGyoji_1_1mir_1_1OperationBinary.html" title="This subclass of Operation represents a binary operation." alt="" coords="231,13,431,38"/>
-<area shape="poly" id="edge30_Node000000_Node000001" title=" " alt="" coords="82,455,85,375,90,322,100,265,116,206,139,148,170,94,210,47,230,34,233,39,214,51,174,97,144,150,121,207,106,266,96,323,90,375,88,455"/>
-<area shape="rect" id="Node000003" href="$classGyoji_1_1mir_1_1OperationFunctionCall.html" title="Function call (invoke) operation." alt="" coords="212,62,451,87"/>
-<area shape="poly" id="edge32_Node000000_Node000003" title=" " alt="" coords="84,454,89,383,107,286,123,234,145,184,174,137,210,97,227,85,230,90,214,101,178,140,149,186,128,236,112,287,94,383,89,455"/>
-<area shape="rect" id="Node000004" href="$classGyoji_1_1mir_1_1OperationJump.html" title="Unconditional Jump." alt="" coords="236,111,427,137"/>
-<area shape="poly" id="edge33_Node000000_Node000004" title=" " alt="" coords="85,454,94,391,114,308,130,264,151,221,178,182,210,147,234,133,237,137,214,151,182,185,156,224,135,266,119,310,99,392,90,455"/>
-<area shape="rect" id="Node000005" href="$classGyoji_1_1mir_1_1OperationJumpConditional.html" title="This operation represents a conditional jump." alt="" coords="236,161,427,201"/>
-<area shape="poly" id="edge34_Node000000_Node000005" title=" " alt="" coords="88,455,101,403,124,337,160,270,183,238,210,211,235,196,237,201,214,215,187,242,164,272,129,340,106,405,93,456"/>
-<area shape="rect" id="Node000006" href="$classGyoji_1_1mir_1_1OperationLiteralBool.html" title="Literal bool." alt="" coords="217,226,445,251"/>
-<area shape="poly" id="edge35_Node000000_Node000006" title=" " alt="" coords="91,454,106,411,130,358,165,305,186,281,210,260,231,249,234,254,214,265,190,285,169,308,135,361,111,413,96,456"/>
-<area shape="rect" id="Node000007" href="$classGyoji_1_1mir_1_1OperationLiteralChar.html" title="Literal character." alt="" coords="217,275,446,301"/>
-<area shape="poly" id="edge36_Node000000_Node000007" title=" " alt="" coords="95,455,113,422,139,382,171,344,211,311,237,298,240,303,213,316,175,347,143,386,118,424,100,457"/>
-<area shape="rect" id="Node000008" href="$classGyoji_1_1mir_1_1OperationLiteralFloat.html" title="Literal float." alt="" coords="232,325,431,365"/>
-<area shape="poly" id="edge37_Node000000_Node000008" title=" " alt="" coords="106,457,151,415,180,393,211,375,239,363,241,368,213,380,183,398,155,419,109,461"/>
-<area shape="rect" id="Node000009" href="$classGyoji_1_1mir_1_1OperationLiteralInt.html" title="Literal integer." alt="" coords="223,390,439,415"/>
-<area shape="poly" id="edge38_Node000000_Node000009" title=" " alt="" coords="122,460,211,424,254,413,256,418,213,429,124,465"/>
-<area shape="rect" id="Node000010" href="$classGyoji_1_1mir_1_1OperationLiteralNull.html" title="Literal null." alt="" coords="219,439,444,465"/>
-<area shape="poly" id="edge39_Node000000_Node000010" title=" " alt="" coords="178,468,224,462,225,467,178,473"/>
-<area shape="rect" id="Node000011" href="$classGyoji_1_1mir_1_1OperationLiteralString.html" title="Literal string." alt="" coords="232,489,431,529"/>
-<area shape="poly" id="edge40_Node000000_Node000011" title=" " alt="" coords="178,489,232,495,231,501,177,494"/>
-<area shape="rect" id="Node000012" href="$classGyoji_1_1mir_1_1OperationLocalDeclare.html" title="Declare a local variable in scope." alt="" coords="235,553,427,593"/>
-<area shape="poly" id="edge41_Node000000_Node000012" title=" " alt="" coords="123,498,213,539,249,551,247,556,211,544,121,503"/>
-<area shape="rect" id="Node000013" href="$classGyoji_1_1mir_1_1OperationLocalUndeclare.html" title="Un&#45;declare a variable (remove it from scope)" alt="" coords="235,617,427,657"/>
-<area shape="poly" id="edge42_Node000000_Node000013" title=" " alt="" coords="106,503,151,554,181,580,213,603,238,615,236,620,211,608,177,585,147,558,102,507"/>
-<area shape="rect" id="Node000014" href="$classGyoji_1_1mir_1_1OperationLocalVariable.html" title="Load a local variable." alt="" coords="235,681,427,721"/>
-<area shape="poly" id="edge43_Node000000_Node000014" title=" " alt="" coords="98,506,116,542,141,586,173,630,214,667,236,680,234,685,210,671,169,634,136,589,111,545,94,508"/>
-<area shape="rect" id="Node000015" href="$classGyoji_1_1mir_1_1OperationReturn.html" title="Return from a function with a value." alt="" coords="231,746,432,771"/>
-<area shape="poly" id="edge44_Node000000_Node000015" title=" " alt="" coords="94,507,107,556,130,617,165,679,188,707,214,731,235,744,233,748,210,735,184,711,161,682,125,619,102,557,89,508"/>
-<area shape="rect" id="Node000016" href="$classGyoji_1_1mir_1_1OperationReturnVoid.html" title="Return from a function without a value." alt="" coords="217,795,446,821"/>
-<area shape="poly" id="edge45_Node000000_Node000016" title=" " alt="" coords="91,507,102,564,123,639,139,678,159,716,184,751,214,781,234,793,231,798,210,785,180,754,155,719,134,680,118,641,97,566,86,508"/>
-<area shape="rect" id="Node000017" href="$classGyoji_1_1mir_1_1OperationSizeofType.html" title="The operation for obtaining the storage size of a type." alt="" coords="217,845,445,870"/>
-<area shape="poly" id="edge46_Node000000_Node000017" title=" " alt="" coords="90,508,97,574,117,661,132,708,154,753,180,794,214,830,233,842,230,847,210,834,176,797,149,755,128,710,111,663,92,575,85,508"/>
-<area shape="rect" id="Node000018" href="$classGyoji_1_1mir_1_1OperationSymbol.html" title="Symbol&#45;table lookup." alt="" coords="228,894,435,919"/>
-<area shape="poly" id="edge47_Node000000_Node000018" title=" " alt="" coords="88,508,93,582,110,684,125,738,147,790,176,839,214,881,230,892,227,896,210,885,172,842,142,793,120,739,104,685,87,583,83,508"/>
-<area shape="rect" id="Node000019" href="$classGyoji_1_1mir_1_1OperationUnary.html" title="This subclass of Operation represents a unary operation." alt="" coords="233,943,430,969"/>
-<area shape="poly" id="edge48_Node000000_Node000019" title=" " alt="" coords="92,507,108,602,134,730,151,794,170,852,191,899,214,930,234,943,231,948,210,934,187,902,165,854,146,795,129,731,103,603,87,508"/>
-<area shape="rect" id="Node000002" href="$classGyoji_1_1mir_1_1OperationArrayIndex.html" title="This subclass of OperationBinary represents indexing an array." alt="" coords="499,5,692,45"/>
-<area shape="poly" id="edge31_Node000001_Node000002" title=" " alt="" coords="445,23,499,23,499,28,445,28"/>
-<area shape="rect" id="Node000020" href="$classGyoji_1_1mir_1_1OperationCast.html" title="This subclass of OperationUnary represents a cast operation." alt="" coords="502,918,689,943"/>
-<area shape="poly" id="edge49_Node000019_Node000020" title=" " alt="" coords="444,943,501,937,502,942,444,948"/>
-<area shape="rect" id="Node000021" href="$classGyoji_1_1mir_1_1OperationDot.html" title="This subclass of Operation is used to access member variables of classes and other aggregate types by..." alt="" coords="505,967,686,993"/>
-<area shape="poly" id="edge50_Node000019_Node000021" title=" " alt="" coords="444,964,505,969,504,974,444,969"/>
+<area shape="rect" id="Node000000" href="$classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction&#45;set of the MIR." alt="" coords="5,538,164,563"/>
+<area shape="rect" id="Node000001" href="$classGyoji_1_1mir_1_1OperationAnonymousStructure.html" title="This class represents an anonymous structure." alt="" coords="214,5,449,45"/>
+<area shape="poly" id="edge32_Node000000_Node000001" title=" " alt="" coords="87,524,101,422,127,281,144,210,164,145,186,92,210,56,225,43,229,48,214,59,190,94,169,147,149,212,132,283,107,423,92,525"/>
+<area shape="rect" id="Node000002" href="$classGyoji_1_1mir_1_1OperationBinary.html" title="This subclass of Operation represents a binary operation." alt="" coords="231,70,431,95"/>
+<area shape="poly" id="edge33_Node000000_Node000002" title=" " alt="" coords="87,524,103,430,130,304,147,241,166,183,187,136,210,105,230,92,233,96,214,109,191,139,171,185,152,242,135,305,108,431,92,525"/>
+<area shape="rect" id="Node000004" href="$classGyoji_1_1mir_1_1OperationFunctionCall.html" title="Function call (invoke) operation." alt="" coords="212,119,451,145"/>
+<area shape="poly" id="edge35_Node000000_Node000004" title=" " alt="" coords="83,524,88,451,106,351,122,298,144,246,173,197,210,155,229,143,232,147,214,159,177,200,148,248,127,299,111,352,93,451,89,524"/>
+<area shape="rect" id="Node000005" href="$classGyoji_1_1mir_1_1OperationGetMethod.html" title="Method call (invoke) preparation." alt="" coords="241,169,422,209"/>
+<area shape="poly" id="edge36_Node000000_Node000005" title=" " alt="" coords="85,524,95,462,115,380,132,336,152,294,178,254,210,219,239,202,242,206,214,223,183,257,157,296,137,339,121,382,100,463,91,525"/>
+<area shape="rect" id="Node000006" href="$classGyoji_1_1mir_1_1OperationJump.html" title="Unconditional Jump." alt="" coords="236,234,427,259"/>
+<area shape="poly" id="edge37_Node000000_Node000006" title=" " alt="" coords="87,524,99,470,121,401,138,365,158,330,182,298,210,270,234,256,237,261,214,274,186,301,162,333,142,367,126,403,104,471,92,525"/>
+<area shape="rect" id="Node000007" href="$classGyoji_1_1mir_1_1OperationJumpConditional.html" title="This operation represents a conditional jump." alt="" coords="236,284,427,324"/>
+<area shape="poly" id="edge38_Node000000_Node000007" title=" " alt="" coords="91,524,107,482,132,431,166,378,187,355,210,334,235,320,237,324,214,338,191,358,170,382,137,433,112,484,96,526"/>
+<area shape="rect" id="Node000008" href="$classGyoji_1_1mir_1_1OperationLiteralBool.html" title="Literal bool." alt="" coords="217,349,445,374"/>
+<area shape="poly" id="edge39_Node000000_Node000008" title=" " alt="" coords="95,524,113,492,139,453,171,415,211,383,234,372,237,376,213,388,175,419,143,456,118,495,100,527"/>
+<area shape="rect" id="Node000009" href="$classGyoji_1_1mir_1_1OperationLiteralChar.html" title="Literal character." alt="" coords="217,398,446,423"/>
+<area shape="poly" id="edge40_Node000000_Node000009" title=" " alt="" coords="103,526,148,478,178,454,211,434,243,421,245,426,213,438,181,458,152,482,107,529"/>
+<area shape="rect" id="Node000010" href="$classGyoji_1_1mir_1_1OperationLiteralFloat.html" title="Literal float." alt="" coords="232,448,431,488"/>
+<area shape="poly" id="edge41_Node000000_Node000010" title=" " alt="" coords="127,530,211,497,250,486,252,491,213,503,129,535"/>
+<area shape="rect" id="Node000011" href="$classGyoji_1_1mir_1_1OperationLiteralInt.html" title="Literal integer." alt="" coords="223,513,439,538"/>
+<area shape="poly" id="edge42_Node000000_Node000011" title=" " alt="" coords="177,538,223,534,224,539,178,544"/>
+<area shape="rect" id="Node000012" href="$classGyoji_1_1mir_1_1OperationLiteralNull.html" title="Literal null." alt="" coords="219,562,444,587"/>
+<area shape="poly" id="edge43_Node000000_Node000012" title=" " alt="" coords="178,557,219,561,218,566,178,562"/>
+<area shape="rect" id="Node000013" href="$classGyoji_1_1mir_1_1OperationLiteralString.html" title="Literal string." alt="" coords="232,612,431,652"/>
+<area shape="poly" id="edge44_Node000000_Node000013" title=" " alt="" coords="131,566,213,596,256,609,254,614,211,601,129,571"/>
+<area shape="rect" id="Node000014" href="$classGyoji_1_1mir_1_1OperationLocalDeclare.html" title="Declare a local variable in scope." alt="" coords="235,676,427,716"/>
+<area shape="poly" id="edge45_Node000000_Node000014" title=" " alt="" coords="108,572,153,618,182,642,213,662,240,673,238,678,211,666,179,646,150,622,104,576"/>
+<area shape="rect" id="Node000015" href="$classGyoji_1_1mir_1_1OperationLocalUndeclare.html" title="Un&#45;declare a variable (remove it from scope)" alt="" coords="235,740,427,780"/>
+<area shape="poly" id="edge46_Node000000_Node000015" title=" " alt="" coords="100,575,117,610,142,650,175,691,214,726,236,738,234,743,210,730,171,695,138,653,113,612,95,578"/>
+<area shape="rect" id="Node000016" href="$classGyoji_1_1mir_1_1OperationLocalVariable.html" title="Load a local variable." alt="" coords="235,804,427,844"/>
+<area shape="poly" id="edge47_Node000000_Node000016" title=" " alt="" coords="95,576,109,623,133,680,167,740,189,767,214,790,236,804,234,808,210,794,185,770,163,743,128,683,104,624,90,578"/>
+<area shape="rect" id="Node000017" href="$classGyoji_1_1mir_1_1OperationReturn.html" title="Return from a function with a value." alt="" coords="231,869,432,894"/>
+<area shape="poly" id="edge48_Node000000_Node000017" title=" " alt="" coords="91,577,101,635,123,710,139,750,159,788,184,824,214,854,234,866,231,871,210,858,180,827,154,791,134,752,118,712,96,636,86,578"/>
+<area shape="rect" id="Node000018" href="$classGyoji_1_1mir_1_1OperationReturnVoid.html" title="Return from a function without a value." alt="" coords="217,918,446,943"/>
+<area shape="poly" id="edge49_Node000000_Node000018" title=" " alt="" coords="90,576,97,643,116,732,132,779,153,825,180,867,214,903,233,916,230,920,210,907,176,870,148,827,127,781,111,733,91,644,84,577"/>
+<area shape="rect" id="Node000019" href="$classGyoji_1_1mir_1_1OperationSizeofType.html" title="The operation for obtaining the storage size of a type." alt="" coords="217,967,445,993"/>
+<area shape="poly" id="edge50_Node000000_Node000019" title=" " alt="" coords="88,577,93,652,109,754,125,808,147,861,176,910,214,953,232,965,229,970,210,957,172,913,142,864,120,810,104,755,87,653,83,577"/>
+<area shape="rect" id="Node000020" href="$classGyoji_1_1mir_1_1OperationSymbol.html" title="Symbol&#45;table lookup." alt="" coords="228,1017,435,1042"/>
+<area shape="poly" id="edge51_Node000000_Node000020" title=" " alt="" coords="92,577,108,672,134,801,151,866,170,925,191,972,214,1003,229,1014,226,1019,210,1007,186,975,165,926,146,867,129,802,103,673,87,578"/>
+<area shape="rect" id="Node000021" href="$classGyoji_1_1mir_1_1OperationUnary.html" title="This subclass of Operation represents a unary operation." alt="" coords="233,1066,430,1091"/>
+<area shape="poly" id="edge52_Node000000_Node000021" title=" " alt="" coords="92,577,105,681,131,825,147,898,167,964,189,1017,214,1053,234,1066,231,1071,210,1057,184,1020,162,966,142,899,125,826,100,682,86,577"/>
+<area shape="rect" id="Node000003" href="$classGyoji_1_1mir_1_1OperationArrayIndex.html" title="This subclass of OperationBinary represents indexing an array." alt="" coords="499,63,692,103"/>
+<area shape="poly" id="edge34_Node000002_Node000003" title=" " alt="" coords="445,80,499,80,499,85,445,85"/>
+<area shape="rect" id="Node000022" href="$classGyoji_1_1mir_1_1OperationCast.html" title="This subclass of OperationUnary represents a cast operation." alt="" coords="502,1041,689,1066"/>
+<area shape="poly" id="edge53_Node000021_Node000022" title=" " alt="" coords="444,1065,501,1060,502,1065,444,1071"/>
+<area shape="rect" id="Node000023" href="$classGyoji_1_1mir_1_1OperationDot.html" title="This subclass of Operation is used to access member variables of classes and other aggregate types by..." alt="" coords="505,1090,686,1115"/>
+<area shape="poly" id="edge54_Node000021_Node000023" title=" " alt="" coords="444,1086,505,1092,504,1097,444,1092"/>
 </map>

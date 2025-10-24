@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gyoji Compiler: Gyoji::frontend::lowering::FunctionResolver Class Reference</title>
+<title>Gyoji Compiler: Gyoji::frontend::lowering::FunctionLowering Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,47 +70,47 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceGyoji.html">Gyoji</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1frontend.html">frontend</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1frontend_1_1lowering.html">lowering</a></li><li class="navelem"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionResolver.html">FunctionResolver</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceGyoji.html">Gyoji</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1frontend.html">frontend</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1frontend_1_1lowering.html">lowering</a></li><li class="navelem"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionLowering.html">FunctionLowering</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classGyoji_1_1frontend_1_1lowering_1_1FunctionResolver-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Gyoji::frontend::lowering::FunctionResolver Class Reference</div></div>
+<a href="classGyoji_1_1frontend_1_1lowering_1_1FunctionLowering-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Gyoji::frontend::lowering::FunctionLowering Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Resolves all functions found in the MIR.  
- <a href="classGyoji_1_1frontend_1_1lowering_1_1FunctionResolver.html#details">More...</a></p>
+ <a href="classGyoji_1_1frontend_1_1lowering_1_1FunctionLowering.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="function-resolver_8hpp_source.html">function-resolver.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="function-lowering_8hpp_source.html">function-lowering.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aad80185effa367166d6f4d64106a9232" id="r_aad80185effa367166d6f4d64106a9232"><td class="memItemLeft" align="right" valign="top"><a id="aad80185effa367166d6f4d64106a9232" name="aad80185effa367166d6f4d64106a9232"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FunctionResolver</b> (<a class="el" href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a> &amp;_compiler_context, const <a class="el" href="classGyoji_1_1frontend_1_1ParseResult.html">Gyoji::frontend::ParseResult</a> &amp;_parse_result, <a class="el" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp;_mir, <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1TypeResolver.html">TypeResolver</a> &amp;_type_resolver)</td></tr>
-<tr class="memdesc:aad80185effa367166d6f4d64106a9232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a definition resolver. Constructs a function resolver using the compiler context, parse result, and an MIR to act as the destination of the parse. This makes use of the <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1TypeResolver.html" title="The TypeResolver is the lowering process for types. This function reads the result of a parse and pro...">TypeResolver</a> which will already have been used to extract type information from the translation unit. <br /></td></tr>
-<tr class="separator:aad80185effa367166d6f4d64106a9232"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b635f91688c7d96b45d20bf35ef1464" id="r_a0b635f91688c7d96b45d20bf35ef1464"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionResolver.html#a0b635f91688c7d96b45d20bf35ef1464">~FunctionResolver</a> ()</td></tr>
-<tr class="memdesc:a0b635f91688c7d96b45d20bf35ef1464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move along, nothing to see here.  <br /></td></tr>
-<tr class="separator:a0b635f91688c7d96b45d20bf35ef1464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a237023b53c37eba490f935f3b8e7307a" id="r_a237023b53c37eba490f935f3b8e7307a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionResolver.html#a237023b53c37eba490f935f3b8e7307a">resolve</a> ()</td></tr>
-<tr class="separator:a237023b53c37eba490f935f3b8e7307a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8008993924462aa29a58c8920ee493d4" id="r_a8008993924462aa29a58c8920ee493d4"><td class="memItemLeft" align="right" valign="top"><a id="a8008993924462aa29a58c8920ee493d4" name="a8008993924462aa29a58c8920ee493d4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FunctionLowering</b> (<a class="el" href="classGyoji_1_1context_1_1CompilerContext.html">Gyoji::context::CompilerContext</a> &amp;_compiler_context, const <a class="el" href="classGyoji_1_1frontend_1_1ParseResult.html">Gyoji::frontend::ParseResult</a> &amp;_parse_result, <a class="el" href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a> &amp;_mir, <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1TypeLowering.html">TypeLowering</a> &amp;_type_lowering)</td></tr>
+<tr class="memdesc:a8008993924462aa29a58c8920ee493d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a definition resolver. Constructs a function resolver using the compiler context, parse result, and an MIR to act as the destination of the parse. This makes use of the <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1TypeLowering.html" title="The TypeLowering is the lowering process for types. This function reads the result of a parse and pro...">TypeLowering</a> which will already have been used to extract type information from the translation unit. <br /></td></tr>
+<tr class="separator:a8008993924462aa29a58c8920ee493d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51b4196265bc990e386bb80e1e182b2" id="r_ad51b4196265bc990e386bb80e1e182b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionLowering.html#ad51b4196265bc990e386bb80e1e182b2">~FunctionLowering</a> ()</td></tr>
+<tr class="memdesc:ad51b4196265bc990e386bb80e1e182b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move along, nothing to see here.  <br /></td></tr>
+<tr class="separator:ad51b4196265bc990e386bb80e1e182b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81fd8fb5d18f506af131af6304aed95d" id="r_a81fd8fb5d18f506af131af6304aed95d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionLowering.html#a81fd8fb5d18f506af131af6304aed95d">lower</a> ()</td></tr>
+<tr class="separator:a81fd8fb5d18f506af131af6304aed95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Resolves all functions found in the MIR. </p>
 <p>This is the 'lowering' process for functions. It reads the parse result syntax tree and constructs functions and the "BasicBlock" control-flow graph in order to produce the MIR which can later drive semantic analysis like borrow checking and then code-generation.</p>
-<p>This process is mainly performed by using one <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionResolver.html" title="Lowering for a function.">FunctionDefinitionResolver</a> for each function found in the translation unit. </p>
+<p>This process is mainly performed by using one <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionLowering.html" title="Lowering for a function.">FunctionDefinitionLowering</a> for each function found in the translation unit. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0b635f91688c7d96b45d20bf35ef1464" name="a0b635f91688c7d96b45d20bf35ef1464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b635f91688c7d96b45d20bf35ef1464">&#9670;&#160;</a></span>~FunctionResolver()</h2>
+<a id="ad51b4196265bc990e386bb80e1e182b2" name="ad51b4196265bc990e386bb80e1e182b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51b4196265bc990e386bb80e1e182b2">&#9670;&#160;</a></span>~FunctionLowering()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FunctionResolver::~FunctionResolver </td>
+          <td class="memname">FunctionLowering::~FunctionLowering </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -124,14 +124,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a237023b53c37eba490f935f3b8e7307a" name="a237023b53c37eba490f935f3b8e7307a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a237023b53c37eba490f935f3b8e7307a">&#9670;&#160;</a></span>resolve()</h2>
+<a id="a81fd8fb5d18f506af131af6304aed95d" name="a81fd8fb5d18f506af131af6304aed95d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81fd8fb5d18f506af131af6304aed95d">&#9670;&#160;</a></span>lower()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool FunctionResolver::resolve </td>
+          <td class="memname">bool FunctionLowering::lower </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -143,8 +143,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/frontend/gyoji-frontend/<a class="el" href="function-resolver_8hpp_source.html">function-resolver.hpp</a></li>
-<li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/frontend/<b>function-resolver.cpp</b></li>
+<li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/frontend/gyoji-frontend/<a class="el" href="function-lowering_8hpp_source.html">function-lowering.hpp</a></li>
+<li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/frontend/<b>function-lowering.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->

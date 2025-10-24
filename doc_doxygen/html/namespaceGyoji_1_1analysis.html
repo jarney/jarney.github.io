@@ -100,6 +100,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html">AnalysisPassUnreachable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for the existence of unreachable code.  <a href="classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1analysis_1_1AnalysisPassUseBeforeAssignment.html">AnalysisPassUseBeforeAssignment</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This pass ensures that all values are assigned before they are used.  <a href="classGyoji_1_1analysis_1_1AnalysisPassUseBeforeAssignment.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html">AnalysisPassVariableScopePairing</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This pass ensures that every variable that has been declared is also paired with an un-declare.  <a href="classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,7 +114,7 @@ Classes</h2></td></tr>
 <li>Initialization: Every variable is written (initialized) BEFORE it is read from.</li>
 <li>Type Resolution: Ensures that each variable has a type that has been fully resolved (i.e. that there are no forward-declared classes that are being used before being fully declared).</li>
 <li>Borrow Semantics: That access to variables through references always point to a valid location and have unique access to it at any point in time.</li>
-<li>Pairing of const/dest: Every local variable constructor is paired with a destructor. No path through the code allows a variable to be declared and constructed without a corresponding destructor and de-allocation.</li>
+<li>Pairing of const/dest: Every local variable declaration is paired with a destructor. No path through the code allows a variable to be declared without a corresponding destructor and de-allocation.</li>
 <li>Unreachable code: There is no code after the end of any basic block which would become unreachable because a branch has occurred before that code is executed.</li>
 <li>Return semantics: Every path through the code returns a value that matches the return-value of the function (or void). </li>
 </ul>

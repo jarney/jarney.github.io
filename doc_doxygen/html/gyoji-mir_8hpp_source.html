@@ -82,50 +82,64 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">gyoji-mir.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;gyoji-mir/types.hpp&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;gyoji-mir/operations.hpp&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;gyoji-mir/functions.hpp&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;gyoji-mir/symbols.hpp&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespaceGyoji_1_1mir.html">   37</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyoji_1_1mir.html">Gyoji::mir</a> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classGyoji_1_1mir_1_1MIR.html">   57</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">MIR</a> {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">MIR</a>();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">~MIR</a>();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Types.html">Types</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a6ddb189937b39b2b515f8eef1b27bdfd">get_types</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Types.html">Types</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a6ddb189937b39b2b515f8eef1b27bdfd">get_types</a>();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Symbols.html">Symbols</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a218b76afeb25c9dee3d5f3cc070b49db">get_symbols</a>() <span class="keyword">const</span>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2025 Jonathan S. Arney</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  You may obtain a copy of the License at</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *      https://github.com/jarney/gyoji/blob/master/LICENSE</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *  See the License for the specific language governing permissions and</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *  limitations under the License.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;gyoji-mir/types.hpp&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;gyoji-mir/operations.hpp&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;gyoji-mir/functions.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;gyoji-mir/symbols.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespaceGyoji_1_1mir.html">   51</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyoji_1_1mir.html">Gyoji::mir</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classGyoji_1_1mir_1_1MIR.html">   71</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">MIR</a> {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">MIR</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1MIR.html">~MIR</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Types.html">Types</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a6ddb189937b39b2b515f8eef1b27bdfd">get_types</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Types.html">Types</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a6ddb189937b39b2b515f8eef1b27bdfd">get_types</a>();</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Symbols.html">Symbols</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a218b76afeb25c9dee3d5f3cc070b49db">get_symbols</a>();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Functions.html">Functions</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a970d848edba8955c1e38d9c0afa36a63">get_functions</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Functions.html">Functions</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a970d848edba8955c1e38d9c0afa36a63">get_functions</a>();</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a4307b088485d7495e1f89207bc89528b">dump</a>(FILE *out) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Functions.html">Functions</a> functions;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Types.html">Types</a> types;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Symbols.html">Symbols</a> symbols;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    };</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Symbols.html">Symbols</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a218b76afeb25c9dee3d5f3cc070b49db">get_symbols</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Symbols.html">Symbols</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a218b76afeb25c9dee3d5f3cc070b49db">get_symbols</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">const</span> <a class="code hl_class" href="classGyoji_1_1mir_1_1Functions.html">Functions</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a970d848edba8955c1e38d9c0afa36a63">get_functions</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Functions.html">Functions</a> &amp; <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a970d848edba8955c1e38d9c0afa36a63">get_functions</a>();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGyoji_1_1mir_1_1MIR.html#a4307b088485d7495e1f89207bc89528b">dump</a>(FILE *out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Functions.html">Functions</a> functions;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Types.html">Types</a> types;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_class" href="classGyoji_1_1mir_1_1Symbols.html">Symbols</a> symbols;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    };</div>
 </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>};</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>};</div>
 </div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1Functions_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Functions.html">Gyoji::mir::Functions</a></div><div class="ttdoc">Container for functions.</div><div class="ttdef"><b>Definition</b> functions.hpp:24</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a></div><div class="ttdoc">The middle-tier intermediate representation (MIR) of a translation unit.</div><div class="ttdef"><b>Definition</b> gyoji-mir.hpp:57</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html_a218b76afeb25c9dee3d5f3cc070b49db"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html#a218b76afeb25c9dee3d5f3cc070b49db">Gyoji::mir::MIR::get_symbols</a></div><div class="ttdeci">const Symbols &amp; get_symbols() const</div><div class="ttdoc">Immutable symbol table.</div><div class="ttdef"><b>Definition</b> mir.cpp:32</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html_a4307b088485d7495e1f89207bc89528b"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html#a4307b088485d7495e1f89207bc89528b">Gyoji::mir::MIR::dump</a></div><div class="ttdeci">void dump(FILE *out) const</div><div class="ttdoc">Dump MIR for debugging.</div><div class="ttdef"><b>Definition</b> mir.cpp:36</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html_a6ddb189937b39b2b515f8eef1b27bdfd"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html#a6ddb189937b39b2b515f8eef1b27bdfd">Gyoji::mir::MIR::get_types</a></div><div class="ttdeci">const Types &amp; get_types() const</div><div class="ttdoc">Immutable type container.</div><div class="ttdef"><b>Definition</b> mir.cpp:12</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html_a970d848edba8955c1e38d9c0afa36a63"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html#a970d848edba8955c1e38d9c0afa36a63">Gyoji::mir::MIR::get_functions</a></div><div class="ttdeci">const Functions &amp; get_functions() const</div><div class="ttdoc">Immutable function table.</div><div class="ttdef"><b>Definition</b> mir.cpp:20</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1Symbols_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Symbols.html">Gyoji::mir::Symbols</a></div><div class="ttdoc">Symbol table for the intermediate representation (MIR)</div><div class="ttdef"><b>Definition</b> symbols.hpp:72</div></div>
-<div class="ttc" id="aclassGyoji_1_1mir_1_1Types_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Types.html">Gyoji::mir::Types</a></div><div class="ttdoc">Set of types extracted from a translation unit.</div><div class="ttdef"><b>Definition</b> types.hpp:40</div></div>
-<div class="ttc" id="anamespaceGyoji_1_1mir_html"><div class="ttname"><a href="namespaceGyoji_1_1mir.html">Gyoji::mir</a></div><div class="ttdoc">Middle intermediate representation (MIR) of a translation unit.</div><div class="ttdef"><b>Definition</b> gyoji-mir.hpp:37</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1Functions_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Functions.html">Gyoji::mir::Functions</a></div><div class="ttdoc">Container for functions.</div><div class="ttdef"><b>Definition</b> functions.hpp:39</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html">Gyoji::mir::MIR</a></div><div class="ttdoc">The middle-tier intermediate representation (MIR) of a translation unit.</div><div class="ttdef"><b>Definition</b> gyoji-mir.hpp:71</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html_a218b76afeb25c9dee3d5f3cc070b49db"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html#a218b76afeb25c9dee3d5f3cc070b49db">Gyoji::mir::MIR::get_symbols</a></div><div class="ttdeci">const Symbols &amp; get_symbols() const</div><div class="ttdoc">Immutable symbol table.</div><div class="ttdef"><b>Definition</b> mir.cpp:46</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html_a4307b088485d7495e1f89207bc89528b"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html#a4307b088485d7495e1f89207bc89528b">Gyoji::mir::MIR::dump</a></div><div class="ttdeci">void dump(FILE *out) const</div><div class="ttdoc">Dump MIR for debugging.</div><div class="ttdef"><b>Definition</b> mir.cpp:50</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html_a6ddb189937b39b2b515f8eef1b27bdfd"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html#a6ddb189937b39b2b515f8eef1b27bdfd">Gyoji::mir::MIR::get_types</a></div><div class="ttdeci">const Types &amp; get_types() const</div><div class="ttdoc">Immutable type container.</div><div class="ttdef"><b>Definition</b> mir.cpp:26</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1MIR_html_a970d848edba8955c1e38d9c0afa36a63"><div class="ttname"><a href="classGyoji_1_1mir_1_1MIR.html#a970d848edba8955c1e38d9c0afa36a63">Gyoji::mir::MIR::get_functions</a></div><div class="ttdeci">const Functions &amp; get_functions() const</div><div class="ttdoc">Immutable function table.</div><div class="ttdef"><b>Definition</b> mir.cpp:34</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1Symbols_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Symbols.html">Gyoji::mir::Symbols</a></div><div class="ttdoc">Symbol table for the intermediate representation (MIR)</div><div class="ttdef"><b>Definition</b> symbols.hpp:94</div></div>
+<div class="ttc" id="aclassGyoji_1_1mir_1_1Types_html"><div class="ttname"><a href="classGyoji_1_1mir_1_1Types.html">Gyoji::mir::Types</a></div><div class="ttdoc">Set of types extracted from a translation unit.</div><div class="ttdef"><b>Definition</b> types.hpp:54</div></div>
+<div class="ttc" id="anamespaceGyoji_1_1mir_html"><div class="ttname"><a href="namespaceGyoji_1_1mir.html">Gyoji::mir</a></div><div class="ttdoc">Middle intermediate representation (MIR) of a translation unit.</div><div class="ttdef"><b>Definition</b> gyoji-mir.hpp:51</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->
 <!-- start footer part -->

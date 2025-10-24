@@ -33,5 +33,7 @@ var searchData=
   ['vector_3c_20std_3a_3aunique_5fptr_3c_20statement_20_3e_20_3e_30',['vector&lt; std::unique_ptr&lt; Statement &gt; &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html',1,'std']]],
   ['vector_3c_20std_3a_3aunique_5fptr_3c_20statementswitchblock_20_3e_20_3e_31',['vector&lt; std::unique_ptr&lt; StatementSwitchBlock &gt; &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html',1,'std']]],
   ['vector_3c_20std_3a_3aunique_5fptr_3c_20structinitializer_20_3e_20_3e_32',['vector&lt; std::unique_ptr&lt; StructInitializer &gt; &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html',1,'std']]],
-  ['view_5finterface_33',['view_interface',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a05974.html',1,'std::ranges']]]
+  ['vector_3c_20std_3a_3aunique_5fptr_3c_20structinitializerfieldexpression_20_3e_20_3e_33',['vector&lt; std::unique_ptr&lt; StructInitializerFieldExpression &gt; &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html',1,'std']]],
+  ['vector_3c_20variableloadpoint_20_3e_34',['vector&lt; VariableLoadPoint &gt;',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html',1,'std']]],
+  ['view_5finterface_35',['view_interface',['http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a05974.html',1,'std::ranges']]]
 ];

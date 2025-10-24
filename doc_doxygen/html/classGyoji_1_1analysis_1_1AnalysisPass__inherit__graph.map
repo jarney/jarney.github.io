@@ -1,13 +1,15 @@
 <map id="Gyoji::analysis::AnalysisPass" name="Gyoji::analysis::AnalysisPass">
-<area shape="rect" id="Node000001" title="Abstract interface to analysis passes." alt="" coords="5,141,216,166"/>
-<area shape="rect" id="Node000002" href="$classGyoji_1_1analysis_1_1AnalysisPassBorrowChecker.html" title="Performs the borrow&#45;checker algorithm." alt="" coords="267,5,448,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,130,195,93,263,55,291,43,293,48,265,60,198,97,142,135"/>
-<area shape="rect" id="Node000003" href="$classGyoji_1_1analysis_1_1AnalysisPassReturnValues.html" title="Performs checks for return&#45;value consistency." alt="" coords="267,69,448,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,134,279,107,280,112,175,140"/>
-<area shape="rect" id="Node000004" href="$classGyoji_1_1analysis_1_1AnalysisPassTypeResolution.html" title="Check that all types have been fully declared before use." alt="" coords="267,133,448,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="230,151,266,151,266,156,230,156"/>
-<area shape="rect" id="Node000005" href="$classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html" title="Checks for the existence of unreachable code." alt="" coords="267,197,448,237"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="175,167,280,195,279,200,173,172"/>
-<area shape="rect" id="Node000006" href="$classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html" title="This pass ensures that every variable that has been declared is also paired with an un&#45;declare." alt="" coords="264,261,451,301"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="142,172,198,209,265,247,293,259,291,264,263,252,195,214,139,176"/>
+<area shape="rect" id="Node000001" title="Abstract interface to analysis passes." alt="" coords="5,173,216,198"/>
+<area shape="rect" id="Node000002" href="$classGyoji_1_1analysis_1_1AnalysisPassBorrowChecker.html" title="Performs the borrow&#45;checker algorithm." alt="" coords="271,5,453,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,161,188,108,224,80,263,55,289,43,291,48,265,60,227,84,191,112,135,165"/>
+<area shape="rect" id="Node000003" href="$classGyoji_1_1analysis_1_1AnalysisPassReturnValues.html" title="Performs checks for return&#45;value consistency." alt="" coords="271,69,453,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,165,263,119,297,107,298,112,265,124,154,170"/>
+<area shape="rect" id="Node000004" href="$classGyoji_1_1analysis_1_1AnalysisPassTypeResolution.html" title="Check that all types have been fully declared before use." alt="" coords="271,133,453,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,168,271,162,271,168,225,174"/>
+<area shape="rect" id="Node000005" href="$classGyoji_1_1analysis_1_1AnalysisPassUnreachable.html" title="Checks for the existence of unreachable code." alt="" coords="271,197,453,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="225,197,271,203,271,208,224,202"/>
+<area shape="rect" id="Node000006" href="$classGyoji_1_1analysis_1_1AnalysisPassUseBeforeAssignment.html" title="This pass ensures that all values are assigned before they are used." alt="" coords="264,261,460,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="154,201,265,247,298,259,297,264,263,252,152,206"/>
+<area shape="rect" id="Node000007" href="$classGyoji_1_1analysis_1_1AnalysisPassVariableScopePairing.html" title="This pass ensures that every variable that has been declared is also paired with an un&#45;declare." alt="" coords="269,325,455,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="135,206,191,258,227,286,265,311,291,323,289,328,263,316,224,291,188,262,131,210"/>
 </map>

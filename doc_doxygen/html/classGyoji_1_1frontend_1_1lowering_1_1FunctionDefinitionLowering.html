@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gyoji Compiler: Gyoji::frontend::lowering::FunctionDefinitionResolver Class Reference</title>
+<title>Gyoji Compiler: Gyoji::frontend::lowering::FunctionDefinitionLowering Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,40 +70,40 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceGyoji.html">Gyoji</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1frontend.html">frontend</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1frontend_1_1lowering.html">lowering</a></li><li class="navelem"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionResolver.html">FunctionDefinitionResolver</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceGyoji.html">Gyoji</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1frontend.html">frontend</a></li><li class="navelem"><a class="el" href="namespaceGyoji_1_1frontend_1_1lowering.html">lowering</a></li><li class="navelem"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionLowering.html">FunctionDefinitionLowering</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionResolver-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Gyoji::frontend::lowering::FunctionDefinitionResolver Class Reference</div></div>
+<a href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionLowering-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Gyoji::frontend::lowering::FunctionDefinitionLowering Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Lowering for a function.  
- <a href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionResolver.html#details">More...</a></p>
+ <a href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionLowering.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="function-resolver_8hpp_source.html">function-resolver.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="function-lowering_8hpp_source.html">function-lowering.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a38bb8fb62c94c7fea3564541370e5604" id="r_a38bb8fb62c94c7fea3564541370e5604"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionResolver.html#a38bb8fb62c94c7fea3564541370e5604">resolve</a> ()</td></tr>
-<tr class="memdesc:a38bb8fb62c94c7fea3564541370e5604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a single function definition.  <br /></td></tr>
-<tr class="separator:a38bb8fb62c94c7fea3564541370e5604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8988d9e05aa06cadd13b2165b005734" id="r_aa8988d9e05aa06cadd13b2165b005734"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionLowering.html#aa8988d9e05aa06cadd13b2165b005734">lower</a> ()</td></tr>
+<tr class="memdesc:aa8988d9e05aa06cadd13b2165b005734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a single function definition.  <br /></td></tr>
+<tr class="separator:aa8988d9e05aa06cadd13b2165b005734"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Lowering for a function. </p>
 <p>This class is responsible for converting a FileStatementFunctionDefinition into an equivalent program in the MIR representation. This iterates the statements inside the function definition and emits MIR code that matches the intend. In addition, rules for the validity of the program are evaluated so that grossly invalid programs never make it to the MIR level. Semantic errors are reported through the CompilerContext in the form of context-aware messages that highlight where the error took place. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a38bb8fb62c94c7fea3564541370e5604" name="a38bb8fb62c94c7fea3564541370e5604"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38bb8fb62c94c7fea3564541370e5604">&#9670;&#160;</a></span>resolve()</h2>
+<a id="aa8988d9e05aa06cadd13b2165b005734" name="aa8988d9e05aa06cadd13b2165b005734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8988d9e05aa06cadd13b2165b005734">&#9670;&#160;</a></span>lower()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool FunctionDefinitionResolver::resolve </td>
+          <td class="memname">bool FunctionDefinitionLowering::lower </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -118,8 +118,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/frontend/gyoji-frontend/<a class="el" href="function-resolver_8hpp_source.html">function-resolver.hpp</a></li>
-<li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/frontend/<b>function-resolver.cpp</b></li>
+<li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/frontend/gyoji-frontend/<a class="el" href="function-lowering_8hpp_source.html">function-lowering.hpp</a></li>
+<li>/home/jona/NetBeansProjects/jos/compiler/jlang2/src/frontend/<b>function-lowering.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->

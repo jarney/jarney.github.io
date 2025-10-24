@@ -91,8 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac39e9026e5c5e40d3d5893e58f130d06" id="r_ac39e9026e5c5e40d3d5893e58f130d06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1ScopeTracker.html#ac39e9026e5c5e40d3d5893e58f130d06">~ScopeTracker</a> ()</td></tr>
 <tr class="memdesc:ac39e9026e5c5e40d3d5893e58f130d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move along, nothing to see here.  <br /></td></tr>
 <tr class="separator:ac39e9026e5c5e40d3d5893e58f130d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4556a08472fc1fc7c55f4935269cdf51" id="r_a4556a08472fc1fc7c55f4935269cdf51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1ScopeTracker.html#a4556a08472fc1fc7c55f4935269cdf51">scope_push</a> (const <a class="el" href="classGyoji_1_1context_1_1SourceReference.html">Gyoji::context::SourceReference</a> &amp;_source_ref)</td></tr>
-<tr class="separator:a4556a08472fc1fc7c55f4935269cdf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb1e723c3e35e61abd2bb5296ec3720a" id="r_adb1e723c3e35e61abd2bb5296ec3720a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1ScopeTracker.html#adb1e723c3e35e61abd2bb5296ec3720a">scope_push</a> (bool <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1ScopeTracker.html#a828533591f049a994126a104cf07bb88">is_unsafe</a>, const <a class="el" href="classGyoji_1_1context_1_1SourceReference.html">Gyoji::context::SourceReference</a> &amp;_source_ref)</td></tr>
+<tr class="separator:adb1e723c3e35e61abd2bb5296ec3720a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab016c3492a5212cb11ca26c76560d02d" id="r_ab016c3492a5212cb11ca26c76560d02d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1ScopeTracker.html#ab016c3492a5212cb11ca26c76560d02d">scope_push_loop</a> (const <a class="el" href="classGyoji_1_1context_1_1SourceReference.html">Gyoji::context::SourceReference</a> &amp;_source_ref, size_t _loop_break_blockid, size_t _loop_continue_blockid)</td></tr>
 <tr class="separator:ab016c3492a5212cb11ca26c76560d02d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e408ea2d0a006da9f36ec0610ee0d79" id="r_a9e408ea2d0a006da9f36ec0610ee0d79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1ScopeTracker.html#a9e408ea2d0a006da9f36ec0610ee0d79">scope_pop</a> ()</td></tr>
@@ -113,10 +113,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8741af8a011d6433061bdcabdf4bd341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57d4adcc70ff5b39d6e5663fcedae0dc" id="r_a57d4adcc70ff5b39d6e5663fcedae0dc"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector</a>&lt; <a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01653.html#ga32db3d9898c44d3b3a578b560f7758cc">std::string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1ScopeTracker.html#a57d4adcc70ff5b39d6e5663fcedae0dc">get_variables_to_unwind_for_label</a> (<a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01653.html#ga32db3d9898c44d3b3a578b560f7758cc">std::string</a> &amp;label) const</td></tr>
 <tr class="separator:a57d4adcc70ff5b39d6e5663fcedae0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a828533591f049a994126a104cf07bb88" id="r_a828533591f049a994126a104cf07bb88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1ScopeTracker.html#a828533591f049a994126a104cf07bb88">is_unsafe</a> () const</td></tr>
+<tr class="separator:a828533591f049a994126a104cf07bb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tracks variables declared in each scope along with abels and goto statements in a highly simplified intermediate representation. </p>
-<p>This class exists to represent a scope in a highly simplified way that is specificatlly designed to provide all of the information needed to resolve labels and goto statements and unwind scopes when a goto/branch would take control of the program directly from one scope to another. Some of these constructs violate the 'normal' scope rules about variable declaration, so this is done in order to first check that the jump is legal and then to provide the information to the <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionResolver.html" title="Lowering for a function.">FunctionDefinitionResolver</a> about what variables would be leaving scope when a goto occurs. In addition, there is logic here to deal with the fact that a 'goto' may precede its corresponding 'label' definition so that the code can be emitted anyway.</p>
+<p>This class exists to represent a scope in a highly simplified way that is specificatlly designed to provide all of the information needed to resolve labels and goto statements and unwind scopes when a goto/branch would take control of the program directly from one scope to another. Some of these constructs violate the 'normal' scope rules about variable declaration, so this is done in order to first check that the jump is legal and then to provide the information to the <a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1FunctionDefinitionLowering.html" title="Lowering for a function.">FunctionDefinitionLowering</a> about what variables would be leaving scope when a goto occurs. In addition, there is logic here to deal with the fact that a 'goto' may precede its corresponding 'label' definition so that the code can be emitted anyway.</p>
 <p>This scope tracker is only to be used inside the lowering process as an intermediate calculation and should not be used outside of that context. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac39e9026e5c5e40d3d5893e58f130d06" name="ac39e9026e5c5e40d3d5893e58f130d06"></a>
@@ -289,6 +291,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a828533591f049a994126a104cf07bb88" name="a828533591f049a994126a104cf07bb88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a828533591f049a994126a104cf07bb88">&#9670;&#160;</a></span>is_unsafe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ScopeTracker::is_unsafe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This returns true if this scope or one of its ancestors is marked as unsafe. </p>
+
+</div>
+</div>
 <a id="a1c1024e36bb5bfe35119453180d39707" name="a1c1024e36bb5bfe35119453180d39707"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c1024e36bb5bfe35119453180d39707">&#9670;&#160;</a></span>label_define()</h2>
 
@@ -336,8 +356,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4556a08472fc1fc7c55f4935269cdf51" name="a4556a08472fc1fc7c55f4935269cdf51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4556a08472fc1fc7c55f4935269cdf51">&#9670;&#160;</a></span>scope_push()</h2>
+<a id="adb1e723c3e35e61abd2bb5296ec3720a" name="adb1e723c3e35e61abd2bb5296ec3720a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb1e723c3e35e61abd2bb5296ec3720a">&#9670;&#160;</a></span>scope_push()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,13 +365,23 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ScopeTracker::scope_push </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classGyoji_1_1context_1_1SourceReference.html">Gyoji::context::SourceReference</a> &amp;&#160;</td>
-          <td class="paramname"><em>_source_ref</em></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_unsafe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classGyoji_1_1context_1_1SourceReference.html">Gyoji::context::SourceReference</a> &amp;&#160;</td>
+          <td class="paramname"><em>_source_ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Enter a new (un-named) scope. </p>
+<p>Enter a new (un-named) scope. This will add a new scope with the 'unsafe' modifier if it is declared as unsafe. </p>
 
 </div>
 </div>

@@ -40,15 +40,20 @@ E-mail is ok too, but I don't really like spam, so I'm going to discourage that
 form of communication for this project.
 </p>
 
-<h3>Support unsafe vs safe</h3>
+<h3>Member visibility: public/private/protected</h3>
 <p>
-  One of the most important safety features of Rust is
-  that some code constructs are identified as 'unsafe'
-  such as de-referencing raw ponters.  The syntax currently
-  supports this idea, but it is not yet enforced by the semantic
-  processing.  We should add support for 'unsafe' by identifying
-  when we are inside an 'unsafe' block and identifying that
-  constructs are potentially unsafe so we can flag them as errors.
+  The syntax currently supports the 'public/private/protected' keywords,
+  but they don't actually do anything.  We should implement the semantic rules
+  for when variables should resolve based on these attributes.
+</p>
+
+<h3>Type Access Modifiers: const, volatile</h3>
+<p>
+  The syntax currently supports the const and volatile keywords,
+  but they have no semantic meaning yet.  Enforce the 'const' keywords
+  to allow const-ness to mean something.  It is currently ignored, but
+  it would be nice to make it actually work.  Const-ness is an important
+  language feature for people who care about it.
 </p>
 
 <h3>Default initialization of everything</h3>
@@ -103,38 +108,6 @@ form of communication for this project.
   Combined, a is bounded by -2 <= a <= 7
   array[a]; This is an invalid access because a can be out of bounds.
 </pre>
-
-<h3>Class constructors/destructors/methods</h3>
-<p>
-  As it stands, classes aren't fully functional with methods,
-  constructors, or destructors.  This project involves creating
-  the concept of a class method and setting up initialization and
-  class member calling structures.  Ordinary function calls
-  are already supported, so this is mainly turning the syntax
-  of method calls into ordinary functions calls where
-  the first parameter is a reference to the object and
-  can be accessed through the member access operator.
-</p>
-<p>
-  Important considerations for constructors are the fact that
-  we cannot provide access to the "this" pointer so that
-  it might accidentally be leaked.  We also need to enforce that
-  in the constructor, every variable must be written to BEFORE
-  it is read.  This is not guaranteed in C++, and poses some
-  problems in terms of "half-initialized" objects and objects
-  entering an unknown or invalid state.
-</p>
-
-<h3>Variable scope rules</h3>
-<p>
-  As it stands, variable scopes are not handled correctly
-  in the sense that variables can go out of scope without
-  being "undeclared".  This poses a problem for both
-  the constructor/destructor guarantees as well as
-  the borrow checker.  This needs to be resolved in order
-  for the language to provide the kind of guarantees
-  that we want.
-</p>
 
 <h3>Syntax Testing and verification</h3>
 

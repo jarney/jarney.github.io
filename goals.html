@@ -74,6 +74,62 @@
 </p>
 
 
+<h3>Guarantees we want the language to make</h3>
+<p>
+  We would like the language to make certain guarantees about
+  code that it compiles.
+</p>
+<h4>Initialization before use</h4>
+<p>
+  Code that compiles outside of "unsafe" blocks guarantees
+  that every variable is assigned to some initial value
+  before it is used.  Use, in this context includes use
+  in an expression to calculate a value (i.e. an rvalue)
+  and also includes expressions that de-reference pointers
+  and even take the address of values.
+</p>
+<p>
+  For local function-scope variables, this guarantee is
+  enforced by some rules:
+  <ul>
+    <li>After a primitive value is declared, it must first be assigned a value
+      before it is used in any expression.
+    </li>
+    <li>After a class value is declared, it must call a constructor before it is used.</li>
+    <li>Every constructor must initialize every primitive member to some initial value.</li>
+    <li>Every constructor must call the constructor of every class member</li>
+  </ul>
+</p>
+<p>
+  Note that under this definition, it is not allowed to take a pointer
+  or reference to a variable and perform the initialization THROUGH that
+  pointer or reference.  While this would constitute an initialization before
+  use, the complexity of this form of initialization is sufficient
+  to make the validation of the rule extremely time consuming.  Therefore,
+  Gyoji has taken the decision to disallow this form of initialization
+  in its validation.
+</p>
+  
+<h4>Scope Guards</h4>
+<p>
+  Classes declared in a local scope will always call their corresponding
+  destructor at the end of the lexical scope in which it was declared.
+</p>
+<p>
+  This guarantee extends to the use of 'goto' and 'break' statements
+  where scope is exited by means other than the '}' at the end of
+  the lexical scope.  That is, if you 'goto' a block which no longer
+  includes a variable, the destructor will be called when the scope
+  is left during execution.
+</p>
 
+<h4>Exceptions</h4>
+<p>
+  Code compiled by Gyoji will not ORIGINATE any exceptions which
+  would break control-flow.  Note that this does NOT mean that
+  exceptions are not possible.  Exceptions may still originate
+  from C or C++ code called indirectly by Gyoji and care must
+  be taken that the functions called do not raise exceptions.
+</p>
   </body>
 </html>

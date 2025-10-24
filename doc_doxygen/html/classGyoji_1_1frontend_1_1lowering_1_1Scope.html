@@ -88,23 +88,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a17c806f9852bb4454ed5709564945373" id="r_a17c806f9852bb4454ed5709564945373"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1Scope.html#a17c806f9852bb4454ed5709564945373">Scope</a> ()</td></tr>
-<tr class="separator:a17c806f9852bb4454ed5709564945373"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabbe1e170079463228acfbe6939e6bb1" id="r_aabbe1e170079463228acfbe6939e6bb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1Scope.html#aabbe1e170079463228acfbe6939e6bb1">Scope</a> (bool _is_loop, size_t _loop_break_blockid, size_t _loop_continue_blockid)</td></tr>
-<tr class="separator:aabbe1e170079463228acfbe6939e6bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0db08cf5623b9ac870f6467920fa8a1" id="r_af0db08cf5623b9ac870f6467920fa8a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1Scope.html#af0db08cf5623b9ac870f6467920fa8a1">Scope</a> (bool _is_unsafe)</td></tr>
+<tr class="separator:af0db08cf5623b9ac870f6467920fa8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251baac0331dfc52d0fea43f278388e4" id="r_a251baac0331dfc52d0fea43f278388e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1Scope.html#a251baac0331dfc52d0fea43f278388e4">Scope</a> (bool _is_unsafe, bool _is_loop, size_t _loop_break_blockid, size_t _loop_continue_blockid)</td></tr>
+<tr class="separator:a251baac0331dfc52d0fea43f278388e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa85e483fa82a151c3020114ada587a6b" id="r_aa85e483fa82a151c3020114ada587a6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1Scope.html#aa85e483fa82a151c3020114ada587a6b">~Scope</a> ()</td></tr>
 <tr class="memdesc:aa85e483fa82a151c3020114ada587a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move along, nothing to see here.  <br /></td></tr>
 <tr class="separator:aa85e483fa82a151c3020114ada587a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af63efa53b3fcafc7a47fe70b193931c2" id="r_af63efa53b3fcafc7a47fe70b193931c2"><td class="memItemLeft" align="right" valign="top">const LocalVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1Scope.html#af63efa53b3fcafc7a47fe70b193931c2">get_variable</a> (<a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a01653.html#ga32db3d9898c44d3b3a578b560f7758cc">std::string</a> name) const</td></tr>
 <tr class="separator:af63efa53b3fcafc7a47fe70b193931c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab23e140146770d01bb0a123dd1f1e7fc" id="r_ab23e140146770d01bb0a123dd1f1e7fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1frontend_1_1lowering_1_1Scope.html#ab23e140146770d01bb0a123dd1f1e7fc">is_unsafe</a> () const</td></tr>
+<tr class="separator:ab23e140146770d01bb0a123dd1f1e7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents variable declarations, labels, and goto inside a lexical scope. </p>
 <p>This class represents a highly simplified representation of operations inside a lexical scope. The only operations that happen here are sub-scopes, labels, goto statements, and variable declarations. The order of the operations is important because it's important to reason about whether initialization has happened before labels in the context of a 'goto' to a different scope.</p>
 <p>In addition, if the scope is a 'loop' (i.e. a while or for loop), this tracks the Block ID of where a 'continue' or 'break' statment should branch to. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a17c806f9852bb4454ed5709564945373" name="a17c806f9852bb4454ed5709564945373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17c806f9852bb4454ed5709564945373">&#9670;&#160;</a></span>Scope() <span class="overload">[1/2]</span></h2>
+<a id="af0db08cf5623b9ac870f6467920fa8a1" name="af0db08cf5623b9ac870f6467920fa8a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0db08cf5623b9ac870f6467920fa8a1">&#9670;&#160;</a></span>Scope() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -112,7 +114,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Scope::Scope </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_is_unsafe</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -121,8 +124,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aabbe1e170079463228acfbe6939e6bb1" name="aabbe1e170079463228acfbe6939e6bb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabbe1e170079463228acfbe6939e6bb1">&#9670;&#160;</a></span>Scope() <span class="overload">[2/2]</span></h2>
+<a id="a251baac0331dfc52d0fea43f278388e4" name="a251baac0331dfc52d0fea43f278388e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a251baac0331dfc52d0fea43f278388e4">&#9670;&#160;</a></span>Scope() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,6 +133,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Scope::Scope </td>
           <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_is_unsafe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>_is_loop</em>, </td>
         </tr>
@@ -193,6 +202,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>If the given variable is defined in this scope, return the type of it. If no such variable is defined, returns nullptr. </p>
+
+</div>
+</div>
+<a id="ab23e140146770d01bb0a123dd1f1e7fc" name="ab23e140146770d01bb0a123dd1f1e7fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23e140146770d01bb0a123dd1f1e7fc">&#9670;&#160;</a></span>is_unsafe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scope::is_unsafe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if this scope is declared as unsafe. Does not check ancestors, only the current scope. If you want to know if an ancestor is unsafe, use the scope tracker instead. </p>
 
 </div>
 </div>

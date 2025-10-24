@@ -111,6 +111,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aab026b1f43104eff8bb958bf5747681b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ba09d92660b48794ec06f1cc0d210be" id="r_a2ba09d92660b48794ec06f1cc0d210be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1mir_1_1BasicBlock.html#a2ba09d92660b48794ec06f1cc0d210be">contains_terminator</a> () const</td></tr>
 <tr class="separator:a2ba09d92660b48794ec06f1cc0d210be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad932e69c6bea75b77e1490a79f3a893b" id="r_ad932e69c6bea75b77e1490a79f3a893b"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1mir_1_1BasicBlock.html#ad932e69c6bea75b77e1490a79f3a893b">get_connections</a> () const</td></tr>
+<tr class="separator:ad932e69c6bea75b77e1490a79f3a893b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1e1b52c37db778f63f38af6d192c963" id="r_af1e1b52c37db778f63f38af6d192c963"><td class="memItemLeft" align="right" valign="top">const <a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector</a>&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1mir_1_1BasicBlock.html#af1e1b52c37db778f63f38af6d192c963">get_reachable_from</a> () const</td></tr>
+<tr class="separator:af1e1b52c37db778f63f38af6d192c963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a34f2cd9e09b9fd7f443f89e4ae7fff" id="r_a6a34f2cd9e09b9fd7f443f89e4ae7fff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyoji_1_1mir_1_1BasicBlock.html#a6a34f2cd9e09b9fd7f443f89e4ae7fff">add_reachable_from</a> (size_t other_block)</td></tr>
+<tr class="separator:a6a34f2cd9e09b9fd7f443f89e4ae7fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Basic block of a function. </p>
@@ -180,6 +186,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6a34f2cd9e09b9fd7f443f89e4ae7fff" name="a6a34f2cd9e09b9fd7f443f89e4ae7fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a34f2cd9e09b9fd7f443f89e4ae7fff">&#9670;&#160;</a></span>add_reachable_from()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BasicBlock::add_reachable_from </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>other_block</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is called from the 'calculate_block_reachability' function when the reachability graph is calculated. </p>
+
+</div>
+</div>
 <a id="a2ba09d92660b48794ec06f1cc0d210be" name="a2ba09d92660b48794ec06f1cc0d210be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ba09d92660b48794ec06f1cc0d210be">&#9670;&#160;</a></span>contains_terminator()</h2>
 
@@ -219,6 +244,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad932e69c6bea75b77e1490a79f3a893b" name="ad932e69c6bea75b77e1490a79f3a893b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad932e69c6bea75b77e1490a79f3a893b">&#9670;&#160;</a></span>get_connections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector</a>&lt; size_t &gt; BasicBlock::get_connections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This method returns the list of other basic blocks we connect to. </p>
+
+</div>
+</div>
 <a id="a19e0762ee4fd32c8d2f9b4dce8b3d47e" name="a19e0762ee4fd32c8d2f9b4dce8b3d47e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19e0762ee4fd32c8d2f9b4dce8b3d47e">&#9670;&#160;</a></span>get_operations()</h2>
 
@@ -236,6 +279,24 @@ Public Member Functions</h2></td></tr>
 
 <p>Access to list of <a class="el" href="classGyoji_1_1mir_1_1Operation.html" title="Operations inside basic blocks, the virtual instruction-set of the MIR.">Operation</a> of basic block. </p>
 <p>This method returns the list of operations defined in this basic block. The list is returned as an immutable reference to owned pointers. The caller may not aquire ownership through this method, but may get access to the functions by de-referencing the pointer. The pointer is guaranteed to be valid because this basic block owns them and they cannot be removed once created. The returned reference must not live longer than this container. </p>
+
+</div>
+</div>
+<a id="af1e1b52c37db778f63f38af6d192c963" name="af1e1b52c37db778f63f38af6d192c963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e1b52c37db778f63f38af6d192c963">&#9670;&#160;</a></span>get_reachable_from()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="elRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07426.html">std::vector</a>&lt; size_t &gt; &amp; BasicBlock::get_reachable_from </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is the list of blocks that can enter this block. Note that this is not valid until the 'calculate_block_reachability()' function has been called on the parent function to calculate the full reachability graph. </p>
 
 </div>
 </div>

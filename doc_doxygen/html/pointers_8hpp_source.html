@@ -82,22 +82,36 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">pointers.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="codeRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a00140.html">memory</a>&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//----------------------------</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Unique pointer types to</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// be used internally to enforce</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// single ownership of these classes</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// in the tree.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//----------------------------</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyoji.html">Gyoji</a> {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="namespaceGyoji.html#ae61c662eaf008320ce4b1b27df1fa074">   63</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">using </span><a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07518.html">owned</a> = <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07518.html">std::unique_ptr&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright 2025 Jonathan S. Arney</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  You may obtain a copy of the License at</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *      https://github.com/jarney/gyoji/blob/master/LICENSE</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *  See the License for the specific language governing permissions and</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *  limitations under the License.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="codeRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a00140.html">memory</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//----------------------------</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Unique pointer types to</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// be used internally to enforce</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// single ownership of these classes</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// in the tree.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//----------------------------</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyoji.html">Gyoji</a> {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="namespaceGyoji.html#ae61c662eaf008320ce4b1b27df1fa074">   77</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">using </span><a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07518.html">owned</a> = <a class="code hl_classRef" href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07518.html">std::unique_ptr&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="ttc" id="aa00140_html"><div class="ttname"><a href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a00140.html">memory</a></div></div>
 <div class="ttc" id="aa07518_html"><div class="ttname"><a href="http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/a07518.html">std::unique_ptr</a></div></div>
-<div class="ttc" id="anamespaceGyoji_html"><div class="ttname"><a href="namespaceGyoji.html">Gyoji</a></div><div class="ttdoc">All aspects of the Gyoji language belong in this namespace.</div><div class="ttdef"><b>Definition</b> gyoji-analysis.hpp:36</div></div>
+<div class="ttc" id="anamespaceGyoji_html"><div class="ttname"><a href="namespaceGyoji.html">Gyoji</a></div><div class="ttdoc">All aspects of the Gyoji language belong in this namespace.</div><div class="ttdef"><b>Definition</b> analysis-return-values.cpp:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.8-->
 <!-- start footer part -->
