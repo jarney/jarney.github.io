@@ -7,9 +7,20 @@
     <h1>An SVG template</h1>
     <h2 id="subtitle">Subtitle</h2>
 
-    <input id="title" type="text" onchange="changed()">
+    <label for="template_id">Choose a template</label>
+    <select id="template_id" name="template_id" onchange="templateChanged()">
+      <option value="template_cutting_board_vertical.svg">Vertical Cutting Board</option>
+      <option value="template_cutting_board_horizontal.svg">Horizontal Cutting Board</option>
+    </select>
     
-    <object id="template" class="emb" data="Template.svg" width="1000" height="1000" type="image/svg+xml"></object>
+    <table>
+      <tr>
+	<td>Title: </td><td><input id="title" type="text" onchange="valuesChanged()"></td>
+      </tr>
+    </table>
+    <br/>
+    <hr/>
+    <embed id="template" onload="contentChanged()" class="emb" data="Template.svg" width="1000" height="1000" type="image/svg+xml"></object>
     
   </body>
 </html>

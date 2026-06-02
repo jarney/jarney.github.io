@@ -20,7 +20,23 @@ function getSubDocument(embedding_element)
 
 var svgDocument = null;
 
-function changed() {
+function templateChanged() {
+    template_id = document.getElementById("template_id");
+    var svgelement = document.getElementById("template");
+    template.src = template_id.value;
+    console.log("Template value changed");
+}
+
+function contentChanged() {
+    console.log("Object content changed");
+    var svgelement = document.getElementById("template");
+    console.log(svgelement)
+    subdoc = getSubDocument(svgelement)
+    console.log(subdoc)
+    svgDocument = subdoc;
+}
+
+function valuesChanged() {
 
     if (svgDocument == null) return;
     
@@ -37,14 +53,6 @@ function initialize() {
     // Regular html 
     subtitle_element = document.getElementById("subtitle");
     subtitle_element.textContent = "New Subtitle";
-
-    // img tag
-    var svgelement = document.getElementById("template");
-    console.log(svgelement)
-    subdoc = getSubDocument(svgelement)
-    console.log(subdoc)
-
-    svgDocument = subdoc;
 
     // TODO: Walk through SVG template
     // and get template elements.
