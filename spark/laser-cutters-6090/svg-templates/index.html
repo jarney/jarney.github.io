@@ -1,24 +1,48 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Template Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <script src="template.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <body>
-    <h1>Laser Cutting Template Maker</h1>
-
-    <label for="template_id">Choose a template</label>
-    <select id="template_id" name="template_id" onchange="templateChanged()">
-      <option value="template_cutting_board_vertical.svg">Vertical Cutting Board</option>
-      <option value="template_cutting_board_horizontal.svg">Horizontal Cutting Board</option>
-    </select>
-
-    <table id="field-container" border="1" width="100%">
-    </table>
+    <div class="header-container">
+      <img style="display:inline;" height="50px" src="facebook-cover-image.webp"/>
+      <div style="display:inline;font-size: 20;">Laser Cutting Template Maker</div>
+    </div>
     
-    <br/>
-    <hr/>
-    <embed id="template" onload="contentChanged()" class="emb" data="Template.svg" width="100%" height="100%" type="image/svg+xml"></object>
+
+    <div class="content">
+      <label for="template_id">Choose a template</label>
+      <select id="template_id" name="template_id" onchange="templateChanged()">
+	<option value="template_cutting_board_vertical.svg">Vertical Cutting Board</option>
+	<option value="template_cutting_board_horizontal.svg">Horizontal Cutting Board</option>
+      </select>
+      
+      <div id="field-container" border="0"></div>
     
+      <!-- Tab links -->
+      <div class="tab">
+	<button id="edit-view-button" class="tablinks" onclick="selectTab(event, 'edit-view')">Edit View</button>
+	<button id="preview-view-button" class="tablinks" onclick="selectTab(event, 'preview-view')">Preview</button>
+      </div>
+      <!-- Tab content -->
+      <div id="edit-view" class="tabcontent">
+	<div>
+<!--	  <div id="template-loader" class="loader"></div>-->
+	  <embed id="template" onload="templateContentLoaded()" class="emb" data="Template.svg" type="image/svg+xml"></embed>
+	</div>
+      </div>
+      <div id="preview-view" class="tabcontent">
+	<button id="download" onclick="downloadClicked()">Download</button>
+	<pre id="preview_svg">
+	</pre>
+	<div>
+<!--	  <div id="preview-loader" class="loader"></div>-->
+	  <embed id="preview" onload="previewContentLoaded()" class="emb" src="empty.svg" type="image/svg+xml"></embed>
+	</div>
+      </div>
+    </div>
   </body>
 </html>

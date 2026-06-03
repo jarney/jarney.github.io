@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>Template Editor</title>
+  </head>
+  <script src="template.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <div class="header-container">
+      <img style="display:inline;" height="50px" src="facebook-cover-image.webp"/>
+      <div style="display:inline;font-size: 50;">Laser Cutting Template Maker</div>
+    </div>
+  </body>
+    <h1>Guide to creating templates</h1>
+    A template may be any SVG document with a few modifications.  Most templates are created using Inkscape.
+    A namespace element must be added to the root SVG tag as follows:
+    <pre>
+      &lt;svg ... xmlns:template="http://jarney.github.io/templates" ... &gt
+    </pre>
+
+    In addition, each template field is identified by the presence of a an attribute.  In addition,
+    the order element determines the ordere template fields show up in the editor.
+
+    <pre>
+      &lt;element template:template-field="true"...&gt;
+      &lt;element template:order="2"...&gt;
+    </pre>
+
+    
+    This tells the template engine to treat this as an element to be processed by the template engine.
+    
+    Depending on the type of the template element, additional attributes define
+    the usage of elements.
+    
+    <h2>Text Field (single-line text)</h2>
+
+    Text fields are single-line text strings.  The name is shown
+    on the form when the user is editing.  The rect element is used
+    to maintain a bounding-box around the text and should be in a group at the
+    same level as the field.  This rect element is not shown in the final result,
+    but is only used in calculating the size and location of the text element.
+
+    <pre>
+      &lt;g&gt;
+          &lt;text
+              ...
+              inkscape:label="Header"
+              template:type="text-field"
+              ...
+          &gt;
+          &lt;rect...&gt;
+    </pre>
+
+    <h2>Text Area (multi-line text)</h2>
+
+    Text areas are multi-line text input where each line of text
+    is inside its own &lt;tspan&lt;.  These can accomodate
+    up to a fixed number of lines depending on the number of
+    &lt;tspan&lt elements in the template.  These are scaled
+    horizontally in order to fit, but no vertical sizing is done
+    to ensure that all of the lines fit inside the template.  Note
+    that if not enough lines are supplied, the remainder will
+    still be there, but empty.  If more lines are supplied,
+    than there are tspan elements, they will simply be dropped.
+
+    As with the Text Field, the supplied &lt;rect&gt; is used
+    for positioning and sizing but otherwise not passed through
+    to the final SVG after template processing.
+
+    <pre>
+      &lt;g&gt;
+          &lt;text
+              ...
+              inkscape:label="Header"
+              template:type="text-area"
+              ...
+          &gt;
+      
+          &lt;rect...&gt;
+    </pre>
+
+    <h2>Image Elements</h2>
+
+    Image elements are used for bitmap graphics.  They are scaled to fit the rectangle of the original graphic and are
+    inlined directly in the image.  You can scale either the vertical, horizontal, or both.  Any JPG or PNG image will
+    fit.  The image is converted to black-and-white.
+
+    <pre>
+    &lt;image
+          ...
+          inkscape:label="Name"
+          template:type="image"
+          ...
+    &gt;
+    </pre>
+    <h2>Select Group</h2>
+    A select group is an item that allows the user to select from among several options.  The select group is
+    set up with this type:
+
+    <pre>
+      &lt;g
+      ...
+       inkscape:label="Name"
+      template:type="select"
+      ...
+      &gt;
+          &lt;g inkscape:label="Option 1"&gt;...&lt;/g&gt;
+          &lt;g inkscape:label="Option 2"&gt;...&lt;/g&gt;
+          &lt;g inkscape:label="Option 3"&gt;...&lt;/g&gt;
+          ...
+      &lt/g&gt;
+    </pre>
+    
+</html>
