@@ -13,7 +13,9 @@ input,select {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
 }
+
 .emb {
+    width: 100%;
 }
 
 .header-container {

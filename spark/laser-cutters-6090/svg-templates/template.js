@@ -63,6 +63,7 @@ function normalizeText(svgElement, elementName, changeY) {
 }
 
 var svgDocument = null;
+var svgDocumentName = "";
 var field_list = []
 
 class TemplateElement {
@@ -222,8 +223,13 @@ class TemplateHidden extends TemplateElement {
 	callback();
     }
     _filterPreview(svgElement) {
-	var parent = svgElement.parentElement;
-	parent.removeChild(svgElement);
+	console.log("Removing hidden field " + this.id + ": " + this.name);
+	if (svgElement) {
+	    var parent = svgElement.parentElement;
+	    if (parent) {
+		parent.removeChild(svgElement);
+	    }
+	}
     }
     innerHTML() {
 	return "";
@@ -262,8 +268,6 @@ class TemplateTextArea extends TemplateElement {
 	var groupElement = svgElement.parentElement;
 	var rectElements = groupElement.getElementsByTagName("rect");
 	for (var rect of rectElements) {
-	    console.log("Removing rect ");
-	    console.log(rect);
 	    groupElement.removeChild(rect);
 	}
     }
@@ -312,6 +316,8 @@ function templateChanged() {
     template_id = document.getElementById("template_id");
     var svgelement = document.getElementById("template");
     template.src = template_id.value;
+
+    svgDocumentName = template_id.value;
 }
 
 function selectTab(evt, tabId) {
@@ -348,7 +354,7 @@ function downloadClicked() {
 
     const a = document.createElement("a");
     a.href = url;
-    a.download = "dynamic-text-file.txt"; // Filename
+    a.download = svgDocumentName;
     
     // Append to the DOM (required for older browsers)
     document.body.appendChild(a);
@@ -398,16 +404,18 @@ function templateContentLoaded() {
 	return a.getOrder() - b.getOrder()
     });
 
-    // Scale the SVG to fit
-    var viewBox = svgDocument.rootElement.getAttribute("viewBox").split(" ");
-    var svgWidth = parseInt(viewBox[2]);
-    var svgHeight = parseInt(viewBox[3]);
-    var scaleFactor = (window.innerWidth - 20) / svgWidth;
-    console.log("Scale factor should be " + scaleFactor);
-    var bbox = svgDocument.rootElement.getBBox();
-    svgDocument.rootElement.setAttribute("width", bbox.width);
-    svgDocument.rootElement.setAttribute("height", bbox.height);
-    svgDocument.rootElement.setAttribute("viewBox", "0 0 " + bbox.width + " " + bbox.height);
+// Scale the SVG to fit
+// None of this is needed, we can do it all with the emb CSS class.
+//    var viewBox = svgDocument.rootElement.getAttribute("viewBox").split(" ");
+//    var svgWidth = parseInt(viewBox[2]);
+//    var svgHeight = parseInt(viewBox[3]);
+//    var scaleFactor = (window.innerWidth - 20) / svgWidth;
+//    console.log("Scale factor should be " + scaleFactor);
+//    var bbox = svgDocument.rootElement.getBBox();
+//    svgDocument.rootElement.setAttribute("width", bbox.width*scaleFactor);
+//    svgDocument.rootElement.setAttribute("height", bbox.height*scaleFactor);
+//    svgDocument.rootElement.setAttribute("viewBox", "0 0 " + bbox.width*scaleFactor + " " + bbox.height*scaleFactor);
+//    console.log("Resized SVG is " + (bbox.width*scaleFactor) + "," + (bbox.height*scaleFactor));
     
     inner = "";
     for (templateElement of field_list) {
@@ -475,9 +483,7 @@ function valuesChanged() {
 
     var callbackCount = 0;
     function waitForCallbacks() {
-	console.log("Got " + callbackCount + " callbacks");
 	if (callbackCount == field_list.length-1) {
-	    console.log("Copied preview");
 	    copyPreviewSVG();
 	}
 	callbackCount++;
