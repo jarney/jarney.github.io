@@ -736,7 +736,13 @@ function initialize() {
 	templateListElement.value = urlParams.get("template");
     }
     else {
-	templateListElement.value = "template_cutting_board_vertical.svg";
+	if (templateListElement.children.length > 0) {
+	    templateListElement.value = templateListElement.children[0].value;
+	    console.log("Defaulting list element");
+	}
+	else {
+	    templateListElement.value = "TinyFoxtato.svg";
+	}
     }
     templateUpdate();
     document.getElementById("edit-view-button").click();
