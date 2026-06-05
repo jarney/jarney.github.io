@@ -1,5 +1,34 @@
 window.addEventListener("load", initialize, false);
 
+var svgDocument = null;
+var svgDocumentName = "";
+var field_list = []
+
+function baseURLFromWindow() {
+    return window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + window.location.pathname;
+}
+
+function findHiddenElements(domElement, hiddenElements) {
+    for (child of domElement.children) {
+	if (child.hasAttribute("style")) {
+	    var styleAttribute = child.getAttribute("style");
+	    if (styleAttribute.match("display[ \t]*:[ \t]*none[ \t]*;")) {
+		hiddenElements.push({obj: domElement, child: child});
+		continue;
+	    }
+	}
+	findHiddenElements(child, hiddenElements);
+    }
+}
+
+function removeAllHidden(domElement) {
+    var toremove = []
+    console.log("Removing all hidden elements");
+    findHiddenElements(domElement, toremove);
+    for (child of toremove) {
+	child.obj.removeChild(child.child);
+    }    
+}
 function removeAllChildren(domElement) {
     var toremove = []
     for (child of domElement.children) {
@@ -113,10 +142,6 @@ function normalizeText(svgElement, elementName) {
     svgElement.transform.baseVal.insertItemBefore(doTranslate2, 0);
 }
 
-var svgDocument = null;
-var svgDocumentName = "";
-var field_list = []
-
 class TemplateElement {
     constructor(id, name, order, type, editable) {
 	this.name = name;
@@ -141,8 +166,9 @@ class TemplateElement {
 	return this.editable;
     }
     filterPreview(previewDocument) {
+	var htmlElement = document.getElementById(this.id);
 	var svgElement = previewDocument.getElementById(this.id);
-	this._filterPreview(svgElement);
+	this._filterPreview(htmlElement, svgElement);
     }
     formToSVG(callback) {
 	var htmlElement = document.getElementById(this.id);
@@ -182,7 +208,7 @@ class TemplateTextField extends TemplateElement {
     _formToURL(htmlElement, svgElement) {
 	return this.id + "=" + encodeURI(htmlElement.value);
     }
-    _filterPreview(svgElement) {
+    _filterPreview(htmlElement, svgElement) {
 	var groupElement = svgElement.parentElement;
 	var rectElements = groupElement.getElementsByTagName("rect");
 	for (var rect of rectElements) {
@@ -228,7 +254,7 @@ class TemplateImage extends TemplateElement {
 	}
 	return this.id + "=" + encodeURI(svgElement.getAttribute("xlink:href"));
     }
-    _filterPreview(svgElement) {
+    _filterPreview(htmlElement, svgElement) {
     }
     innerHTML() {
 	var htmlElement = document.createElement("input");
@@ -254,10 +280,10 @@ class TemplateSelect extends TemplateElement {
     _formToSVG(htmlElement, svgElement, callback) {
 	for (var child of svgElement.children) {
 	    if (child.id == htmlElement.value) {
-		child.setAttribute("style", "display:inline");
+		child.setAttribute("style", "display:inline;");
 	    }
 	    else {
-		child.setAttribute("style", "display:none");
+		child.setAttribute("style", "display:none;");
 	    }
 	}
 	callback();
@@ -265,12 +291,19 @@ class TemplateSelect extends TemplateElement {
     _formToURL(htmlElement, svgElement) {
 	return this.id + "=" + encodeURI(htmlElement.value);
     }
-    _filterPreview(svgElement) {
-	var child_list = svgElement.children;
+    _filterPreview(htmlElement, svgElement) {
+/*	var child_list = svgElement.children;
 	var todelete = []
+	for (var child of svgElement.children) {
+	    if (child.id == htmlElement.value) {
+		continue;
+	    }
+	    todelete.push(child);
+	}
 	for (var child of todelete) {
 	    svgElement.removeChild(child);
-	}
+	    }
+	    */
     }
     innerHTML() {
 	var htmlElement = document.createElement("select");
@@ -311,7 +344,7 @@ class TemplateHidden extends TemplateElement {
 	// Hidden elements have nothing to say.
 	return null;
     }
-    _filterPreview(svgElement) {
+    _filterPreview(htmlElement, svgElement) {
 	if (svgElement) {
 	    var parent = svgElement.parentElement;
 	    if (parent) {
@@ -382,7 +415,7 @@ class TemplateTextArea extends TemplateElement {
     _formToURL(htmlElement, svgElement) {
 	return this.id + "=" + encodeURI(htmlElement.value);
     }
-    _filterPreview(svgElement) {
+    _filterPreview(htmlElement, svgElement) {
 	var groupElement = svgElement.parentElement;
 	var rectElements = groupElement.getElementsByTagName("rect");
 	for (var rect of rectElements) {
@@ -429,10 +462,15 @@ function getSubDocument(embedding_element) {
 	return subdoc;
     }
 }
-
 function templateChanged() {
-    template_id = document.getElementById("template_id");
-    var svgelement = document.getElementById("template");
+    var url = baseURLFromWindow();
+    window.history.replaceState(null, null, url);
+    templateUpdate();
+}
+
+function templateUpdate() {
+    var template_id = document.getElementById("template_id");
+    var template = document.getElementById("template");
     template.src = template_id.value;
     
     svgDocumentName = template_id.value;
@@ -596,10 +634,12 @@ function copyPreviewSVG() {
     for (templateElement of field_list) {
 	templateElement.filterPreview(previewDocument);
     }
-    var viewBox = svgDocument.rootElement.getAttribute("viewBox").split(" ");
-    var svgWidth = parseInt(viewBox[2]);
-    var svgHeight = parseInt(viewBox[3]);
-    previewDocument.rootElement.setAttribute("viewBox", "0 0 " + svgWidth + " " + svgHeight);
+    removeAllHidden(previewDocument);
+    
+    var viewBox = svgDocument.rootElement.getAttribute("viewBox");
+    var svgWidth = svgDocument.rootElement.getAttribute("width");
+    var svgHeight = svgDocument.rootElement.getAttribute("height");
+    previewDocument.rootElement.setAttribute("viewBox", viewBox);
     previewDocument.rootElement.setAttribute("width", svgWidth);
     previewDocument.rootElement.setAttribute("height", svgHeight);
     
@@ -617,7 +657,7 @@ function generateQRCodeAndURL() {
     }
     
     // Extract parameters and build a URL.
-    var url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + window.location.pathname;
+    var url = baseURLFromWindow();
     var paramlist = []
     paramlist.push("template=" + encodeURI(svgDocumentName));
     for (templateElement of field_list) {
@@ -698,6 +738,6 @@ function initialize() {
     else {
 	templateListElement.value = "template_cutting_board_vertical.svg";
     }
-    templateChanged();
+    templateUpdate();
     document.getElementById("edit-view-button").click();
 }
