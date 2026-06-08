@@ -24,15 +24,16 @@
 	<option value="Graduation.svg">Graduation</option>
 	<option value="Heart.svg">Just Married</option>
 	<option value="Kitten.svg">Kittens</option>
+<!--	<option value="border-designs.svg">Border Designs</option>-->
 <!--	<option value="template_cutting_board_vertical.svg">Vertical Cutting Board</option>-->
 <!--	<option value="template_cutting_board_horizontal.svg">Horizontal Cutting Board</option>-->
       </select>
       
       <!-- Tab links -->
       <div class="tab">
-	<button id="edit-view-button" class="tab-link" onclick="selectTab(event, 'edit-view')">View Design</button>
-	<button id="share-button" class="tab-link" onclick="selectTab(event, 'share-view')">Customize and share</button>
-	<button id="preview-view-button" class="tab-link" onclick="selectTab(event, 'preview-view')">Lasercut Preview</button>
+	<button id="edit-view-button" class="tab-link" onclick="selectTab('edit-view-button', 'edit-view')">View Design</button>
+	<button id="share-view-button" class="tab-link" onclick="selectTab('share-view-button', 'share-view')">Customize and share</button>
+	<button id="preview-view-button" class="tab-link" onclick="selectTab('preview-view-button', 'preview-view')">Lasercut Preview</button>
 	<!--
 	    Mainly for debugging.
 	    <button id="source-button" class="tab-link" onclick="selectTab(event, 'source-view')">SVG Source</button>
@@ -40,30 +41,34 @@
       </div>
       <!-- Tab content -->
       <div class="tab-container">
-	<div id="edit-view" class="tab-content"><div class="tab-content-middle">
-	    <div>
-	      <div id="template-loader" class="loader" style=""></div>
-	      <embed id="template" style="" onload="templateContentLoaded()" class="emb" data="Template.svg" type="image/svg+xml"></embed>
-	  </div></div>
+	<div id="edit-view" class="tab-content">
+	  <div>
+	    <div id="template-loader" class="loader" style=""></div>
+	    <embed id="template" class="emb" src="WhoCutTheCheese.svg" onload="templateContentLoaded()" type="image/svg+xml"></embed>
+	  </div>
 	</div>
-	<div id="preview-view" class="tab-content"><div class="tab-content-middle">
-	    <div>
-	      <div id="preview-loader" class="loader" style=""></div>
-	      <embed id="preview" style="" onload="previewContentLoaded()" class="emb" src="empty.svg" type="image/svg+xml"></embed>
-	    </div>
-	</div></div>
-	<div id="share-view" class="tab-content"><div class="tab-content-middle">
+	<div id="preview-view" class="tab-content-hidden">
+	  <div>
+	    <div id="preview-loader" class="loader" style=""></div>
+	    <embed id="preview" class="emb" src="empty.svg" onload="previewContentLoaded()" type="image/svg+xml"></embed>
+	  </div>
+	</div>
+	<div id="share-view" class="tab-content-hidden">
+	  <div>
 	    <div id="field-container" border="0"></div>
 	    <button id="download" onclick="downloadClicked()">Download</button>
 	    <!--<pre id="qrcode_data"></pre>-->
 	    <div style="display:none;" id="qrcode_length"></div>
 	    <div style="display:none;" id="qrcode"></div>
 	    <div style="display:none;" id="qrcode_error">QR Code is too large to share (probably because it contains an image).</div>
-	</div></div>
-	<div id="source-view" class="tab-content"><div class="tab-content-middle">
+	  </div>
+	</div>
+	<div id="source-view" class="tab-content-hidden">
+	  <div>
 	    <div>This is the complete SVG document ready to print.  If you want, you can download and customize it further.</div>
 	    <textarea style="display: none;" rows="50" id="preview_svg" readonly></textarea>
-	</div></div>
+	  </div>
+	</div>
       </div>
     </div>
 

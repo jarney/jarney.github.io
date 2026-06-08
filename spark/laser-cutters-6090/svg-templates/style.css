@@ -1,8 +1,14 @@
+html {
+    display: grid;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     overflow-y: scroll;
     font-size: 20px;
+    max-width: 800px;
+    justify-self: center;
 }
 .content {
     display: block;
@@ -89,28 +95,48 @@ button.active {
 .tab-container {
     position: relative;
     width: 95%;
+    max-width: 700px;
 }
 
+.tab-content > div {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 255);
+}
 
-.tab-content-middle {
-    position: absolute;
+.tab-content-hidden > div {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    width: 1px;
+}
+
+.xtab-content-hidden {
     z-index: 1;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
+    position: absolute;
     width: 100%;
+    top: 0;
+    left: 0px;
 }
 
-/* Style the tab content */
+.tab-content-hidden {
+    display: none;
+}
+
 .tab-content {
+    position: absolute;
     display: block;
-/*  border-top: none;*/
-/*  overflow: hidden;*/
+    top: 0px;
+    left: 0px;
+}
+
+.xtab-content {
+    z-index: 99;
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
+    background: rgba(255, 255, 255, 255);
 }
-
 
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
@@ -126,3 +152,27 @@ button.active {
   100% { transform: rotate(360deg); }
 }
 
+/***********clearfix*/
+/*
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+*/

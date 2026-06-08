@@ -86,6 +86,7 @@ function globalBBox(element) {
  * both TextArea and TextField template types.
  */
 function normalizeText(svgElement, elementName) {
+    
     var groupElement = svgElement.parentElement;
     var rectElements = groupElement.getElementsByTagName("rect");
     
@@ -93,12 +94,26 @@ function normalizeText(svgElement, elementName) {
     
     // All of this is to center the text in the given rectangle.
     var rectElement = rectElements[0];
-    
+
+    // This is a little hack bacause we can't get
+    // the bounding box of a non-rendered
+    // item, so we need to make sure the SVG is
+    // rendered before we ask for dimensions for
+    // resizing the text.
+    var editView = document.getElementById("edit-view");
+    var oldViewClass = editView.className;
+    editView.className = "tab-content";
+    var shareView = document.getElementById("share-view");
+    var oldShareViewClass = shareView.className;
+    shareView.className = "tab-content-hidden";
+
     // We need the bounding boxes to be calculated
     // in terms of global coordinates for both elements.
     var rect_bbox = globalBBox(rectElement);
     var text_bbox = globalBBox(svgElement);
-    
+    editView.className = oldViewClass;
+    shareView.className = oldShareViewClass;
+
     // We're not rendering any text, so we should not try
     // to center it.  Best to leave it alone for now.
     if (text_bbox.width <= 0 || text_bbox.height <= 0) {
@@ -114,6 +129,9 @@ function normalizeText(svgElement, elementName) {
     var widthTransform = rect_bbox.width / text_bbox.width;
     var heightTransform = rect_bbox.height / text_bbox.height;
     var scale = widthTransform < heightTransform ? widthTransform : heightTransform;
+
+    //alert("width " + rect_bbox.width + " : " + text_bbox.width);
+    //alert("height " + rect_bbox.height + " : " + text_bbox.height);
     
     // Next, find the center point of the text.  This is
     // because we want to move the center of the text to
@@ -136,6 +154,9 @@ function normalizeText(svgElement, elementName) {
     doScale.setScale(scale, scale);
     svgElement.transform.baseVal.insertItemBefore(doScale, 0);
     
+    //alert("moveto text location " + cbx + " " + cby);
+    //alert("scale " + scale);
+
     // Move text to center of rectangle
     const doTranslate2 = svgDocument.querySelector("svg").createSVGTransform();
     doTranslate2.setTranslate(cbx, cby);
@@ -200,7 +221,17 @@ class TemplateTextField extends TemplateElement {
 	htmlElement.value = svgElement.textContent;
     }
     _formToSVG(htmlElement, svgElement, callback) {
-	svgElement.textContent = htmlElement.value;
+	if (svgElement.getElementsByTagName("tspan").length > 0) {
+	    var tspan = svgElement.getElementsByTagName("tspan")[0];
+	    tspan.textContent = htmlElement.value;
+	}
+	else if (svgElement.getElementsByTagName("textPath").length > 0) {
+	    var textPath = svgElement.getElementsByTagName("textPath")[0];
+	    textPath.textContent = htmlElement.value;
+	}
+	else {
+	    svgElement.textContent = htmlElement.value;
+	}
 	
 	normalizeText(svgElement, this.name);
 	callback();
@@ -210,9 +241,13 @@ class TemplateTextField extends TemplateElement {
     }
     _filterPreview(htmlElement, svgElement) {
 	var groupElement = svgElement.parentElement;
+	console.log("Removing " + this.id);
 	var rectElements = groupElement.getElementsByTagName("rect");
 	for (var rect of rectElements) {
-	    groupElement.removeChild(rect);
+	    if (rect.parent == groupElement) {
+		console.log("  removing child " + rect.id);
+		groupElement.removeChild(rect);
+	    }
 	}
     }
     innerHTML() {
@@ -466,6 +501,7 @@ function templateChanged() {
     var url = baseURLFromWindow();
     window.history.replaceState(null, null, url);
     templateUpdate();
+    selectTab('edit-view-button', 'edit-view');
 }
 
 function templateUpdate() {
@@ -481,14 +517,14 @@ function templateUpdate() {
     qrcodeErrorElement.setAttribute("style", "display:none;");
 }
 
-function selectTab(evt, tabId) {
+function selectTab(buttonId, tabId) {
     // Declare all variables
     var i, tabcontent, tablinks;
     
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
-	tabcontent[i].style.opacity = 0;
+	tabcontent[i].className = "tab-content-hidden";
     }
     
     // Get all elements with class="tablinks" and remove the class "active"
@@ -498,8 +534,8 @@ function selectTab(evt, tabId) {
     }
     
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabId).style.opacity = 1;
-    evt.currentTarget.className += " active";
+    document.getElementById(tabId).className = "tab-content";
+    document.getElementById(buttonId).className += " active";
     
     processResults();
 }
@@ -528,13 +564,11 @@ function downloadClicked() {
 
 function previewContentLoaded() {
     document.getElementById("preview-loader").setAttribute("style", "display: none");
-    document.getElementById("preview").setAttribute("style", "");
     processResults();    
 }
 
 function templateContentLoaded() {
     document.getElementById("template-loader").setAttribute("style", "display:none;");
-    document.getElementById("template").setAttribute("style", "");
     
     var svgElement = document.getElementById("template");
     svgDocument = getSubDocument(svgElement);
@@ -564,7 +598,7 @@ function templateContentLoaded() {
     field_list.sort(function (a, b) {
 	return a.getOrder() - b.getOrder()
     });
-    
+
     var fieldElement = document.getElementById("field-container");
     removeAllChildren(fieldElement);
     for (templateElement of field_list) {
@@ -601,6 +635,12 @@ function templateContentLoaded() {
 }
 
 function processResults() {
+    var svgElement = document.getElementById("template");
+    svgDocument = getSubDocument(svgElement);
+    if (!svgDocument) {
+	return;
+    }
+    
     copyPreviewSVG();
     generateQRCodeAndURL();
 }
@@ -609,12 +649,6 @@ function copyPreviewSVG() {
     // If we haven't loaded our template
     // yet, then we shouldn't mess with the preview.
     if (field_list.length == 0) {
-	return;
-    }
-    
-    var svgElement = document.getElementById("template");
-    svgDocument = getSubDocument(svgElement);
-    if (!svgDocument) {
 	return;
     }
     
