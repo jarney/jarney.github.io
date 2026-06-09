@@ -3,6 +3,7 @@ window.addEventListener("load", initialize, false);
 var svgDocument = null;
 var svgDocumentName = "";
 var field_list = []
+var initialized = false;
 
 function baseURLFromWindow() {
     return window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + window.location.pathname;
@@ -23,7 +24,6 @@ function findHiddenElements(domElement, hiddenElements) {
 
 function removeAllHidden(domElement) {
     var toremove = []
-    console.log("Removing all hidden elements");
     findHiddenElements(domElement, toremove);
     for (child of toremove) {
 	child.obj.removeChild(child.child);
@@ -241,11 +241,9 @@ class TemplateTextField extends TemplateElement {
     }
     _filterPreview(htmlElement, svgElement) {
 	var groupElement = svgElement.parentElement;
-	console.log("Removing " + this.id);
 	var rectElements = groupElement.getElementsByTagName("rect");
 	for (var rect of rectElements) {
 	    if (rect.parent == groupElement) {
-		console.log("  removing child " + rect.id);
 		groupElement.removeChild(rect);
 	    }
 	}
@@ -635,6 +633,7 @@ function templateContentLoaded() {
 }
 
 function processResults() {
+    if (!initialized) return;
     var svgElement = document.getElementById("template");
     svgDocument = getSubDocument(svgElement);
     if (!svgDocument) {
@@ -763,7 +762,8 @@ function valuesChanged() {
 
 function initialize() {
     var templateListElement = document.getElementById("template_id");
-    
+
+    initialized = true;
     const urlParams = new URLSearchParams(window.location.search);
     
     if (urlParams.get("template")) {
@@ -772,7 +772,6 @@ function initialize() {
     else {
 	if (templateListElement.children.length > 0) {
 	    templateListElement.value = templateListElement.children[0].value;
-	    console.log("Defaulting list element");
 	}
 	else {
 	    templateListElement.value = "TinyFoxtato.svg";
