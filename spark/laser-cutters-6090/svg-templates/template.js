@@ -407,7 +407,7 @@ class TemplateTextArea extends TemplateElement {
 	for (var tspan_element of tspan_elements) {
 	    text_list.push(tspan_element.textContent);
 	}
-	htmlElement.value = text_list.join("\n");
+	htmlElement.value = text_list.join("");
     }
     _formToSVG(htmlElement, svgElement, callback) {
 	var text_list = htmlElement.value.split(/\r?\n/);
