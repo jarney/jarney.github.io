@@ -34,7 +34,7 @@
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      showguides="false"
-     inkscape:current-layer="g461"><inkscape:grid
+     inkscape:current-layer="layer10"><inkscape:grid
    id="grid1"
    units="mm"
    originx="0"
@@ -333,7 +333,7 @@
          y="349.11853"
          inkscape:label="Footer Bounding Box" /><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;stroke-width:0.264583;fill:#a00000;stroke:#a00000"
          x="127.65675"
          y="372.64728"
          id="template_footer"
@@ -345,12 +345,12 @@
            id="tspan2"
            x="127.65675"
            y="372.64728"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Tiddles</tspan></text></g><g
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a00000;stroke:#a00000">Tiddles</tspan></text></g><g
        id="g1"
        inkscape:label="ListItemsBox"
        style="display:inline"><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:130;display:inline;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:1;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:130;display:inline;stroke-width:0.264583;fill:#a00000;stroke:#a00000"
          x="10"
          y="130"
          id="text94"
@@ -359,35 +359,35 @@
          template:order="2"><tspan
            x="10"
            y="130"
-           id="tspan3">Nap
+           id="tspan1">Nap
 </tspan><tspan
            x="10"
            y="149.7556"
-           id="tspan12">Eat Tuna
+           id="tspan4">Eat Tuna
 </tspan><tspan
            x="10"
            y="169.5112"
-           id="tspan13">Sleep
+           id="tspan5">Sleep
 </tspan><tspan
            x="10"
            y="189.2668"
-           id="tspan14">Zoomies
+           id="tspan6">Zoomies
 </tspan><tspan
            x="10"
            y="209.0224"
-           id="tspan15">Snooze
+           id="tspan7">Snooze
 </tspan><tspan
            x="10"
            y="228.778"
-           id="tspan16">Spill coffee
+           id="tspan8">Spill coffee
 </tspan><tspan
            x="10"
            y="248.5336"
-           id="tspan17">Snacks
+           id="tspan9">Snacks
 </tspan><tspan
            x="10"
            y="268.2892"
-           id="tspan18">Sleep</tspan></text><rect
+           id="tspan10">Sleep</tspan></text><rect
          style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.875781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:0.875781, 1.75156;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
          id="rect3-3"
          width="130"
@@ -413,7 +413,7 @@
        style="display:inline"
        transform="translate(1.5801215,64.288582)"><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.05;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;inline-size:271.515;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.05;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;inline-size:271.515;display:inline;fill:#a00000;fill-opacity:1;stroke:#a00000;stroke-width:0.264583;stroke-opacity:1"
          x="120.43997"
          y="31.080101"
          id="template_title"
@@ -423,7 +423,7 @@
          transform="translate(5.4311483,-5.3686849)"><tspan
            x="120.43997"
            y="31.080101"
-           id="tspan19">Cat TODO List</tspan></text><rect
+           id="tspan11">Cat TODO List</tspan></text><rect
          style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.875781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:0.875781, 1.75156;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
          id="rect3"
          width="256.14896"

@@ -34,7 +34,7 @@
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      showguides="false"
-     inkscape:current-layer="g461"><inkscape:grid
+     inkscape:current-layer="layer10"><inkscape:grid
    id="grid1"
    units="mm"
    originx="0"
@@ -314,7 +314,7 @@
          y="349.13568"
          inkscape:label="Footer Bounding Box" /><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;stroke-width:0.264583;fill:#a00000;stroke:#a00000"
          x="128.28893"
          y="372.64728"
          id="template_footer"
@@ -347,7 +347,7 @@
        style="display:inline"
        transform="translate(65.080122,15.312162)"><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.05;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;inline-size:271.515;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.05;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;inline-size:271.515;display:inline;fill:#a00000;fill-opacity:1;stroke:#a00000;stroke-width:0.264583;stroke-opacity:1"
          x="120.43997"
          y="31.080101"
          id="template_title"
@@ -357,7 +357,7 @@
          transform="translate(5.4311483,-5.3686849)"><tspan
            x="120.43997"
            y="31.080101"
-           id="tspan2">What's that?</tspan></text><rect
+           id="tspan1">What's that?</tspan></text><rect
          style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.875781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:0.875781, 1.75156;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
          id="rect3"
          width="256.14896"

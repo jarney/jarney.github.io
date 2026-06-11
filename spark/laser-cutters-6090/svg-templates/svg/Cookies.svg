@@ -26,7 +26,7 @@
      showgrid="true"
      borderlayer="true"
      inkscape:zoom="0.70710678"
-     inkscape:cx="348.60364"
+     inkscape:cx="347.89654"
      inkscape:cy="599.62655"
      inkscape:window-width="1920"
      inkscape:window-height="995"
@@ -34,7 +34,7 @@
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      showguides="false"
-     inkscape:current-layer="g1-3"><inkscape:grid
+     inkscape:current-layer="layer10"><inkscape:grid
    id="grid1"
    units="mm"
    originx="0"
@@ -565,7 +565,7 @@
          y="80"
          inkscape:label="Recipe Bounding Box" /><text
          xml:space="preserve"
-         style="font-size:9.87777778px;line-height:1.25;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:200;stroke-width:0.264583;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         style="font-size:9.87777778px;line-height:1.25;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;white-space:pre;inline-size:200;stroke-width:0.264583;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a00000;stroke:#a00000"
          x="19.732626"
          y="110.95185"
          id="text4"
@@ -575,64 +575,64 @@
          template:order="2"><tspan
            x="19.732626"
            y="110.95185"
-           id="tspan1">16 tablespoons (2 sticks) unsalted </tspan><tspan
+           id="tspan16">16 tablespoons (2 sticks) unsalted </tspan><tspan
            x="19.732626"
            y="123.29908"
-           id="tspan2">butter
+           id="tspan17">butter
 </tspan><tspan
            x="19.732626"
            y="135.6463"
-           id="tspan3">12 ounces bread flour
+           id="tspan18">12 ounces bread flour
 </tspan><tspan
            x="19.732626"
            y="147.99353"
-           id="tspan4">1 teaspoon kosher salt
+           id="tspan19">1 teaspoon kosher salt
 </tspan><tspan
            x="19.732626"
            y="160.34076"
-           id="tspan5">1 teaspoon baking soda
+           id="tspan20">1 teaspoon baking soda
 </tspan><tspan
            x="19.732626"
            y="172.68799"
-           id="tspan6">2 ounces granulated sugar
+           id="tspan21">2 ounces granulated sugar
 </tspan><tspan
            x="19.732626"
            y="185.03522"
-           id="tspan7">8 ounces light brown sugar
+           id="tspan22">8 ounces light brown sugar
 </tspan><tspan
            x="19.732626"
            y="197.38245"
-           id="tspan8">1 large egg
+           id="tspan23">1 large egg
 </tspan><tspan
            x="19.732626"
            y="209.72968"
-           id="tspan9">1 large egg yolk
+           id="tspan24">1 large egg yolk
 </tspan><tspan
            x="19.732626"
            y="222.07691"
-           id="tspan10">2 tablespoons whole milk
+           id="tspan25">2 tablespoons whole milk
 </tspan><tspan
            x="19.732626"
            y="234.42414"
-           id="tspan11">1 1/2 teaspoons vanilla extract
+           id="tspan26">1 1/2 teaspoons vanilla extract
 </tspan><tspan
            x="19.732626"
            y="246.77137"
-           id="tspan12">12 ounces semisweet chocolate chips 
+           id="tspan27">12 ounces semisweet chocolate chips 
 </tspan><tspan
            x="19.732626"
            y="259.11859"
-           id="tspan13">
+           id="tspan28">
 </tspan><tspan
            x="19.732626"
            y="271.46581"
-           id="tspan14">Bake at 375 Degrees for 15min</tspan></text></g><g
+           id="tspan29">Bake at 375 Degrees for 15min</tspan></text></g><g
        id="g4"
        inkscape:label="TitleBox"
        style="display:inline"
        transform="translate(-6.6198713,75.312159)"><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.05;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;inline-size:271.515;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.05;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;inline-size:271.515;display:inline;fill:#a00000;fill-opacity:1;stroke:#a00000;stroke-width:0.264583;stroke-opacity:1"
          x="120.43997"
          y="31.080101"
          id="template_title"
@@ -642,7 +642,7 @@
          transform="translate(14.005778,-30.880473)"><tspan
            x="120.43997"
            y="31.080101"
-           id="tspan15">Cookie Time!</tspan></text><rect
+           id="tspan30">Cookie Time!</tspan></text><rect
          style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.875781;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:0.875781, 1.75156;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
          id="rect3"
          width="181.93567"
