@@ -505,7 +505,8 @@ function templateChanged() {
 function templateUpdate() {
     var template_id = document.getElementById("template_id");
     var template = document.getElementById("template");
-    template.src = template_id.value;
+    template.src = "svg/" + template_id.value + "?" + Date.now();
+    console.log("Got template " + template_id.value);
     
     svgDocumentName = template_id.value;
     
@@ -536,6 +537,29 @@ function selectTab(buttonId, tabId) {
     document.getElementById(buttonId).className += " active";
     
     processResults();
+}
+
+function copyLinkClicked() {
+    var url = baseURLFromWindow();
+    var paramlist = []
+    paramlist.push("template=" + encodeURI(svgDocumentName));
+    paramlist.push("font=" + encodeURI(document.getElementById("font_id").value));
+    for (templateElement of field_list) {
+	if (templateElement.isEditable()) {
+	    var formData = templateElement.formToURL();
+	    if (!formData) continue;
+	    paramlist.push(formData);
+	}
+    }
+    paramstring = "?" + paramlist.join("&");
+    console.log("URL:");
+    console.log(url + paramstring);
+    window.navigator.clipboard.writeText(url + paramstring).then(function() {
+	console.log('Async: Copying to clipboard was successful!');
+    });
+}
+
+function createDownloadURL() {
 }
 
 function downloadClicked() {
@@ -624,6 +648,7 @@ function templateContentLoaded() {
 	    fieldElement.appendChild(rowDiv);
 	}
     }
+    fontSelected();
     const urlParams = new URLSearchParams(window.location.search);
     for (templateElement of field_list) {
 	templateElement.svgToForm(urlParams);
@@ -693,6 +718,7 @@ function generateQRCodeAndURL() {
     var url = baseURLFromWindow();
     var paramlist = []
     paramlist.push("template=" + encodeURI(svgDocumentName));
+    paramlist.push("font=" + encodeURI(document.getElementById("font_id").value));
     for (templateElement of field_list) {
 	if (templateElement.isEditable()) {
 	    var formData = templateElement.formToURL();
@@ -713,9 +739,11 @@ function generateQRCodeAndURL() {
     // Pretty generous, but not super large actually.
     if ((url + paramstring).length > 512) {
 	window.history.replaceState(null, null, url);
+	document.getElementById("copy-link").style.display = "none";
     }
     else {
 	window.history.replaceState(null, null, url + paramstring);
+	document.getElementById("copy-link").style.display = "inline";
     }
     
     // Put the parameters onto the QR code (if it fits)
@@ -777,6 +805,34 @@ function initialize() {
 	    templateListElement.value = "TinyFoxtato.svg";
 	}
     }
+
+    var fontListElement = document.getElementById("font_id");
+    if (urlParams.get("font")) {
+	console.log("Got font from URL line" + urlParams.get("font"));
+	fontListElement.value = urlParams.get("font");
+    }
+    else {
+	if (fontListElement.children.length > 0) {
+	    fontListElement.value = fontListElement.children[0].value;
+	}
+	else {
+	    fontListElement.value = "TinyFoxtato.svg";
+	}
+    }
+
     templateUpdate();
     document.getElementById("edit-view-button").click();
+}
+
+function fontSelected() {
+    const fontValue = document.getElementById("font_id").value;
+    const allTextElements = svgDocument.querySelectorAll("text");
+    for (var textElement of allTextElements) {
+	textElement.style.fontFamily = fontValue;
+    }
+    const allTSpanElements = svgDocument.querySelectorAll("tspan");
+    for (var textElement of allTSpanElements) {
+	textElement.style.fontFamily = fontValue;
+    }
+    
 }

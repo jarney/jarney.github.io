@@ -15,55 +15,72 @@
     
 
     <div class="content">
-      <label for="template_id">Choose a template</label>
-      <select id="template_id" name="template_id" onchange="templateChanged()">
-	<option value="TinyFoxtato.svg">Tiny Foxtato</option>
-	<option value="WineGlasses.svg">Wine Glasses</option>
-	<option value="WhoCutTheCheese.svg">Who Cut The Cheese?</option>
-	<option value="Mandala.svg">Mandala</option>
-	<option value="Graduation.svg">Graduation</option>
-	<option value="Heart.svg">Just Married</option>
-	<option value="Kitten.svg">Kittens</option>
-	<option value="CustomImage.svg">Custom Image</option>
-	<option value="Coaster.svg">Coaster with text</option>
-	<option value="CoasterImage.svg">Coaster with custom image</option>
-<!--	<option value="border-designs.svg">Border Designs</option>-->
-<!--	<option value="template_cutting_board_vertical.svg">Vertical Cutting Board</option>-->
-<!--	<option value="template_cutting_board_horizontal.svg">Horizontal Cutting Board</option>-->
-      </select>
-      
+      <div class="field">
+	<label for="template_id">Choose a template</label>
+
+	<select id="template_id" name="template_id" onchange="templateChanged()">
+	  <option value="Cookies.svg">Cookie Time</option>
+	  <option value="Conversions.svg">Kitchen Conversions</option>
+	  <option value="TinyFoxtato.svg">Tiny Foxtato</option>
+	  <option value="WineGlasses.svg">Wine Glasses</option>
+	  <option value="WhoCutTheCheese.svg">Who Cut The Cheese?</option>
+	  <option value="Mandala.svg">Mandala</option>
+	  <option value="Graduation.svg">Graduation</option>
+	  <option value="Heart.svg">Just Married</option>
+	  <option value="Kitten.svg">Kittens</option>
+	  <option value="CustomImage.svg">Custom Image</option>
+	  <option value="Coaster.svg">Coaster with text</option>
+	  <option value="CoasterImage.svg">Coaster with custom image</option>
+	  <!--	<option value="border-designs.svg">Border Designs</option>-->
+	  <!--	<option value="template_cutting_board_vertical.svg">Vertical Cutting Board</option>-->
+	  <!--	<option value="template_cutting_board_horizontal.svg">Horizontal Cutting Board</option>-->
+	</select>
+      </div>
+
+      <div class="field">
+	<label for="font_id">Select Font</label>
+        <select id="font_id" value="Kaushan Script" onclick="templateChanged();">
+	  <option value="Kaushan Script">Kaushan Script</option>
+	  <option value="Analecta">Analecta</option>
+	  <option value="Anaktoria">Anaktoria</option>
+	  <option value="Akkadian">Akkadian</option>
+	  <option value="DotGothic16">DotGothic16</option>
+	  <option value="Dyuthi">Dyuthi</option>
+	  <option value="Lobster Two">Lobster Two</option>
+	  <option value="Purisa">Purisa</option>
+	  <option value="Uroob">Uroob</option>
+	  <option value="Z003">Z003</option>
+	  <option value="eufm10">eumf10</option>
+	  <option value="dsrom10">dsrom</option>
+	</select>
+      </div>
+    </div>
+    <div style="display:block;">
       <!-- Tab links -->
+      
       <div class="tab">
 	<button id="edit-view-button" class="tab-link" onclick="selectTab('edit-view-button', 'edit-view')">View Design</button>
-	<button id="share-view-button" class="tab-link" onclick="selectTab('share-view-button', 'share-view')">Customize and share</button>
+	<button id="field-view-button" class="tab-link" onclick="selectTab('field-view-button', 'field-view')">Customize</button>
 	<button id="preview-view-button" class="tab-link" onclick="selectTab('preview-view-button', 'preview-view')">Lasercut Preview</button>
-	<!--
-	    Mainly for debugging.
-	    <button id="source-button" class="tab-link" onclick="selectTab(event, 'source-view')">SVG Source</button>
-	-->
+	<button id="share-view-button" class="tab-link" onclick="selectTab('share-view-button', 'share-view')">Share Design</button>
       </div>
       <!-- Tab content -->
       <div class="tab-container">
 	<div id="edit-view" class="tab-content">
 	  <div>
 	    <div id="template-loader" class="loader" style=""></div>
-	    <embed id="template" class="emb" src="WhoCutTheCheese.svg" onload="templateContentLoaded()" type="image/svg+xml"></embed>
+	    <embed id="template" class="emb" src="svg/WhoCutTheCheese.svg" onload="templateContentLoaded()" type="image/svg+xml"></embed>
 	  </div>
 	</div>
 	<div id="preview-view" class="tab-content-hidden">
 	  <div>
 	    <div id="preview-loader" class="loader" style=""></div>
-	    <embed id="preview" class="emb" src="empty.svg" onload="previewContentLoaded()" type="image/svg+xml"></embed>
+	    <embed id="preview" class="emb" src="svg/empty.svg" onload="previewContentLoaded()" type="image/svg+xml"></embed>
 	  </div>
 	</div>
-	<div id="share-view" class="tab-content-hidden">
+	<div id="field-view" class="tab-content-hidden">
 	  <div>
 	    <div id="field-container" border="0"></div>
-	    <button id="download" onclick="downloadClicked()">Download</button>
-	    <!--<pre id="qrcode_data"></pre>-->
-	    <div style="display:none;" id="qrcode_length"></div>
-	    <div style="display:none;" id="qrcode"></div>
-	    <div style="display:none;" id="qrcode_error">QR Code is too large to share (probably because it contains an image).</div>
 	  </div>
 	</div>
 	<div id="source-view" class="tab-content-hidden">
@@ -72,8 +89,13 @@
 	    <textarea style="display: none;" rows="50" id="preview_svg" readonly></textarea>
 	  </div>
 	</div>
+	<div id="share-view">
+	  <button id="download" onclick="downloadClicked()">Download SVG File</button>
+	  <button id="copy-link" onclick="copyLinkClicked()">Copy Link</button>
+	  <div style="display:none;" id="qrcode_length"></div>
+	  <div style="display:none;" id="qrcode"></div>
+	  <div style="display:none;" id="qrcode_error">QR Code is too large to share (probably because it contains an image).</div>
+	</div>
       </div>
-    </div>
-
-  </body>
+    </body>
 </html>
