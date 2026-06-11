@@ -18,7 +18,7 @@
       <div class="field">
 	<label for="template_id">Choose a template</label>
 
-	<select id="template_id" name="template_id" onchange="templateChanged()">
+	<select id="template_id" name="template_id" onchange="templateChanged(true);">
 	  <option value="Cookies.svg">Cookie Time</option>
 	  <option value="Conversions.svg">Kitchen Conversions</option>
 	  <option value="TinyFoxtato.svg">Tiny Foxtato</option>
@@ -39,7 +39,7 @@
 
       <div class="field">
 	<label for="font_id">Select Font</label>
-        <select id="font_id" value="Kaushan Script" onclick="templateChanged();">
+        <select id="font_id" value="Kaushan Script" onclick="templateChanged(false);">
 	  <option value="Kaushan Script">Kaushan Script</option>
 	  <option value="Analecta">Analecta</option>
 	  <option value="Anaktoria">Anaktoria</option>

@@ -495,9 +495,13 @@ function getSubDocument(embedding_element) {
 	return subdoc;
     }
 }
-function templateChanged() {
+function templateChanged(clearFields) {
     var url = baseURLFromWindow();
-    window.history.replaceState(null, null, url);
+    console.log("Template changed" + url);
+    if (clearFields) {
+	field_list = [];
+	window.history.replaceState(null, null, url);
+    }
     templateUpdate();
     selectTab('edit-view-button', 'edit-view');
 }
