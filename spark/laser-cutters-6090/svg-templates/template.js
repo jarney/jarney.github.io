@@ -242,10 +242,12 @@ class TemplateTextField extends TemplateElement {
     _filterPreview(htmlElement, svgElement) {
 	var groupElement = svgElement.parentElement;
 	var rectElements = groupElement.getElementsByTagName("rect");
+	var toremove = []
 	for (var rect of rectElements) {
-	    if (rect.parent == groupElement) {
-		groupElement.removeChild(rect);
-	    }
+	    toremove.push(rect);
+	}
+	for (var rect of toremove) {
+	    groupElement.removeChild(rect);
 	}
     }
     innerHTML() {
@@ -451,7 +453,11 @@ class TemplateTextArea extends TemplateElement {
     _filterPreview(htmlElement, svgElement) {
 	var groupElement = svgElement.parentElement;
 	var rectElements = groupElement.getElementsByTagName("rect");
+	var toremove = []
 	for (var rect of rectElements) {
+	    toremove.push(rect);
+	}
+	for (var rect of toremove) {
 	    groupElement.removeChild(rect);
 	}
     }
