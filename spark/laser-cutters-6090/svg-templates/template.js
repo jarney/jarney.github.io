@@ -39,6 +39,61 @@ function removeAllChildren(domElement) {
     }
 }
 
+function setNodeColorForEdit(svgElement, color) {
+    var style = svgElement.getAttribute("style");
+    if (style) {
+	var newStyle = style;
+	if (style.match(/stroke:/)) {
+	    var originalStroke = style.replace(/.*stroke:/, ""). replace(/;.*/, "");
+	    newStyle = newStyle.replace(/stroke:[^;]*/, "stroke:" + color);
+	    svgElement.setAttribute("template:original-stroke", originalStroke);
+	}
+	if (style.match(/fill:/) && !svgElement.nodeName.match(/path/)) {
+	    var originalFill = style.replace(/.*fill:/, "").replace(/;.*/, "");
+	    if (!originalFill.match(/none/)) {
+		newStyle = newStyle.replace(/fill:[^;]+/, "fill:" + color);
+		svgElement.setAttribute("template:original-fill", originalFill);
+	    }
+	}
+	svgElement.setAttribute("style", newStyle);
+    }
+}
+
+function prepareNode(svgElement) {
+    setNodeColorForEdit(svgElement, "#000000");
+    for (child of svgElement.children) {
+	prepareNode(child);
+    }
+}
+
+function prepareCutting(svgElement) {
+    var originalStroke = svgElement.getAttribute("template:original-stroke");
+    var originalFill = svgElement.getAttribute("template:original-fill");
+    var style = svgElement.getAttribute("style");
+    var newStyle = style;
+    if (originalStroke) {
+	if (newStyle.match(/stroke:/)) {
+	    newStyle = newStyle.replace(/stroke:[^;]*/, "stroke:" + originalStroke);
+	}
+	else {
+	    newStyle = "stroke:" + originalStroke + ";" + newStyle;
+	}
+    }
+    if (originalFill) {
+	if (newStyle.match(/fill:/)) {
+	    newStyle = newStyle.replace(/fill:[^;]*/, "fill:" + originalFill);
+	}
+	else {
+	    newStyle = "fill:" + originalFill + ";" + newStyle;
+	}
+    }
+    svgElement.setAttribute("style", newStyle);
+    for (child of svgElement.children) {
+	prepareCutting(child);
+    }
+
+}
+
 function globalBBox(element) {
     var rect_bbox = element.getBBox();
     var consolidated = element.transform.baseVal.consolidate();
@@ -604,6 +659,8 @@ function templateContentLoaded() {
     
     var svgElement = document.getElementById("template");
     svgDocument = getSubDocument(svgElement);
+
+    prepareNode(svgDocument.documentElement);
     
     //var template_fields = svgDocument.querySelectorAll('[*|template-field="true"]');
     var fieldElements = svgDocument.querySelectorAll(
@@ -715,6 +772,8 @@ function copyPreviewSVG() {
     const serializer = new XMLSerializer();
     const svgStr = serializer.serializeToString(previewDocument);
     document.getElementById("preview_svg").textContent = svgStr;
+
+    prepareCutting(previewDocument.documentElement);
 }
 
 function generateQRCodeAndURL() {
