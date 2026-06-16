@@ -6,7 +6,12 @@ var field_list = []
 var initialized = false;
 
 function baseURLFromWindow() {
-    return window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + window.location.pathname;
+    var s = window.location.protocol + "//" + window.location.hostname;
+    if (window.location.port && window.location.port.length > 0) {
+	s += ":" + window.location.port
+    }
+    s += window.location.pathname;
+    return s;
 }
 
 function findHiddenElements(domElement, hiddenElements) {
