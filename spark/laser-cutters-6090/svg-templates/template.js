@@ -3,6 +3,7 @@ window.addEventListener("load", initialize, false);
 var svgDocument = null;
 var svgDocumentName = "";
 var field_list = []
+var template_has_changed = false;
 var initialized = false;
 
 function baseURLFromWindow() {
@@ -568,13 +569,14 @@ function templateChanged(clearFields) {
 	field_list = [];
 	window.history.replaceState(null, null, url);
     }
-    templateUpdate();
+    templateUpdate(clearFields);
     selectTab('edit-view-button', 'edit-view');
 }
 
-function templateUpdate() {
+function templateUpdate(templateChanged) {
     var template_id = document.getElementById("template_id");
     var template = document.getElementById("template");
+    template_has_changed = templateChanged;
     template.src = "svg/" + template_id.value + "?" + Date.now();
     console.log("Got template " + template_id.value);
     
@@ -660,12 +662,32 @@ function previewContentLoaded() {
 }
 
 function templateContentLoaded() {
-    document.getElementById("template-loader").setAttribute("style", "display:none;");
-    
     var svgElement = document.getElementById("template");
     svgDocument = getSubDocument(svgElement);
-
     prepareNode(svgDocument.documentElement);
+
+    // If the template changed, but we were not actually
+    // trying to make a change, the browser has reloaded
+    // the content without us asking for it and we just need
+    // to refresh its state from the form selections.
+    // This addressed a problem on MAC devices where
+    // the content may be reloaded just based on the
+    // visibility of the elements and not because the
+    // content actually changed.
+    if (!template_has_changed) {
+	fontSelected();
+	for (templateElement of field_list) {
+	    templateElement.formToSVG(function() {return;});
+	}
+	return;
+    }
+
+    // Otherwise, we have changed the template after asking for it.
+    // If the template actually changed, we need to reload
+    // the field list from the template and do the initial population of
+    // the fields from the template to make it a starting point.
+    template_has_changed = false;
+    document.getElementById("template-loader").setAttribute("style", "display:none;");
     
     //var template_fields = svgDocument.querySelectorAll('[*|template-field="true"]');
     var fieldElements = svgDocument.querySelectorAll(
@@ -890,11 +912,11 @@ function initialize() {
 	    fontListElement.value = fontListElement.children[0].value;
 	}
 	else {
-	    fontListElement.value = "TinyFoxtato.svg";
+	    fontListElement.value = "Kaushan Script";
 	}
     }
 
-    templateUpdate();
+    templateUpdate(true);
     document.getElementById("edit-view-button").click();
 }
 
