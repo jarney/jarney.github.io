@@ -34,7 +34,7 @@
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      showguides="false"
-     inkscape:current-layer="g2"><inkscape:grid
+     inkscape:current-layer="layer1"><inkscape:grid
    id="grid1"
    units="mm"
    originx="0"
@@ -203,9 +203,10 @@
          id="rect1"
          width="103.06081"
          height="77.659348"
-         x="78.000175"
-         y="234.72185"
-         inkscape:label="Footer Bounding Box" /><text
+         x="33.866962"
+         y="251.54233"
+         inkscape:label="Footer Bounding Box"
+         transform="rotate(-8.9498072)" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6004px;line-height:1.25;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#a00000;stroke:#a00000;stroke-width:0.24911"
          x="76.102348"
